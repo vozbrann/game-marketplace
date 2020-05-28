@@ -6,9 +6,9 @@ body {
   color: rgba(255, 255, 255, 0.7);
   background: url("./images/comingBgSmoke.png") no-repeat center,
   url("./images/spaceShuttle.png") no-repeat 70% bottom,
-  url("./images/stars.png") no-repeat center,
+  url("./images/stars.png") no-repeat 80% 0,
   url("./images/comingBg.png") no-repeat left;
-  background-size: cover, 40vh auto, auto, 100vw 100vh;
+  background-size: cover, 40vh auto, 60vw auto, 100vw 100vh;
   height: 100vh;
 
   .content {
