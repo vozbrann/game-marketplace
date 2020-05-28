@@ -1,9 +1,7 @@
-@mixin text-stroke-shadow($color, $width) {
-  color: $color;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-width: $width;
-  -webkit-text-stroke-color: $color;
-  text-shadow: 0 0 20px rgba($color, .4);
+@mixin text-stroke-shadow($color, $width, $glow:0.8) {
+  color: transparent;
+  -webkit-text-stroke: $width $color;
+  text-shadow: 0 0 36px rgba($color,$glow);
 }
 
 @mixin block-shadow($color) {
@@ -13,4 +11,19 @@
 @mixin button($color) {
   @include block-shadow($color);
   background-color: $color;
+}
+
+@mixin button-outline($color) {
+  @include block-shadow($color);
+  color: $color!important;
+  text-transform: capitalize;
+  border: 3px solid $color;
+  box-sizing: border-box;
+  &:hover {
+    background-color: $color;
+    color: white!important;
+  }
+  &:active {
+    box-shadow: none;
+  }
 }

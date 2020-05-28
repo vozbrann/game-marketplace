@@ -1,0 +1,66 @@
+@import "mixins";
+@import "variables";
+
+body {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+  background:
+          url("./images/spaceShuttle2.png") no-repeat 80% 80%,
+          url("./images/galaxy.png") no-repeat center;
+  background-size: 30vh auto, cover;
+  height: 100vh;
+
+  .content {
+    position: absolute;
+    left: 8%;
+    padding-bottom: 100px;
+  }
+}
+
+
+.warning-text {
+  @include text-stroke-shadow($red, 2px);
+  white-space: nowrap;
+  font-weight: 900;
+  font-size: 36px;
+  text-transform: uppercase;
+}
+
+h1 {
+  @include text-stroke-shadow($yellow, 4px, 0.3);
+  white-space: nowrap;
+  font-weight: 900;
+  font-size: 184px;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+.btn {
+  @include button-outline($green);
+}
+
+
+@media screen and (max-width: 768px) {
+  body {
+    .content {
+      position: unset;
+      width: 100%;
+    }
+  }
+  .warning-text {
+    @include text-stroke-shadow($red, 2px);
+    white-space: nowrap;
+    font-weight: 900;
+    font-size: 36px;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    @include text-stroke-shadow($yellow, 4px, 0.3);
+    white-space: nowrap;
+    font-weight: 900;
+    font-size: 120px;
+    line-height: 1em;
+    text-transform: uppercase;
+  }
+}
