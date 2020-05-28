@@ -1,0 +1,39 @@
+@import "mixins";
+@import "variables";
+
+body {
+  font-size: 16px;
+  color: #fff;
+  background: url("./images/largePlanetBg.png") no-repeat center 70%;
+  background-size: cover;
+  height: 100vh;
+}
+
+.faded {
+  opacity: 0.7;
+}
+
+.pre-heading {
+  font-weight: 600;
+  font-size: 24px;
+}
+h1 {
+  @include text-stroke-shadow($yellow, 4px, 0.3);
+  font-weight: 900;
+  font-size: 78px;
+  text-transform: uppercase;
+}
+
+.btn-group {
+  .btn {
+    @include button-outline($violet);
+    &.active {
+      color: #fff!important;
+      @include button($violet);
+    }
+  }
+}
+
+.form-container {
+  background-color: $dark;
+}

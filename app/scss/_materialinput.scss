@@ -1,0 +1,144 @@
+@import "variables";
+
+.material-input {
+  position: relative;
+  margin-top: 7px;
+  @include size(366px, 53px);
+  box-sizing: border-box;
+
+  input {
+    @include same(100%);
+    background-color: transparent;
+    position: absolute;
+    font-size: 16px;
+    padding: 0 16px;
+    border: 2px solid #3A3258;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 150ms cubic-bezier(0.4,0,0.2,1);
+    @include noSelect;
+
+    &:focus {
+      border: 2px solid $green;
+      @include block-shadow($green, 0.3);
+      padding-left: 15px;
+
+      & + label {
+        color: #fff;
+        transition: transform 150ms cubic-bezier(0.4,0,0.2,1);
+        transform: scale(0.75) translate3d(-13px, -36px, 0);
+      }
+    }
+  }
+
+  label {
+    color: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    font-size: 16px;
+    margin: 14px 0 0 7px;
+    padding: 0 16px;
+    background-color: $dark;
+    cursor: text;
+    will-change: transform;
+    transition: transform 150ms cubic-bezier(0.4,0,0.2,1);
+    backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  &.active {
+    label {
+      color: #80868b;
+      transition: transform 150ms cubic-bezier(0.4,0,0.2,1);
+      transform: scale(0.75) translate3d(-13px, -36px, 0);
+    }
+  }
+
+  .hint {
+    position: absolute;
+    display: block;
+    font-size: 12px;
+    bottom: -17px;
+    left: 1px;
+    margin: 0;
+
+    &.red {
+      color: red;
+    }
+    &.green {
+      color: green;
+    }
+  }
+
+
+  /* SMALLER INPUT */
+  &.small {
+    height: 36px;
+    margin-top: 5px;
+
+    input {
+      padding: 0 11px;
+      line-height: 36px;
+      font-size: 14px;
+
+      &:focus {
+        padding-left: 10px;
+
+        & + label {
+          transform: scale(0.75) translate3d(-12px, -23px, 0);
+        }
+      }
+    }
+
+    label {
+      font-size: 14px;
+      margin: 9.5px 0 0 6px;
+      padding: 0 6px;
+    }
+
+    &.active label {
+      transform: scale(0.75) translate3d(-12px, -23px, 0);
+    }
+  }
+
+
+  /* OLDER GOOGLE INPUT A.K.A. underline */
+  &.underline {
+    height: 38px;
+
+    input {
+      @include size(366px, 38px);
+      padding: 9px 0px;
+      border-radius: 5px;
+      border-radius: 0px;
+      border: none;
+      border-bottom: 1px solid rgba(0,0,0,0.12);
+      box-shadow: 0 1px 0 0 rgba(0,0,0,0.12);
+      -webkit-box-shadow: 0 1px 0 0 rgba(0,0,0,0.12);
+
+      &:focus {
+        border-bottom: 1px solid #0029e2;
+        -webkit-box-shadow: 0 1px 0 0 #0029e2;
+        box-shadow: 0 1px 0 0 #0029e2;
+
+        & + label {
+          transform: scale(0.75) translate3d(-13px, -31px, 0);
+        }
+      }
+    }
+
+    label {
+      margin: 9.5px 0 0 0px;
+      padding: 0;
+    }
+
+    &.active {
+      label {
+        transform: scale(0.75) translate3d(-13px, -31px, 0);
+      }
+    }
+
+    .hint {
+      bottom: -18px;
+    }
+  }
+}

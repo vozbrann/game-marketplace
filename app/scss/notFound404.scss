@@ -6,7 +6,7 @@ body {
   color: rgba(255, 255, 255, 0.7);
   background:
           url("./images/spaceShuttle2.png") no-repeat 80% 80%,
-          url("./images/galaxy.png") no-repeat center;
+          url("./images/galaxy.png") no-repeat top;
   background-size: 30vh auto, cover;
   height: 100vh;
 
@@ -19,7 +19,7 @@ body {
 
 
 .warning-text {
-  @include text-stroke-shadow($red, 2px);
+  @include text-stroke-shadow($red, 2px, 0.4);
   white-space: nowrap;
   font-weight: 900;
   font-size: 36px;
@@ -34,11 +34,6 @@ h1 {
   line-height: 1em;
   text-transform: uppercase;
 }
-
-.btn {
-  @include button-outline($green);
-}
-
 
 @media screen and (max-width: 768px) {
   body {

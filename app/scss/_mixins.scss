@@ -4,26 +4,47 @@
   text-shadow: 0 0 36px rgba($color,$glow);
 }
 
-@mixin block-shadow($color) {
-  box-shadow: 0 5px 20px rgba($color, 0.65);
+@mixin block-shadow($color, $glow:0.4) {
+  box-shadow: 0 5px 20px rgba($color, $glow);
 }
 
-@mixin button($color) {
+@mixin button($color, $text-color:unset) {
   @include block-shadow($color);
   background-color: $color;
+  color: $text-color;
 }
 
-@mixin button-outline($color) {
+@mixin button-outline($color, $text-color:white) {
   @include block-shadow($color);
   color: $color!important;
   text-transform: capitalize;
-  border: 3px solid $color;
+  border: 2px solid $color;
   box-sizing: border-box;
   &:hover {
     background-color: $color;
-    color: white!important;
+    color: $text-color!important;
   }
   &:active {
     box-shadow: none;
   }
+}
+
+/* PREFIXES material design inputs */
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+@mixin same($size) {
+  width: $size;
+  height: $size;
+}
+@mixin noSelect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }

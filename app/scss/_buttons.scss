@@ -1,0 +1,48 @@
+@import "custom";
+@import "base";
+@import "variables";
+@import "mixins";
+@import "materialinput";
+
+.btn {
+  font-size: 18px!important;
+
+  &.btn-green {
+    @include button($green);
+  }
+  &.btn-outline-green {
+    @include button-outline($green);
+  }
+
+  &.btn-light-green {
+    @include button($light-green, black);
+  }
+  &.btn-outline-light-green {
+    @include button-outline($light-green, black);
+  }
+
+  &.btn-google {
+    color: #DB4437!important;
+    text-transform: capitalize;
+    border: 2px solid #DB4437;
+    box-sizing: border-box;
+    &:hover {
+      background-color: #DB4437;
+      color: #fff!important;
+    }
+  }
+
+  &.btn-facebook {
+    color: #4267B2!important;
+    text-transform: capitalize;
+    border: 2px solid #4267B2;
+    box-sizing: border-box;
+    &:hover {
+      background-color: #4267B2;
+      color: #fff!important;
+    }
+  }
+  &:active {
+    box-shadow: none!important;
+  }
+}
