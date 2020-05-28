@@ -27,13 +27,12 @@ h1 {
 
 .count-down {
   & > div {
-    margin: 0 34px;
-
+    width: 8em;
     .number {
       @include text-stroke-shadow($blue, 4px);
       text-transform: uppercase;
       font-weight: 900;
-      font-size: 72px;
+      font-size: 64px;
     }
   }
 }
@@ -88,10 +87,13 @@ form {
     .content {
       width: 100%;
       position: unset;
-      margin: 0 20px;
+      margin: 0;
       margin-top: 10vh;
     }
-    font-size: 12px;
+    font-size: 13px;
+  }
+  .title, form {
+    margin: 0 10px;
   }
   h1 {
     @include text-stroke-shadow($yellow, 1px);
@@ -100,10 +102,10 @@ form {
   }
   .count-down {
     & > div {
-      margin: 0 10px;
+      width: 5em;
       .number {
         @include text-stroke-shadow($blue, 2px);
-        font-size: 46px;
+        font-size: 34px;
       }
     }
   }
