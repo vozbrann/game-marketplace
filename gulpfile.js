@@ -7,7 +7,7 @@ var uglify = require('gulp-uglify');
 
 // Sass task: compiles the style.scss file into style.css
 gulp.task('sass', function(){
-  return gulp.src('app/scss/style.scss')
+  return gulp.src('app/scss/*.scss')
   .pipe(sass()) // compile SCSS to CSS
     .pipe(cssnano()) // minify CSS
     .pipe(gulp.dest('docs')); // put final CSS in dist folder

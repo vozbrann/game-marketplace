@@ -1,0 +1,110 @@
+@import "mixins";
+@import "variables";
+
+body {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+  background: url("./images/comingBgSmoke.png") no-repeat center,
+  url("./images/spaceShuttle.png") no-repeat 70% bottom,
+  url("./images/stars.png") no-repeat center,
+  url("./images/comingBg.png") no-repeat left;
+  background-size: cover, 40vh auto, auto, 100vw 100vh;
+  height: 100vh;
+
+  .content {
+    position: absolute;
+    right: 48%;
+  }
+}
+
+h1 {
+  @include text-stroke-shadow($yellow, 2px);
+  white-space: nowrap;
+  font-weight: 900;
+  font-size: 48px;
+  text-transform: uppercase;
+}
+
+.count-down {
+  & > div {
+    margin: 0 34px;
+
+    .number {
+      @include text-stroke-shadow($blue, 4px);
+      text-transform: uppercase;
+      font-weight: 900;
+      font-size: 72px;
+    }
+  }
+}
+
+form {
+  .btn {
+    @include button($green);
+  }
+
+  .form-control {
+    color: #fff;
+    border: 3px solid $green;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px $green;
+    background-color: transparent;
+
+    &:focus {
+      color: #fff;
+      background-color: transparent;
+      border: 3px solid $green;
+    }
+
+    &::placeholder {
+      color: #fff;
+      opacity: 0.7;
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  body {
+    background: url("./images/comingBgSmoke.png") no-repeat center,
+    url("./images/spaceShuttle.png") no-repeat 80% bottom,
+    url("./images/stars.png") no-repeat center,
+    url("./images/comingBg.png") no-repeat left;
+    background-size: cover, 40vh auto, auto, 110vw 100vh;
+    .content {
+      position: unset;
+      margin: 0 40px;
+    }
+  }
+}
+
+@media screen and (max-width: 986px) {
+  body {
+    background:
+            url("./images/comingBgSmoke.png") no-repeat -30vw bottom,
+            url("./images/spaceShuttle.png") no-repeat center bottom,
+            url("./images/stars.png") no-repeat center bottom,
+            url("./images/comingBgMob.png") no-repeat center;
+    background-size: 130vw auto, 20vh auto, auto 60vh, cover;
+    .content {
+      width: 100%;
+      position: unset;
+      margin: 0 20px;
+      margin-top: 10vh;
+    }
+    font-size: 12px;
+  }
+  h1 {
+    @include text-stroke-shadow($yellow, 1px);
+    font-size: 32px;
+    white-space: unset;
+  }
+  .count-down {
+    & > div {
+      margin: 0 10px;
+      .number {
+        @include text-stroke-shadow($blue, 2px);
+        font-size: 46px;
+      }
+    }
+  }
+}
