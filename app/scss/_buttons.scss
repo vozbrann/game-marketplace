@@ -22,25 +22,13 @@
   }
 
   &.btn-google {
-    color: #DB4437!important;
-    text-transform: capitalize;
-    border: 2px solid #DB4437;
-    box-sizing: border-box;
-    &:hover {
-      background-color: #DB4437;
-      color: #fff!important;
-    }
+    @include button-outline(#DB4437);
+    box-shadow: none;
   }
 
   &.btn-facebook {
-    color: #4267B2!important;
-    text-transform: capitalize;
-    border: 2px solid #4267B2;
-    box-sizing: border-box;
-    &:hover {
-      background-color: #4267B2;
-      color: #fff!important;
-    }
+    @include button-outline(#4267B2);
+    box-shadow: none;
   }
   &:active {
     box-shadow: none!important;

@@ -1,6 +1,8 @@
+@import "variables";
+
 // variable overrides
-//$border-radius: 8px;
-//$input-border-radius-lg: 8px;
-//$input-border-radius-sm: 8px;
+$input-bg: transparent;
+$component-active-color: $light-dark;
+$component-active-bg: $green;
 // Bootstrap and its default variables
 @import "../../node_modules/bootstrap/scss/bootstrap";
