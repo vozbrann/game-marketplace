@@ -5,8 +5,13 @@
 }
 
 @mixin block-shadow($color, $glow:0.4) {
+  box-shadow: 0 0 10px rgba($color, $glow);
+}
+
+@mixin block-shadow-lg($color, $glow:0.65) {
   box-shadow: 0 5px 20px rgba($color, $glow);
 }
+
 
 @mixin button($color, $text-color:unset) {
   @include block-shadow($color);
@@ -27,6 +32,12 @@
   &:active {
     box-shadow: none;
   }
+}
+
+@mixin button-shine($color, $text-color:unset) {
+  @include block-shadow-lg($color);
+  background-color: $color;
+  color: $text-color;
 }
 
 /* PREFIXES material design inputs */

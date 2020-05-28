@@ -13,6 +13,9 @@
   &.btn-outline-green {
     @include button-outline($green);
   }
+  &.btn-green-shine {
+    @include button-shine($green);
+  }
 
   &.btn-light-green {
     @include button($light-green, black);
@@ -23,12 +26,12 @@
 
   &.btn-google {
     @include button-outline(#DB4437);
-    box-shadow: none;
+    text-shadow: 0 0 10px rgba(#DB4437, 0.7);
   }
 
   &.btn-facebook {
     @include button-outline(#4267B2);
-    box-shadow: none;
+    text-shadow: 0 0 10px rgba(#4267B2, 0.7);
   }
   &:active {
     box-shadow: none!important;

@@ -9,6 +9,13 @@ body {
   height: 100vh;
 }
 
+.content {
+  padding: 0 8%;
+  .title-container {
+    padding-right: 15%;
+  }
+}
+
 .faded {
   opacity: 0.7;
 }

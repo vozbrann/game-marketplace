@@ -4,5 +4,9 @@
 $input-bg: transparent;
 $component-active-color: $light-dark;
 $component-active-bg: $green;
+
+$border-radius:               8px;
+$border-radius-lg:            8px;
+$border-radius-sm:            8px;
 // Bootstrap and its default variables
 @import "../../node_modules/bootstrap/scss/bootstrap";

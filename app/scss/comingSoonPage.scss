@@ -44,15 +44,11 @@ h1 {
 }
 
 form {
-  .btn {
-    @include button($green);
-  }
-
   .form-control {
     color: #fff;
     border: 3px solid $green;
     box-sizing: border-box;
-    box-shadow: 0 0 10px $green;
+    box-shadow: 0 0 10px rgba($green, 0.65);
     background-color: transparent;
 
     &:focus {
