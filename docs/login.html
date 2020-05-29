@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/pages/authPage.css">
 
-    <title>Auth</title>
+    <title>Login</title>
 </head>
 <body>
 <img class="bg-image planet-1" src="images/auth/planet1.png" alt="">
@@ -31,37 +31,34 @@
                 <img class="fg-image planet-2" src="images/auth/planet5.png" alt="">
                 <div class="btn-group w-100 d-flex mb-4" role="group">
                     <button type="button"
-                            class="btn w-100 active text-uppercase text-white font-weight-bold">Register
+                            class="btn w-100 text-uppercase text-white font-weight-bold">Register
                     </button>
-                    <button type="button" class="btn w-100 text-uppercase text-white font-weight-bold ">
+                    <button type="button" class="btn w-100 active text-uppercase text-white font-weight-bold ">
                         Login
                     </button>
                 </div>
                 <form class="border-bottom border-secondary mb-4">
                     <div class="material-input w-100 mb-3">
-                        <input id="username" type="text" name="username">
-                        <label for="username">Username</label>
-                    </div>
-                    <div class="material-input w-100 mb-3">
-                        <input id="email" type="email" name="email">
-                        <label for="email">E-mail</label>
+                        <input id="login" type="text" name="username">
+                        <label for="login">Username or Email</label>
                     </div>
                     <div class="material-input w-100 mb-3">
                         <input id="password" type="password" name="password">
                         <label for="password">Password</label>
                     </div>
-                    <div class="material-input w-100 mb-3">
-                        <input id="repeatPassword" type="password" name="Password">
-                        <label for="repeatPassword">Repeat password</label>
+                    <div class="d-flex justify-content-between">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="remember">
+                            <label class="custom-control-label" for="remember"><span class="text-grey">Remember Me</span></label>
+                        </div>
+                        <a class="text-light text-grey" href="#">Forgot password?</a>
                     </div>
                     <button type="submit"
-                            class="btn btn-lg btn-block btn-green-shine active text-white font-weight-bold mt-4 mb-3">
-                        Register Now!
+                            class="btn btn-lg btn-block btn-green-shine active text-white font-weight-bold mt-4 mb-4">
+                        Login to your account!
                     </button>
-                    <p class="small text-grey">You'll receive a confirmation email in your inbox with a link
-                        to activate your account. If you have any problems, <a href="#">contact us</a>!</p>
                 </form>
-                <p class="text-center mb-0 text-grey">Or Register with</p>
+                <p class="text-center mb-0 text-grey">Or Login with</p>
                 <div class="d-flex">
                     <button type="button"
                             class="btn btn-block btn-google active text-white font-weight-bold mt-4 mb-3 mr-3">
