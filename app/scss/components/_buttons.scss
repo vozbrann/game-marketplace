@@ -6,6 +6,20 @@
 
 .btn {
   font-size: 18px!important;
+  padding-top: 11px!important;
+  padding-bottom: 11px!important;
+
+  &.btn-lg {
+    padding-top: 16px!important;
+    padding-bottom: 16px!important;
+  }
+
+  &.btn-primary {
+    @include button($primary);
+  }
+  &.btn-outline-primary {
+    @include button-outline($primary);
+  }
 
   &.btn-green {
     @include button($green);

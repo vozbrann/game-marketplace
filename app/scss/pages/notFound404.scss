@@ -1,12 +1,12 @@
-@import "mixins";
-@import "variables";
+@import "../components/mixins";
+@import "../components/variables";
 
 body {
   font-size: 16px;
   color: rgba(255, 255, 255, 0.7);
   background:
-          url("./images/spaceShuttle2.png") no-repeat 80% 80%,
-          url("./images/galaxy.png") no-repeat top;
+          url("../../images/notFound/spaceShuttle2.png") no-repeat 80% 80%,
+          url("../../images/notFound/galaxy.png") no-repeat top;
   background-size: 30vh auto, cover;
   height: 100vh;
 

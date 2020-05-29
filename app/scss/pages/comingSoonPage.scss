@@ -1,10 +1,11 @@
-@import "mixins";
-@import "variables";
+@import "../components/mixins";
+@import "../components/variables";
 
-$bgSmokeImage: url("./images/comingBgSmoke.png");
-$bgSpaceShuttleImage: url("./images/spaceShuttle.png");
-$bgStarsImage: url("./images/stars.png");
-$bgImage: url("./images/comingBg.png");
+$bgSmokeImage: url("../../images/comingSoon/comingBgSmoke.png");
+$bgSpaceShuttleImage: url("../../images/comingSoon/spaceShuttle.png");
+$bgStarsImage: url("../../images/comingSoon/stars.png");
+$bgImage: url("../../images/comingSoon/comingBg.png");
+$bgImageMob: url("../../images/comingSoon/comingBgMob.png");
 
 body {
   font-size: 16px;
@@ -21,6 +22,11 @@ body {
     position: absolute;
     right: 48%;
   }
+}
+
+.btn {
+  padding-top: unset!important;
+  padding-bottom: unset!important;
 }
 
 h1 {
@@ -49,11 +55,11 @@ form {
     border: 3px solid $green;
     box-sizing: border-box;
     box-shadow: 0 0 10px rgba($green, 0.65);
-    background-color: transparent;
+    background-color: rgba(#2B2541, 0.4);
 
     &:focus {
+      background-color: rgba(#2B2541, 0.4);
       color: #fff;
-      background-color: transparent;
       border: 3px solid $green;
     }
 
@@ -67,7 +73,7 @@ form {
 @media screen and (max-width: 1400px) {
   body {
     background:
-            $bgImage no-repeat center,
+            $bgSmokeImage no-repeat center,
             $bgSpaceShuttleImage no-repeat 80% bottom,
             $bgStarsImage no-repeat center,
             $bgImage no-repeat left;
@@ -82,10 +88,10 @@ form {
 @media screen and (max-width: 986px) {
   body {
     background:
-            $bgImage no-repeat -30vw bottom,
+            $bgSmokeImage no-repeat -30vw bottom,
             $bgSpaceShuttleImage no-repeat center bottom,
             $bgStarsImage no-repeat center bottom,
-            $bgImage no-repeat center;
+            $bgImageMob no-repeat center;
     background-size: 130vw auto, 20vh auto, auto 60vh, cover;
     .content {
       width: 100%;
@@ -110,6 +116,11 @@ form {
         @include text-stroke-shadow($blue, 2px);
         font-size: 34px;
       }
+    }
+  }
+  form {
+    .btn {
+      font-size: 14px!important;
     }
   }
 }

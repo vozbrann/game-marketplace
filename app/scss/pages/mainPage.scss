@@ -1,0 +1,15 @@
+@import "../components/mixins";
+@import "../components/variables";
+
+body {
+  background-color: $semi-dark;
+  min-height: 100vh;
+}
+.menu {
+  min-height: 100vh;
+  background-color: $dark;
+  a {
+    text-decoration: none;
+    color: rgba(#FFFFFF, 0.6);
+  }
+}

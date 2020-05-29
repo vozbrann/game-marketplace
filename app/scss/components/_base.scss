@@ -12,6 +12,7 @@ html, body {
   margin: 0;
   max-width: 100%;
   overflow-x: hidden;
+  min-height: 100vh;
 }
 
 a {
@@ -28,6 +29,13 @@ a {
     color: $yellow;
   }
 }
+
+//material-icons
+.material-icons.md-10 { font-size: 10px; }
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
 
 *,
 *:after,

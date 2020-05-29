@@ -7,10 +7,10 @@ var uglify = require('gulp-uglify');
 
 // Sass task: compiles the style.scss file into style.css
 gulp.task('sass', function(){
-  return gulp.src('app/scss/*.scss')
+  return gulp.src('app/scss/**/*.scss')
   .pipe(sass()) // compile SCSS to CSS
     .pipe(cssnano()) // minify CSS
-    .pipe(gulp.dest('docs')); // put final CSS in dist folder
+    .pipe(gulp.dest('docs/css')); // put final CSS in dist folder
 });
 
 // JS task: concatenates and uglifies JS files to script.js
@@ -23,7 +23,7 @@ gulp.task('js', function(){
 
 // Watch task: watch SCSS and JS files for changes
 gulp.task('watch', function(){
-  gulp.watch('app/scss/*.scss', gulp.series('sass'));
+  gulp.watch('app/scss/**/*.scss', gulp.series('sass'));
   gulp.watch('app/js/**/*.js', gulp.series('js'));
 });
 

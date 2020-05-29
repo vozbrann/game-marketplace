@@ -1,0 +1,24 @@
+@import "variables";
+
+// variable overrides
+$input-bg: transparent;
+$component-active-color: $light-dark;
+$component-active-bg: $green;
+
+$primary:       #7750F8;
+//$secondary:     $gray-600 !default;
+//$success:       $green !default;
+//$info:          $cyan !default;
+//$warning:       $yellow !default;
+//$danger:        $red !default;
+//$light:         $gray-100 !default;
+//$dark:          $gray-800 !default;
+
+$btn-border-radius:           .5rem;
+$btn-border-radius-lg:        .6rem;
+$btn-border-radius-sm:        .4rem;
+$input-border-radius:                   .5rem;
+$input-border-radius-lg:                .6rem;
+$input-border-radius-sm:                .4rem;
+// Bootstrap and its default variables
+@import "../../../node_modules/bootstrap/scss/bootstrap";
