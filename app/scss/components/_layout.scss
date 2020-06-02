@@ -1,0 +1,22 @@
+@import "header";
+@import "menu";
+
+main {
+  min-height: 100vh;
+  transition: all 0.3s ease; margin-left: 280px;
+}
+
+.collapsed {
+  main {
+    margin: 0 0 0 80px;
+  }
+}
+
+.imageList {
+  img {
+    height: 160px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: $border-radius-lg;
+  }
+}

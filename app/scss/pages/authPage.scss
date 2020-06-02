@@ -10,6 +10,21 @@ body {
   overflow: hidden;
 }
 
+a {
+  &:link {
+    color: $yellow;
+  }
+  &:visited {
+    color: $yellow;
+  }
+  &:hover {
+    color: $yellow;
+  }
+  &:active {
+    color: $yellow;
+  }
+}
+
 .scene {
   z-index: 2;
   position: fixed;

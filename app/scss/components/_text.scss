@@ -7,11 +7,20 @@
   text-shadow: 0 0 36px rgba($color,$glow);
 }
 
+@mixin text-glow-mixin($color) {
+  color: $color;
+  text-shadow: 0 0 10px rgba($color, 0.8);
+}
+
 .text-green {
   color: $green;
 }
-
 .text-glow-green {
-  color: $green;
-  text-shadow: 0 0 10px rgba($green, 0.8);
+  @include text-glow-mixin($green);
+}
+.text-light-red {
+  color: $light-red;
+}
+.text-glow-light-red {
+  @include text-glow-mixin($light-red);
 }

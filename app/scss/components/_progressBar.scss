@@ -23,4 +23,7 @@
   &.bg-yellow {
     @include progress-mixin($yellow);
   }
+  &.bg-light-red {
+    @include progress-mixin($light-red);
+  }
 }

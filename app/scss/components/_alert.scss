@@ -19,6 +19,12 @@
 }
 
 .alert {
+  &.alert-small {
+    .title {
+      font-size: 14px;
+    }
+  }
+
   &.alert-danger {
     @include alert-mixin(#EE2A58, #FEB3C5);
   }

@@ -1,0 +1,43 @@
+@import "variables";
+
+@mixin item-mixin($color) {
+  background-color: $dark;
+  border-radius: $border-radius-lg;
+  position: relative;
+  display: flex;
+  align-items: center;
+  &:before {
+    content: "";
+    height: 85%;
+    position: absolute;
+    border-radius: 9px;
+    border-left: 3px solid $color;
+    box-shadow: 0 0 10px rgba($color, 0.8);
+  }
+  .content {
+    font-size: $custom-font-size;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.4);
+    .price {
+      font-size: $custom-font-size-lg;
+      font-weight: 500;
+    }
+    .rating {
+      font-weight: normal;
+      color: rgba(255, 255, 255, 0.7);
+    }
+  }
+  &.outlined {
+    border: 3px solid $color;
+    &:before {
+      height: 0;
+    }
+  }
+}
+
+.item {
+  @include item-mixin($violet);
+}
+.item-ad {
+  @include item-mixin($orange);
+}

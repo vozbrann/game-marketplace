@@ -2,7 +2,7 @@ $(document).ready(function() {
   var myGamePiece;
 
   function startGame() {
-    myGamePiece = new component(46, 93, 'spaceShuttle3.png', window.innerWidth/4,
+    myGamePiece = new component(46, 93, 'images/auth/spaceShuttle3.png', window.innerWidth/4,
       -100, 'image');
     myGameArea.start();
   }

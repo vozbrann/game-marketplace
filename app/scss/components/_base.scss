@@ -15,21 +15,6 @@ html, body {
   min-height: 100vh;
 }
 
-a {
-  &:link {
-    color: $yellow;
-  }
-  &:visited {
-    color: $yellow;
-  }
-  &:hover {
-    color: $yellow;
-  }
-  &:active {
-    color: $yellow;
-  }
-}
-
 //material-icons
 .material-icons.md-10 { font-size: 10px; }
 .material-icons.md-18 { font-size: 18px; }
