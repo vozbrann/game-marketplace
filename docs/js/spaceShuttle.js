@@ -2,8 +2,8 @@ $(document).ready(function() {
   var myGamePiece;
 
   function startGame() {
-    myGamePiece = new component(46, 93, 'spaceShuttle3.png', 0,
-      window.innerHeight, 'image');
+    myGamePiece = new component(46, 93, 'spaceShuttle3.png', window.innerWidth/4,
+      -100, 'image');
     myGameArea.start();
   }
 
@@ -39,10 +39,11 @@ $(document).ready(function() {
     this.width = width;
     this.height = height;
     this.speed = 0;
-    this.angle = 0.6;
+    this.angle = 2;
     this.moveAngle = 0;
     this.x = x;
     this.y = y;
+
     this.update = function() {
       ctx = myGameArea.context;
       ctx.save();
@@ -74,19 +75,19 @@ $(document).ready(function() {
   function updateGameArea() {
     myGameArea.startPosArr = [
       {
-        x: window.innerWidth / 5 * 4,
-        y: window.innerHeight + 100,
-        angle: -0.6,
+        x: window.innerWidth + 100,
+        y: window.innerHeight/5*4,
+        angle: -1.2,
       },
       {
-        x: 0,
-        y: window.innerHeight + 100,
-        angle: 0.6,
-      },
-      {
-        x: window.innerWidth+100,
+        x: -100,
         y: window.innerHeight/3,
-        angle: -1.8,
+        angle: 1.2,
+      },
+      {
+        x: window.innerWidth/4,
+        y: -100,
+        angle: 2,
       },
     ];
     myGameArea.clear();
@@ -98,7 +99,7 @@ $(document).ready(function() {
     myGamePiece.update();
   }
 
-  $( window ).resize(function() {
+  $(window).resize(function() {
     myGameArea.canvas.width = window.innerWidth;
     myGameArea.canvas.height = window.innerHeight;
   });

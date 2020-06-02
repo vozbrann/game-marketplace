@@ -13,14 +13,13 @@
     <title>Auth</title>
 </head>
 <body>
-<div id="scene">
+<div class="scene">
     <img class="bg-image planet-1" data-depth="0.3" src="images/auth/planet1.png" alt="">
     <img class="bg-image planet-2" data-depth="0.1" src="images/auth/planet2.png" alt="">
     <img class="bg-image planet-3" data-depth="0.2" src="images/auth/planet3.png" alt="">
     <img class="bg-image planet-4" data-depth="0.1" src="images/auth/planet6.png" alt="">
     <img class="bg-image planet-5" data-depth="0.08" src="images/auth/planet4.png" alt="">
 </div>
-<img class="fg-image spaceShuttle" src="images/auth/spaceShuttle3.png" alt="">
 <div class="container-fluid h-100 content">
     <div class="row py-4 h-100">
         <div class="col-8 title-container text-center">
@@ -31,10 +30,10 @@
                 aenean.</p>
         </div>
         <div class="col d-flex align-items-center h-100">
-            <div class="form-container position-relative animate__animated animate__fadeInRight">
-                <div>
-                    <img class="fg-image planet-1" src="images/auth/planet3.png" alt="">
-                    <img class="fg-image planet-2" src="images/auth/planet5.png" alt="">
+            <div id="form-register" class="form-container position-relative">
+                <div class="position-absolute scene-form">
+                    <img class="fg-image planet-1" data-depth="0.08" src="images/auth/planet3.png" alt="">
+                    <img class="fg-image planet-2" data-depth="0.1" src="images/auth/planet5.png" alt="">
                 </div>
                 <div class="btn-group w-100 d-flex mb-4" role="group">
                     <button type="button"
@@ -84,6 +83,55 @@
                     </button>
                 </div>
             </div>
+            <div id="form-login" class="form-container position-relative">
+                <div class="position-absolute scene-form">
+                    <img class="fg-image planet-1" data-depth="0.08" src="images/auth/planet3.png" alt="">
+                    <img class="fg-image planet-2" data-depth="0.1" src="images/auth/planet5.png" alt="">
+                </div>
+                <div class="btn-group w-100 d-flex mb-4" role="group">
+                    <button type="button"
+                            id="register-btn"
+                            class="btn w-100 text-uppercase text-white font-weight-bold">
+                        Register
+                    </button>
+                    <button type="button"
+                            class="btn w-100 active text-uppercase text-white font-weight-bold">
+                        Login
+                    </button>
+                </div>
+                <form class="border-bottom border-secondary mb-4">
+                    <div class="material-input w-100 mb-3">
+                        <input id="login" type="text" name="username">
+                        <label for="login">Username or Email</label>
+                    </div>
+                    <div class="material-input w-100 mb-3">
+                        <input id="loginPassword" type="password" name="password">
+                        <label for="loginPassword">Password</label>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="remember">
+                            <label class="custom-control-label" for="remember"><span class="text-grey">Remember Me</span></label>
+                        </div>
+                        <a class="text-light text-grey" href="#">Forgot password?</a>
+                    </div>
+                    <button type="submit"
+                            class="btn btn-lg btn-block btn-green-shine active text-white font-weight-bold mt-4 mb-4">
+                        Login to your account!
+                    </button>
+                </form>
+                <p class="text-center mb-0 text-grey">Or Login with</p>
+                <div class="d-flex">
+                    <button type="button"
+                            class="btn btn-block btn-google active text-white font-weight-bold mt-4 mb-3 mr-3">
+                        Google
+                    </button>
+                    <button type="button"
+                            class="btn btn-block btn-facebook active text-white font-weight-bold mt-4 mb-3">
+                        Facebook
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -110,8 +158,14 @@
   });
 
   // Parallax.js
-  var scene = $('#scene').get(0);
-  var parallaxInstance = new Parallax(scene);
+  var scene = $('.scene').get(0);
+  var sceneForm1 = $('.scene-form').get(0);
+  var sceneForm2 = $('.scene-form').get(1);
+  new Parallax(scene, {
+    invertX : false
+  });
+  new Parallax(sceneForm1);
+  new Parallax(sceneForm2);
 
   //Change page animation
   const animateCSS = (element, animation, prefix = 'animate__') =>
@@ -135,12 +189,20 @@
     });
 
   $('#login-btn').click(function() {
-    console.log('animate');
-    animateCSS('.form-container', 'fadeOutRight').then((message) => {
-      $('.form-container').hide();
-      window.location = './login.html';
+    animateCSS('#form-register', 'fadeOutRight').then(() => {
+      $('#form-register').hide();
+      $('#form-login').show();
+      animateCSS('#form-login', 'fadeInRight')
     });
   });
+  $('#register-btn').click(function() {
+    animateCSS('#form-login', 'fadeOutRight').then(() => {
+      $('#form-login').hide();
+      $('#form-register').show();
+      animateCSS('#form-register', 'fadeInRight')
+    });
+  });
+  $('#form-login').hide();
 </script>
 </body>
 </html>
