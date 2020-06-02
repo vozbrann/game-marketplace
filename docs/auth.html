@@ -6,15 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/pages/authPage.css">
-
     <title>Auth</title>
 </head>
 <body>
-<img class="bg-image planet-1" src="images/auth/planet1.png" alt="">
-<img class="bg-image planet-2" src="images/auth/planet2.png" alt="">
-<img class="bg-image planet-3" src="images/auth/planet3.png" alt="">
-<img class="bg-image planet-4" src="images/auth/planet1.png" alt="">
-<img class="bg-image planet-5" src="images/auth/planet4.png" alt="">
+<div id="scene">
+    <img class="bg-image planet-1" data-depth="0.3" src="images/auth/planet1.png" alt="">
+    <img class="bg-image planet-2" data-depth="0.1" src="images/auth/planet2.png" alt="">
+    <img class="bg-image planet-3" data-depth="0.2" src="images/auth/planet3.png" alt="">
+    <img class="bg-image planet-4" data-depth="0.1" src="images/auth/planet6.png" alt="">
+    <img class="bg-image planet-5" data-depth="0.08" src="images/auth/planet4.png" alt="">
+</div>
 <img class="fg-image spaceShuttle" src="images/auth/spaceShuttle3.png" alt="">
 <div class="container-fluid h-100 content">
     <div class="row py-4 h-100">
@@ -27,8 +28,10 @@
         </div>
         <div class="col d-flex align-items-center h-100">
             <div class="form-container position-relative">
-                <img class="fg-image planet-1" src="images/auth/planet3.png" alt="">
-                <img class="fg-image planet-2" src="images/auth/planet5.png" alt="">
+                <div>
+                    <img class="fg-image planet-1" src="images/auth/planet3.png" alt="">
+                    <img class="fg-image planet-2" src="images/auth/planet5.png" alt="">
+                </div>
                 <div class="btn-group w-100 d-flex mb-4" role="group">
                     <button type="button"
                             class="btn w-100 active text-uppercase text-white font-weight-bold">Register
@@ -78,9 +81,7 @@
 </div>
 
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
         crossorigin="anonymous"></script>
@@ -88,6 +89,7 @@
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
 <!-- Optional JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 <script>
   $('.material-input input').on('input', function() {
     $(this).closest('.material-input').addClass('active')
@@ -96,6 +98,89 @@
     if ($(this).val() === '') {
       $(this).closest('.material-input').removeClass('active')
     }
+  });
+
+  var scene = $('#scene').get(0);
+  var parallaxInstance = new Parallax(scene);
+
+  $( document ).ready(function() {
+    var myGamePiece;
+
+    function startGame() {
+      myGamePiece = new component(46, 93, "spaceShuttle3.png", 0, window.innerHeight, "image");
+      myGameArea.start();
+    }
+
+    var myGameArea = {
+      canvas : document.createElement("canvas"),
+      start : function() {
+        this.canvas.width = window.innerWidth;
+        this.canvas.height = window.innerHeight;
+        this.context = this.canvas.getContext("2d");
+        document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+        this.frameNo = 0;
+        this.interval = setInterval(updateGameArea, 20);
+        window.addEventListener('keydown', function (e) {
+          myGameArea.keys = (myGameArea.keys || []);
+          myGameArea.keys[e.keyCode] = (e.type == "keydown");
+        });
+        window.addEventListener('keyup', function (e) {
+          myGameArea.keys[e.keyCode] = (e.type == "keydown");
+        })
+      },
+      stop : function() {
+        clearInterval(this.interval);
+      },
+      clear : function() {
+        this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+      }
+    };
+
+    function component(width, height, color, x, y, type) {
+      this.type = type;
+      this.image = new Image();
+      this.image.src = color;
+      this.width = width;
+      this.height = height;
+      this.speed = 0;
+      this.angle = 0.6;
+      this.moveAngle = 0;
+      this.x = x;
+      this.y = y;
+      this.update = function() {
+        ctx = myGameArea.context;
+        ctx.save();
+        ctx.translate(this.x, this.y);
+        ctx.rotate(this.angle);
+        ctx.drawImage(this.image,
+          0,
+          -60,
+          this.width, this.height);
+        ctx.restore();
+
+        if (this.x < 0 || this.x > window.innerWidth || this.y < 0 || this.y > window.innerHeight) {
+          this.x = 0;
+          this.y = window.innerHeight;
+          this.angle = 0.6;
+        }
+      };
+      this.newPos = function() {
+        this.angle += this.moveAngle * Math.PI / 180;
+        this.x += this.speed * Math.sin(this.angle);
+        this.y -= this.speed * Math.cos(this.angle);
+      };
+    }
+
+    function updateGameArea() {
+      myGameArea.clear();
+      myGamePiece.moveAngle = 0;
+      myGamePiece.speed = 4;
+      if (myGameArea.keys && myGameArea.keys[37]) {myGamePiece.moveAngle = -1; }
+      if (myGameArea.keys && myGameArea.keys[39]) {myGamePiece.moveAngle = 1; }
+      myGamePiece.newPos();
+      myGamePiece.update();
+    }
+    startGame();
   });
 </script>
 </body>
