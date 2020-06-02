@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/pages/authPage.css">
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+    />
     <title>Auth</title>
 </head>
 <body>
@@ -27,16 +31,18 @@
                 aenean.</p>
         </div>
         <div class="col d-flex align-items-center h-100">
-            <div class="form-container position-relative">
+            <div class="form-container position-relative animate__animated animate__fadeInRight">
                 <div>
                     <img class="fg-image planet-1" src="images/auth/planet3.png" alt="">
                     <img class="fg-image planet-2" src="images/auth/planet5.png" alt="">
                 </div>
                 <div class="btn-group w-100 d-flex mb-4" role="group">
                     <button type="button"
-                            class="btn w-100 active text-uppercase text-white font-weight-bold">Register
+                            class="btn w-100 active text-uppercase text-white font-weight-bold">
+                        Register
                     </button>
-                    <button type="button" class="btn w-100 text-uppercase text-white font-weight-bold ">
+                    <button type="button" id="login-btn"
+                            class="btn w-100 text-uppercase text-white font-weight-bold">
                         Login
                     </button>
                 </div>
@@ -61,8 +67,10 @@
                             class="btn btn-lg btn-block btn-green-shine active text-white font-weight-bold mt-4 mb-3">
                         Register Now!
                     </button>
-                    <p class="small text-grey">You'll receive a confirmation email in your inbox with a link
-                        to activate your account. If you have any problems, <a href="#">contact us</a>!</p>
+                    <p class="small text-grey">You'll receive a confirmation email in your inbox
+                        with a link
+                        to activate your account. If you have any problems, <a href="#">contact
+                            us</a>!</p>
                 </form>
                 <p class="text-center mb-0 text-grey">Or Register with</p>
                 <div class="d-flex">
@@ -90,97 +98,48 @@
         crossorigin="anonymous"></script>
 <!-- Optional JavaScript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+<script src="js/spaceShuttle.js"></script>
 <script>
   $('.material-input input').on('input', function() {
-    $(this).closest('.material-input').addClass('active')
+    $(this).closest('.material-input').addClass('active');
   });
   $('.material-input input').focusout(function() {
     if ($(this).val() === '') {
-      $(this).closest('.material-input').removeClass('active')
+      $(this).closest('.material-input').removeClass('active');
     }
   });
 
+  // Parallax.js
   var scene = $('#scene').get(0);
   var parallaxInstance = new Parallax(scene);
 
-  $( document ).ready(function() {
-    var myGamePiece;
+  //Change page animation
+  const animateCSS = (element, animation, prefix = 'animate__') =>
+    // We create a Promise and return it
+    new Promise((resolve, reject) => {
+      const animationName = `${prefix}${animation}`;
+      const node = document.querySelector(element);
 
-    function startGame() {
-      myGamePiece = new component(46, 93, "spaceShuttle3.png", 0, window.innerHeight, "image");
-      myGameArea.start();
-    }
+      node.style.setProperty('--animate-duration', '0.5s');
+      node.classList.add(`${prefix}animated`, animationName);
 
-    var myGameArea = {
-      canvas : document.createElement("canvas"),
-      start : function() {
-        this.canvas.width = window.innerWidth;
-        this.canvas.height = window.innerHeight;
-        this.context = this.canvas.getContext("2d");
-        document.body.insertBefore(this.canvas, document.body.childNodes[0]);
-        this.frameNo = 0;
-        this.interval = setInterval(updateGameArea, 20);
-        window.addEventListener('keydown', function (e) {
-          myGameArea.keys = (myGameArea.keys || []);
-          myGameArea.keys[e.keyCode] = (e.type == "keydown");
-        });
-        window.addEventListener('keyup', function (e) {
-          myGameArea.keys[e.keyCode] = (e.type == "keydown");
-        })
-      },
-      stop : function() {
-        clearInterval(this.interval);
-      },
-      clear : function() {
-        this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+      // When the animation ends, we clean the classes and resolve the Promise
+      function handleAnimationEnd() {
+        node.classList.remove(`${prefix}animated`, animationName);
+        node.removeEventListener('animationend', handleAnimationEnd);
+
+        resolve('Animation ended');
       }
-    };
 
-    function component(width, height, color, x, y, type) {
-      this.type = type;
-      this.image = new Image();
-      this.image.src = color;
-      this.width = width;
-      this.height = height;
-      this.speed = 0;
-      this.angle = 0.6;
-      this.moveAngle = 0;
-      this.x = x;
-      this.y = y;
-      this.update = function() {
-        ctx = myGameArea.context;
-        ctx.save();
-        ctx.translate(this.x, this.y);
-        ctx.rotate(this.angle);
-        ctx.drawImage(this.image,
-          0,
-          -60,
-          this.width, this.height);
-        ctx.restore();
+      node.addEventListener('animationend', handleAnimationEnd);
+    });
 
-        if (this.x < 0 || this.x > window.innerWidth || this.y < 0 || this.y > window.innerHeight) {
-          this.x = 0;
-          this.y = window.innerHeight;
-          this.angle = 0.6;
-        }
-      };
-      this.newPos = function() {
-        this.angle += this.moveAngle * Math.PI / 180;
-        this.x += this.speed * Math.sin(this.angle);
-        this.y -= this.speed * Math.cos(this.angle);
-      };
-    }
-
-    function updateGameArea() {
-      myGameArea.clear();
-      myGamePiece.moveAngle = 0;
-      myGamePiece.speed = 4;
-      if (myGameArea.keys && myGameArea.keys[37]) {myGamePiece.moveAngle = -1; }
-      if (myGameArea.keys && myGameArea.keys[39]) {myGamePiece.moveAngle = 1; }
-      myGamePiece.newPos();
-      myGamePiece.update();
-    }
-    startGame();
+  $('#login-btn').click(function() {
+    console.log('animate');
+    animateCSS('.form-container', 'fadeOutRight').then((message) => {
+      $('.form-container').hide();
+      window.location = './login.html';
+    });
   });
 </script>
 </body>
