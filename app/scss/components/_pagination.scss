@@ -1,0 +1,24 @@
+@import "variables";
+@import "mixins";
+
+.pagination-row {
+  a,span {
+    color: rgba(#fff, 0.5);
+    width: 50px;
+    height: 48px;
+    padding: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    &.active {
+      pointer-events: none;
+      text-decoration: none;
+      font-weight: 600;
+      color: $violet;
+      border-radius: $border-radius-md;
+      border: 2px solid $violet;
+      @include block-shadow($violet);
+    }
+  }
+}

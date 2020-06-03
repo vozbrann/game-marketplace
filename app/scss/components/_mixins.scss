@@ -11,31 +11,3 @@
 @mixin block-shadow-lg($color, $glow:0.65) {
   box-shadow: 0 5px 20px rgba($color, $glow);
 }
-
-
-@mixin button($color, $text-color:unset) {
-  @include block-shadow($color);
-  background-color: $color;
-  color: $text-color;
-}
-
-@mixin button-outline($color, $text-color:white) {
-  @include block-shadow($color);
-  color: $color!important;
-  text-transform: capitalize;
-  border: 2px solid $color;
-  box-sizing: border-box;
-  &:hover {
-    background-color: $color;
-    color: $text-color!important;
-  }
-  &:active {
-    box-shadow: none;
-  }
-}
-
-@mixin button-shine($color, $text-color:unset) {
-  @include block-shadow-lg($color);
-  background-color: $color;
-  color: $text-color;
-}

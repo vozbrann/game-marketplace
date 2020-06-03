@@ -1,14 +1,20 @@
 @import "variables";
+@import "text";
+@import "mixins";
 
 @mixin item-mixin($color) {
+  text-decoration: none!important;
+  transition: all 0.3s ease;
   background-color: $dark;
   border-radius: $border-radius-lg;
+  border: 3px solid transparent;
   position: relative;
   display: flex;
   align-items: center;
   &:before {
     content: "";
     height: 85%;
+    margin-left: -3px;
     position: absolute;
     border-radius: 9px;
     border-left: 3px solid $color;
@@ -17,21 +23,14 @@
   .content {
     font-size: $custom-font-size;
     font-weight: 500;
-    color: rgba(255, 255, 255, 0.4);
     .price {
       font-size: $custom-font-size-lg;
-      font-weight: 500;
-    }
-    .rating {
-      font-weight: normal;
-      color: rgba(255, 255, 255, 0.7);
     }
   }
-  &.outlined {
+  &:hover {
     border: 3px solid $color;
-    &:before {
-      height: 0;
-    }
+    @include block-shadow($color, 0.8);
+    @extend .text-light-gray;
   }
 }
 

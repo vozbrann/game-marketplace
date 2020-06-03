@@ -1,15 +1,21 @@
 @import "../components/mixins";
 @import "../components/variables";
 
-@mixin text-stroke-shadow($color, $width, $glow:0.8) {
+@mixin text-stroke-shadow($color, $width, $glow:0.8, $shadow-size:36px) {
   color: transparent;
   -webkit-text-stroke: $width $color;
-  text-shadow: 0 0 36px rgba($color,$glow);
+  text-shadow: 0 0 $shadow-size rgba($color,$glow);
 }
 
 @mixin text-glow-mixin($color) {
-  color: $color;
-  text-shadow: 0 0 10px rgba($color, 0.8);
+  color: $color!important;
+  text-shadow: 0 0 10px rgba($color, 0.8) !important;
+}
+.text-gray {
+  color: rgba(#fff, 0.5);
+}
+.text-light-gray {
+  color: rgba(#fff, 0.7);
 }
 
 .text-green {

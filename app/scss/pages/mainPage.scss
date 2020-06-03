@@ -1,9 +1,9 @@
 @import "../components/mixins";
 @import "../components/variables";
 @import "../components/layout";
+@import "../components/text";
 
 body {
   background-color: $semi-dark;
-  color: rgba(255, 255, 255, 0.5);
-  font-weight: 600;
+  @extend .text-gray;
 }
