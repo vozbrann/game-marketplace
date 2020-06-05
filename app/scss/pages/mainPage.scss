@@ -7,3 +7,66 @@ body {
   background-color: $semi-dark;
   @extend .text-gray;
 }
+
+.carousel {
+  .carousel-control-prev, .carousel-control-next {
+    width: 10%;
+    z-index: 5;
+  }
+  .btn {
+    border-radius: 5px;
+  }
+  .carousel-inner {
+    .carousel-item {
+      border-radius: $border-radius-md;
+      background: $violet;
+      position: relative;
+      height: 330px;
+      z-index: 2;
+      .bg-image-container {
+        z-index: -2;
+        position: absolute;
+        display: inline-block;
+        width: 46%;
+        .bg-image {
+          border-radius: $border-radius-md;
+          height: 330px;
+          width: 100%;
+          object-fit: cover;
+        }
+        &::before {
+
+          position: absolute;
+          top:0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          content: '';
+          display: block;
+          background-image: linear-gradient(to left, $violet 5%, transparent 30%);
+        }
+      }
+      .content {
+        padding: 58px 130px;
+        .title {
+          font-size: 36px;
+          color: #FFFFFF;
+          opacity: 0.8;
+        }
+        .text {
+          width: 50%;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+.imageList {
+  img {
+    height: 160px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: $border-radius-lg;
+  }
+}

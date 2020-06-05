@@ -1,0 +1,78 @@
+@import "../components/mixins";
+@import "../components/variables";
+@import "../components/layout";
+@import "../components/text";
+
+body {
+  background-color: $semi-dark;
+  @extend .text-gray;
+}
+
+.banner {
+  background: url("../../images/support/bannerBg.png") no-repeat center;
+  background-size: cover;
+  height: 300px;
+  padding: 0 8%;
+  border-radius: $border-radius-md;
+  .content {
+    display: flex;
+    align-items: center;
+    p {
+      line-height: 150%;
+      padding-right: 5%;
+    }
+  }
+}
+
+.page-nav {
+  .live-chat-title {
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    @include text-stroke-shadow($light-red, 1.5px, 0.4, 20px);
+  }
+}
+
+.live-chat {
+  border-radius: $border-radius-md;
+  background-color: $dark;
+  padding: 30px;
+  .message-list {
+    max-height: 400px;
+    overflow-y: scroll;
+  }
+  .message {
+    width: 50%;
+    font-size: 16px;
+    line-height: 20px;
+    .text {
+      @include block-shadow($violet, 0.3);
+      border: 2px solid $violet;
+      border-radius: 30px 30px 30px 0;
+      padding: 20px 30px;
+    }
+    &.my-message {
+      margin-left: auto;
+      .text {
+        @include block-shadow($green, 0.3);
+        border: 2px solid $green;
+        border-radius: 30px 30px 0 30px;
+      }
+    }
+  }
+  input[type="text"] {
+    padding: 28px;
+    font-size: 16px;
+    font-weight: 600;
+    border: 2px solid #3A3258;
+    background-color: transparent;
+    border-radius: $border-radius-md;
+    color: $light-gray;
+    &::placeholder {
+      color: $gray;
+    }
+  }
+  .attach-file-icon {
+    transform: rotate(45deg);
+    cursor: pointer;
+  }
+}

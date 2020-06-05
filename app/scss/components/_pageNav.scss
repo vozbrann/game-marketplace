@@ -1,12 +1,12 @@
 @import "../components/variables";
 @import "../components/text";
+@import "../../../node_modules/bootstrap/scss/variables";
 
 .page-nav {
   border-radius: $border-radius-md;
   background-color: $dark;
   h1 {
     font-weight: 900;
-    font-size: 36px;
-    @include text-stroke-shadow($green, 2px, 0.5, 20px);
+    @include text-stroke-shadow($green, 1.5px, 0.4, 20px);
   }
 }

@@ -3,9 +3,9 @@
 
 @mixin alert-mixin($color, $textColor) {
   background: rgba($color, 0.15)!important;
-  border: 2px solid $color;
+  border: 3px solid $color;
   box-sizing: border-box;
-  box-shadow: 0 0 10px rgba($color, 0.7);
+  @include block-shadow($color);
   border-radius: 10px;
   .title {
     color: $color;

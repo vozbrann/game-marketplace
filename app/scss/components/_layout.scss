@@ -3,20 +3,13 @@
 
 main {
   min-height: 100vh;
-  transition: all 0.3s ease; margin-left: 280px;
+  transition: all 0.3s ease;
+  margin-left: 280px;
+  padding: 20px 36px;
 }
 
 .collapsed {
   main {
-    margin: 0 0 0 80px;
-  }
-}
-
-.imageList {
-  img {
-    height: 160px;
-    width: 100%;
-    object-fit: cover;
-    border-radius: $border-radius-lg;
+    margin: 0 0 0 90px;
   }
 }

@@ -13,34 +13,32 @@
 </head>
 <body>
 <nav class="main-menu p-3">
-    <div class="menu-header d-flex mb-2">
-        <a href="index.html" class="h4 text-primary d-flex align-items-center">
-            <span class="material-icons md-36">sports_esports</span>
-            <span class="text-nowrap ml-2 hidden-on-collapsed">Test logotype</span>
+    <div class="menu-header d-flex align-items-center mb-2">
+        <a class="d-flex align-items-center" href="index.html">
+            <span class="material-icons md-36 text-primary">sports_esports</span>
+            <p class="h5 mb-0 text-nowrap hidden-on-collapsed ml-2 text-primary">Games System</p>
         </a>
-        <div class="mt-2 hidden-on-collapsed">
+        <div class="hidden-on-collapsed">
             <span id="menu-fixed-toggle" class="material-icons text-primary"></span>
         </div>
     </div>
-    <div class="nav accordion flex-column nav-pills" id="v-pills-tab" role="tablist"
+    <div class="nav accordion flex-column nav-pills" id="menu-nav" role="tablist"
          aria-orientation="vertical">
-        <a class="nav-link d-flex active" href="#">
+        <a class="nav-link d-flex" href="#">
             <span class="material-icons">home</span>
             <span class="hidden-on-collapsed ml-2">Home</span>
         </a>
         <p class="category-title ml-3 mt-4 mb-2 hidden-on-collapsed">Market</p>
         <div>
-            <div class="nav-link d-flex justify-content-between" type="button"
-                 data-toggle="collapse"
-                 data-target="#collapse-1" aria-expanded="true" aria-controls="collapse-1">
+            <div class="nav-link d-flex justify-content-between menu-accordion-collapse-toggle" type="button">
                 <div class="d-flex">
                     <span class="material-icons">sports_esports</span>
                     <span class="hidden-on-collapsed ml-2">Games</span>
                 </div>
                 <span class="material-icons hidden-on-collapsed expand-icon">expand_more</span>
             </div>
-            <div id="collapse-1" class="collapse hidden-on-collapsed pl-2"
-                 data-parent="#v-pills-tab">
+            <div class="collapse hidden-on-collapsed pl-2"
+                 data-parent="#menu-nav">
                 <a class="nav-link d-flex align-items-center" href="#">
                     <span class="material-icons md-10">trip_origin</span>
                     <span class="ml-3">Keys/License</span>
@@ -52,18 +50,16 @@
             </div>
         </div>
         <div>
-            <div class="nav-link d-flex justify-content-between" type="button"
-                 data-toggle="collapse"
-                 data-target="#collapse-2" aria-expanded="true" aria-controls="collapse-2">
+            <div class="nav-link d-flex justify-content-between menu-accordion-collapse-toggle" type="button">
                 <div class="d-flex">
                     <span class="material-icons">view_module</span>
                     <span class="hidden-on-collapsed ml-2">Services</span>
                 </div>
                 <span class="material-icons hidden-on-collapsed expand-icon">expand_more</span>
             </div>
-            <div id="collapse-2" class="collapse hidden-on-collapsed pl-2"
-                 data-parent="#v-pills-tab">
-                <a class="nav-link d-flex align-items-center" href="#">
+            <div class="collapse hidden-on-collapsed pl-2"
+                 data-parent="#menu-nav">
+                <a class="nav-link d-flex align-items-center active" href="#">
                     <span class="material-icons md-10">trip_origin</span>
                     <span class="ml-3">Farm</span>
                 </a>
@@ -81,7 +77,7 @@
                 </a>
             </div>
         </div>
-        <p class="category-title ml-3 mt-4 mb-0 hidden-on-collapsed">Market</p>
+        <p class="category-title ml-3 mt-3 mb-2 hidden-on-collapsed">Market</p>
         <a class="nav-link d-flex" href="#">
             <span class="material-icons">format_list_bulleted</span>
             <span class="hidden-on-collapsed ml-2">Items</span>
@@ -94,7 +90,7 @@
             <span class="material-icons">casino</span>
             <span class="hidden-on-collapsed ml-2">Luck</span>
         </a>
-        <p class="category-title ml-3 mt-4 mb-0 hidden-on-collapsed">Market</p>
+        <p class="category-title ml-3 mt-3 mb-2 hidden-on-collapsed">Market</p>
         <a class="nav-link d-flex" href="#">
             <span class="material-icons">format_list_bulleted</span>
             <span class="hidden-on-collapsed ml-2">Items</span>
@@ -108,17 +104,15 @@
             <span class="hidden-on-collapsed ml-2">Luck</span>
         </a>
         <div>
-            <div class="nav-link d-flex justify-content-between" type="button"
-                 data-toggle="collapse"
-                 data-target="#collapse-3" aria-controls="collapse-3">
+            <div class="nav-link d-flex justify-content-between menu-accordion-collapse-toggle" type="button">
                 <div class="d-flex">
                     <span class="material-icons">sports_esports</span>
                     <span class="hidden-on-collapsed ml-2">Games</span>
                 </div>
                 <span class="material-icons hidden-on-collapsed expand-icon">expand_more</span>
             </div>
-            <div id="collapse-3" class="collapse hidden-on-collapsed pl-2"
-                 data-parent="#v-pills-tab">
+            <div class="collapse hidden-on-collapsed pl-2"
+                 data-parent="#menu-nav">
                 <a class="nav-link d-flex align-items-center" href="#">
                     <span class="material-icons md-10">trip_origin</span>
                     <span class="ml-3">Keys/License</span>
@@ -129,18 +123,23 @@
                 </a>
             </div>
         </div>
-        <a class="nav-link d-flex" href="info.html">
+        <p class="category-title ml-3 mt-3 mb-2 hidden-on-collapsed text-uppercase">info</p>
+        <a class="nav-link d-flex" href="support.html">
+            <span class="material-icons">sentiment_satisfied_alt</span>
+            <span class="hidden-on-collapsed ml-2">Support</span>
+        </a>
+        <a class="nav-link d-flex active" href="info.html">
             <span class="material-icons">help_outline</span>
             <span class="hidden-on-collapsed ml-2">FAQ</span>
         </a>
     </div>
 </nav>
 <main class="px-4 py-3">
-    <header class="main-header px-4 py-1 d-flex mb-3 justify-content-between">
+    <header class="main-header px-4 d-flex mb-4 justify-content-between">
         <div class="d-flex align-items-center my-3">
-            <span class="material-icons-outlined mr-3">shopping_cart</span>
-            <span class="material-icons mr-3">chat_bubble_outline</span>
-            <span class="material-icons text-glow-green mr-3">search</span>
+            <span class="material-icons-outlined mr-4 md-30">shopping_cart</span>
+            <span class="material-icons mr-4 md-30">chat_bubble_outline</span>
+            <span class="material-icons text-glow-green mr-4 md-30">search</span>
         </div>
         <div class="d-flex align-items-center">
             <div class="d-flex align-items-center">
@@ -161,8 +160,8 @@
                 </div>
             </div>
             <div class="my-3 ml-4">
-                <span class="material-icons md-24">notifications_none</span>
-                <span class="material-icons-outlined md-24 ml-3">account_circle</span>
+                <span class="material-icons md-30">notifications_none</span>
+                <span class="material-icons-outlined md-30 ml-3">account_circle</span>
             </div>
         </div>
     </header>
@@ -171,56 +170,69 @@
         <h1 class="mb-0">FAQ</h1>
     </nav>
 
+    <div class="banner d-flex align-items-center mb-4">
+        <div class="text-light-gray w-100">
+            <p class="h3 font-weight-bold">Have Any Questions?</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+            <form>
+                <div class="form-group has-search d-flex align-items-center">
+                    <span class="material-icons icon position-absolute ml-4">search</span>
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+            </form>
+        </div>
+    </div>
+
     <div class="row mb-3 nav-info">
         <div class="col-auto">
             <div class="nav flex-column nav-pills" id="infoNav" role="tablist"
                  aria-orientation="vertical">
-                <a class="nav-link nav-link-yellow mb-3 py-3 px-4 d-flex active"
+                <a class="nav-link nav-link-yellow mb-3 p-4 d-flex active"
                    id="v-pills-home-tab" data-toggle="pill"
                    href="#v-pills-all" role="tab" aria-controls="v-pills-home" aria-selected="true">
                     <span class="material-icons md-36 mr-3">view_module</span>
                     <div>
-                        <p class="h4 font-weight-bolder">All</p>
+                        <p class="h5 font-weight-bolder">All</p>
                         <p class="small mb-2">Pellentesque nec nam aliquam sem et ali</p>
                     </div>
                 </a>
-                <a class="nav-link nav-link-light-red mb-3 py-3 px-4 d-flex"
+                <a class="nav-link nav-link-light-red mb-3 p-4 d-flex"
                    id="v-pills-general-tab" data-toggle="pill"
                    href="#v-pills-general" role="tab" aria-controls="v-pills-general"
                    aria-selected="false">
                     <span class="material-icons md-36 mr-3">pages</span>
                     <div>
-                        <p class="h4 font-weight-bolder">General</p>
+                        <p class="h5 font-weight-bolder">General</p>
                         <p class="small mb-2">Pellentesque nec nam aliquam sem et ali</p>
                     </div>
                 </a>
-                <a class="nav-link nav-link-green mb-3 py-3 px-4 d-flex" id="v-pills-sellers-tab"
+                <a class="nav-link nav-link-green mb-3 p-4 d-flex" id="v-pills-sellers-tab"
                    data-toggle="pill"
                    href="#v-pills-sellers" role="tab" aria-controls="v-pills-sellers"
                    aria-selected="false">
                     <span class="material-icons md-36 mr-3">store</span>
                     <div>
-                        <p class="h4 font-weight-bolder">For Sellers</p>
+                        <p class="h5 font-weight-bolder">For Sellers</p>
                         <p class="small mb-2">Pellentesque nec nam aliquam sem et ali</p>
                     </div>
                 </a>
-                <a class="nav-link nav-link-blue mb-3 py-3 px-4 d-flex" id="v-pills-buyers-tab"
+                <a class="nav-link nav-link-blue mb-3 p-4 d-flex" id="v-pills-buyers-tab"
                    data-toggle="pill"
                    href="#v-pills-buyers" role="tab" aria-controls="v-pills-buyers"
                    aria-selected="false">
                     <span class="material-icons-outlined md-36 mr-3">shopping_bag</span>
                     <div>
-                        <p class="h4 font-weight-bolder">For Buyers</p>
+                        <p class="h5 font-weight-bolder">For Buyers</p>
                         <p class="small mb-2">Pellentesque nec nam aliquam sem et ali</p>
                     </div>
                 </a>
-                <a class="nav-link nav-link-violet mb-3 py-3 px-4 d-flex" id="v-pills-legal-tab"
+                <a class="nav-link nav-link-violet mb-3 p-4 d-flex" id="v-pills-legal-tab"
                    data-toggle="pill"
                    href="#v-pills-legal" role="tab" aria-controls="v-pills-legal"
                    aria-selected="false">
                     <span class="material-icons-outlined md-36 mr-3">article</span>
                     <div>
-                        <p class="h4 font-weight-bolder">Legal</p>
+                        <p class="h5 font-weight-bolder">Legal</p>
                         <p class="small mb-2">Pellentesque nec nam aliquam sem et ali</p>
                     </div>
                 </a>
@@ -231,7 +243,8 @@
                 <div class="tab-pane fade show active" id="v-pills-all" role="tabpanel"
                      aria-labelledby="v-pills-all-tab">
                     <div class="accordion" id="accordionAll">
-                        <div class="accordion-item px-4 py-2 mb-3 accordion-collapse-toggle" type="button">
+                        <div class="accordion-item px-4 py-2 mb-3 accordion-collapse-toggle"
+                             type="button">
                             <div class="d-flex justify-content-between align-items-center">
                                 <p class="h5 mb-0 title">Lorem ipsum dolor sit amet, consectetur
                                     adipiscing elit, sed do eiusmod tempor incididunt</p>
@@ -251,7 +264,8 @@
                                     haven't heard of them accusamus labore sustainable VHS.</p>
                             </div>
                         </div>
-                        <div class="accordion-item px-4 py-2 mb-3 accordion-collapse-toggle" type="button">
+                        <div class="accordion-item px-4 py-2 mb-3 accordion-collapse-toggle"
+                             type="button">
                             <div class="d-flex justify-content-between align-items-center">
                                 <p class="h5 mb-0 title">Lorem ipsum dolor sit amet, consectetur
                                     adipiscing elit, sed do eiusmod tempor incididunt</p>
@@ -271,7 +285,8 @@
                                     haven't heard of them accusamus labore sustainable VHS.</p>
                             </div>
                         </div>
-                        <div class="accordion-item px-4 py-2 mb-3 accordion-collapse-toggle" type="button">
+                        <div class="accordion-item px-4 py-2 mb-3 accordion-collapse-toggle"
+                             type="button">
                             <div class="d-flex justify-content-between align-items-center">
                                 <p class="h5 mb-0 title">Lorem ipsum dolor sit amet, consectetur
                                     adipiscing elit, sed do eiusmod tempor incididunt</p>
@@ -291,7 +306,8 @@
                                     haven't heard of them accusamus labore sustainable VHS.</p>
                             </div>
                         </div>
-                        <div class="accordion-item px-4 py-2 mb-3 accordion-collapse-toggle" type="button">
+                        <div class="accordion-item px-4 py-2 mb-3 accordion-collapse-toggle"
+                             type="button">
                             <div class="d-flex justify-content-between align-items-center">
                                 <p class="h5 mb-0 title">Lorem ipsum dolor sit amet, consectetur
                                     adipiscing elit, sed do eiusmod tempor incididunt</p>
@@ -311,7 +327,8 @@
                                     haven't heard of them accusamus labore sustainable VHS.</p>
                             </div>
                         </div>
-                        <div class="accordion-item px-4 py-2 mb-3 accordion-collapse-toggle" type="button">
+                        <div class="accordion-item px-4 py-2 mb-3 accordion-collapse-toggle"
+                             type="button">
                             <div class="d-flex justify-content-between align-items-center">
                                 <p class="h5 mb-0 title">Lorem ipsum dolor sit amet, consectetur
                                     adipiscing elit, sed do eiusmod tempor incididunt</p>
@@ -331,7 +348,8 @@
                                     haven't heard of them accusamus labore sustainable VHS.</p>
                             </div>
                         </div>
-                        <div class="accordion-item px-4 py-2 mb-3 accordion-collapse-toggle" type="button">
+                        <div class="accordion-item px-4 py-2 mb-3 accordion-collapse-toggle"
+                             type="button">
                             <div class="d-flex justify-content-between align-items-center">
                                 <p class="h5 mb-0 title">Lorem ipsum dolor sit amet, consectetur
                                     adipiscing elit, sed do eiusmod tempor incididunt</p>
@@ -351,7 +369,8 @@
                                     haven't heard of them accusamus labore sustainable VHS.</p>
                             </div>
                         </div>
-                        <div class="accordion-item px-4 py-2 mb-3 accordion-collapse-toggle" type="button">
+                        <div class="accordion-item px-4 py-2 mb-3 accordion-collapse-toggle"
+                             type="button">
                             <div class="d-flex justify-content-between align-items-center">
                                 <p class="h5 mb-0 title">Lorem ipsum dolor sit amet, consectetur
                                     adipiscing elit, sed do eiusmod tempor incididunt</p>
@@ -376,7 +395,8 @@
                 <div class="tab-pane fade" id="v-pills-general" role="tabpanel"
                      aria-labelledby="v-pills-profile-tab">
                     <div class="accordion" id="accordionGeneral">
-                        <div class="accordion-item px-4 py-2 mb-3 accordion-collapse-toggle" type="button">
+                        <div class="accordion-item px-4 py-2 mb-3 accordion-collapse-toggle"
+                             type="button">
                             <div class="d-flex justify-content-between align-items-center">
                                 <p class="h5 mb-0 title">Lorem ipsum dolor sit amet, consectetur
                                     adipiscing elit, sed do eiusmod tempor incididunt</p>
@@ -396,7 +416,8 @@
                                     haven't heard of them accusamus labore sustainable VHS.</p>
                             </div>
                         </div>
-                        <div class="accordion-item px-4 py-2 mb-3 accordion-collapse-toggle" type="button">
+                        <div class="accordion-item px-4 py-2 mb-3 accordion-collapse-toggle"
+                             type="button">
                             <div class="d-flex justify-content-between align-items-center">
                                 <p class="h5 mb-0 title">Lorem ipsum dolor sit amet, consectetur
                                     adipiscing elit, sed do eiusmod tempor incididunt</p>
@@ -416,7 +437,8 @@
                                     haven't heard of them accusamus labore sustainable VHS.</p>
                             </div>
                         </div>
-                        <div class="accordion-item px-4 py-2 mb-3 accordion-collapse-toggle" type="button">
+                        <div class="accordion-item px-4 py-2 mb-3 accordion-collapse-toggle"
+                             type="button">
                             <div class="d-flex justify-content-between align-items-center">
                                 <p class="h5 mb-0 title">Lorem ipsum dolor sit amet, consectetur
                                     adipiscing elit, sed do eiusmod tempor incididunt</p>
@@ -436,7 +458,8 @@
                                     haven't heard of them accusamus labore sustainable VHS.</p>
                             </div>
                         </div>
-                        <div class="accordion-item px-4 py-2 mb-3 accordion-collapse-toggle" type="button">
+                        <div class="accordion-item px-4 py-2 mb-3 accordion-collapse-toggle"
+                             type="button">
                             <div class="d-flex justify-content-between align-items-center">
                                 <p class="h5 mb-0 title">Lorem ipsum dolor sit amet, consectetur
                                     adipiscing elit, sed do eiusmod tempor incididunt</p>
@@ -456,7 +479,8 @@
                                     haven't heard of them accusamus labore sustainable VHS.</p>
                             </div>
                         </div>
-                        <div class="accordion-item px-4 py-2 mb-3 accordion-collapse-toggle" type="button">
+                        <div class="accordion-item px-4 py-2 mb-3 accordion-collapse-toggle"
+                             type="button">
                             <div class="d-flex justify-content-between align-items-center">
                                 <p class="h5 mb-0 title">Lorem ipsum dolor sit amet, consectetur
                                     adipiscing elit, sed do eiusmod tempor incididunt</p>
@@ -481,7 +505,8 @@
                 <div class="tab-pane fade" id="v-pills-sellers" role="tabpanel"
                      aria-labelledby="v-pills-messages-tab">
                     <div class="accordion" id="accordionSellers">
-                        <div class="accordion-item px-4 py-2 mb-3 accordion-collapse-toggle" type="button">
+                        <div class="accordion-item px-4 py-2 mb-3 accordion-collapse-toggle"
+                             type="button">
                             <div class="d-flex justify-content-between align-items-center">
                                 <p class="h5 mb-0 title">Lorem ipsum dolor sit amet, consectetur
                                     adipiscing elit, sed do eiusmod tempor incididunt</p>
@@ -506,7 +531,8 @@
                 <div class="tab-pane fade" id="v-pills-buyers" role="tabpanel"
                      aria-labelledby="v-pills-settings-tab">
                     <div class="accordion" id="accordionBuyers">
-                        <div class="accordion-item px-4 py-2 mb-3 accordion-collapse-toggle" type="button">
+                        <div class="accordion-item px-4 py-2 mb-3 accordion-collapse-toggle"
+                             type="button">
                             <div class="d-flex justify-content-between align-items-center">
                                 <p class="h5 mb-0 title">Lorem ipsum dolor sit amet, consectetur
                                     adipiscing elit, sed do eiusmod tempor incididunt</p>
@@ -531,7 +557,8 @@
                 <div class="tab-pane fade" id="v-pills-legal" role="tabpanel"
                      aria-labelledby="v-pills-settings-tab">
                     <div class="accordion" id="accordionLegal">
-                        <div class="accordion-item px-4 py-2 mb-3 accordion-collapse-toggle" type="button">
+                        <div class="accordion-item px-4 py-2 mb-3 accordion-collapse-toggle"
+                             type="button">
                             <div class="d-flex justify-content-between align-items-center">
                                 <p class="h5 mb-0 title">Lorem ipsum dolor sit amet, consectetur
                                     adipiscing elit, sed do eiusmod tempor incididunt</p>
@@ -568,31 +595,23 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
 <!-- Optional JavaScript -->
 <script>
   $('#menu-fixed-toggle').click(function() {
     $('body').toggleClass('collapsed');
   });
-  $('.collapse').on('show.bs.collapse', function(e) {
-    $(this).siblings('[data-toggle="collapse"]').find('.expand-icon').toggleClass('expanded');
-  });
-  $('.collapse').on('hide.bs.collapse', function(e) {
-    $(this).siblings('[data-toggle="collapse"]').find('.expand-icon').toggleClass('expanded');
-  });
-
-  $('.collapse').on('show.bs.collapse', function(e) {
-    $(this).siblings('[data-toggle="collapse"]').find('.expand-icon').toggleClass('expanded');
-  });
-  $('.collapse').on('hide.bs.collapse', function(e) {
-    $(this).siblings('[data-toggle="collapse"]').find('.expand-icon').toggleClass('expanded');
-  });
 
   //info accordion
-  $('.nav-info .collapse').on('show.bs.collapse', function(e) {
+  $('.collapse').on('show.bs.collapse', function(e) {
     $(this).parent().toggleClass('expanded');
   });
-  $('.nav-info  .collapse').on('hide.bs.collapse', function(e) {
+  $('.collapse').on('hide.bs.collapse', function(e) {
     $(this).parent().toggleClass('expanded');
+  });
+
+  $('.menu-accordion-collapse-toggle').click(function() {
+    $(this).siblings('.collapse').collapse('toggle');
   });
 
   $('.accordion-collapse-toggle').click(function() {

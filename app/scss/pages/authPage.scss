@@ -1,6 +1,11 @@
 @import "../components/mixins";
 @import "../components/variables";
 @import "../components/buttons";
+@import "../components/text";
+
+$input-bg: transparent;
+$component-active-color: $light-dark;
+$component-active-bg: $green;
 
 body {
   font-size: 16px;
@@ -112,6 +117,14 @@ canvas {
   label {
     margin: 18px 0 0 12px;
   }
+}
+.custom-control-label {
+  &:before{
+   background-color: transparent;
+  }
+}
+.custom-control-input:checked~.custom-control-label::before {
+  background-color: $green;
 }
 
 .text-grey {

@@ -7,17 +7,17 @@
   transition: all 0.3s ease;
   background-color: $dark;
   border-radius: $border-radius-lg;
-  border: 3px solid transparent;
+  border: 2px solid transparent;
   position: relative;
   display: flex;
   align-items: center;
   &:before {
     content: "";
     height: 85%;
-    margin-left: -3px;
+    margin-left: -2px;
     position: absolute;
     border-radius: 9px;
-    border-left: 3px solid $color;
+    border-left: 2px solid $color;
     box-shadow: 0 0 10px rgba($color, 0.8);
   }
   .content {
@@ -28,15 +28,17 @@
     }
   }
   &:hover {
-    border: 3px solid $color;
+    border: 2px solid $color;
     @include block-shadow($color, 0.8);
-    @extend .text-light-gray;
+    .text {
+      @extend .text-light-gray;
+    }
   }
 }
 
 .item {
   @include item-mixin($violet);
 }
-.item-ad {
+.item-orange {
   @include item-mixin($orange);
 }

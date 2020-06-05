@@ -8,8 +8,8 @@
 }
 
 @mixin text-glow-mixin($color) {
-  color: $color!important;
-  text-shadow: 0 0 10px rgba($color, 0.8) !important;
+  color: $color;
+  text-shadow: 0 0 10px rgba($color, 0.8);
 }
 .text-gray {
   color: rgba(#fff, 0.5);
@@ -23,6 +23,9 @@
 }
 .text-glow-green {
   @include text-glow-mixin($green);
+}
+.text-glow-yellow {
+  @include text-glow-mixin($yellow);
 }
 .text-light-red {
   color: $light-red;
