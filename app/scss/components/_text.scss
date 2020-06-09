@@ -1,7 +1,7 @@
 @import "../components/mixins";
 @import "../components/variables";
 
-@mixin text-stroke-shadow($color, $width, $glow:0.8, $shadow-size:36px) {
+@mixin text-stroke-shadow($color, $width:2px, $glow:0.8, $shadow-size:36px) {
   color: transparent;
   -webkit-text-stroke: $width $color;
   text-shadow: 0 0 $shadow-size rgba($color,$glow);
@@ -23,6 +23,15 @@
 }
 .text-glow-green {
   @include text-glow-mixin($green);
+}
+.text-violet {
+  color: $violet;
+}
+.text-glow-violet {
+  @include text-glow-mixin($violet);
+}
+.text-stroke-glow-violet {
+  @include text-stroke-shadow($violet, $glow:0.6);
 }
 .text-glow-yellow {
   @include text-glow-mixin($yellow);

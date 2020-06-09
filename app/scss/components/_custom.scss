@@ -4,13 +4,12 @@
 
 $primary:       #7750F8;
 $danger:        $light-red;
-//$secondary:     $gray-600 !default;
-//$success:       $green !default;
-//$info:          $cyan !default;
-//$warning:       $yellow !default;
-//$danger:        $red !default;
-//$light:         $gray-100 !default;
-//$dark:          $gray-800 !default;
+
+$font-weight-lighter:         lighter;
+$font-weight-light:           300;
+$font-weight-normal:          400;
+$font-weight-bold:            700;
+$font-weight-bolder:          900;
 
 $btn-border-radius:           .5rem;
 $btn-border-radius-lg:        .6rem;

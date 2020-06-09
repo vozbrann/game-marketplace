@@ -1,0 +1,103 @@
+@import "../components/mixins";
+@import "../components/variables";
+@import "../components/layout";
+@import "../components/text";
+
+body {
+  background-color: $semi-dark;
+  @extend .text-gray;
+}
+
+@mixin outlined-nav($color) {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: $dark;
+  border-radius: $border-radius-md;
+  height: 145px;
+  border: 2px solid transparent;
+  .number {
+    @include text-stroke-shadow($color);
+  }
+  &:hover {
+    border: 2px solid $color;
+  }
+}
+
+.game-info-panes {
+  .pane {
+    &.pane-violet {
+      @include outlined-nav($violet);
+    }
+    &.pane-blue {
+      @include outlined-nav($blue);
+    }
+    &.pane-green {
+      @include outlined-nav($green);
+    }
+    &.pane-light-green {
+      @include outlined-nav($light-green);
+    }
+    &.pane-light-yellow {
+      @include outlined-nav($yellow);
+    }
+    &.pane-light-light-red {
+      @include outlined-nav($light-red);
+    }
+  }
+}
+.price-pane {
+  background: $light-dark;
+  border-radius: $border-radius-md;
+}
+
+@mixin outlined-nav($bgColor, $color) {
+  background: $bgColor;
+  border-radius: $border-radius-md;
+  .nav {
+    margin-bottom: -2px;
+    flex-wrap: nowrap;
+    display: flex;
+    .badge {
+      border-radius: $border-radius-lg;
+    }
+  }
+  .nav-item {
+    width: 100%;
+    border: 2px solid transparent;
+    &.active {
+      background: $bgColor;
+      border-radius: $border-radius-md $border-radius-md 0 0;
+      border: 2px solid $color;
+      border-bottom: none $bgColor;
+      @include text-glow-mixin($color);
+      font-weight: bold;
+    }
+  }
+  .tab-content {
+    border: 2px solid $color;
+    border-radius: 0 0 $border-radius-md $border-radius-md;
+    .content {
+      margin: 30px;
+    }
+  }
+}
+
+.outlined-nav-violet {
+  @include outlined-nav($dark, $violet);
+}
+.outlined-nav-green {
+  @include outlined-nav($dark, $green);
+}
+
+.review {
+  border: 2px solid #393052;
+  border-radius: $border-radius-lg;
+  .control {
+    opacity: 0.6;
+  }
+}
+
+.author {
+  background-color: $dark;
+  border-radius: $border-radius-md;
+}
