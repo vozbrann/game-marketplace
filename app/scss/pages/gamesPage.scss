@@ -1,0 +1,25 @@
+@import "../components/mixins";
+@import "../components/variables";
+@import "../components/layout";
+@import "../components/text";
+
+body {
+  background-color: $semi-dark;
+  @extend .text-gray;
+}
+
+.page-nav {
+  form {
+    width: 70%;
+    .material-input {
+      height: 50px;
+    }
+    .price-container {
+      width: 140%;
+      input {
+        padding-top: 2px;
+        padding-left: 30px;
+      }
+    }
+  }
+}

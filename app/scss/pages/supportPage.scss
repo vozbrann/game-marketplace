@@ -44,6 +44,7 @@ body {
     width: 50%;
     font-size: 16px;
     line-height: 20px;
+    color: rgba(#fff, 0.4);
     .text {
       @include block-shadow($violet, 0.3);
       border: 2px solid $violet;
