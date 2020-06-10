@@ -5,6 +5,7 @@
 .page-nav {
   border-radius: $border-radius-md;
   background-color: $dark;
+  padding: 15px 30px;
   h1 {
     font-weight: 900;
     @include text-stroke-shadow($green, 1.5px, 0.4, 20px);

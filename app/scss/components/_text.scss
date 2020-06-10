@@ -1,7 +1,7 @@
 @import "../components/mixins";
 @import "../components/variables";
 
-@mixin text-stroke-shadow($color, $width:2px, $glow:0.8, $shadow-size:36px) {
+@mixin text-stroke-shadow($color, $width:2px, $glow:0.4, $shadow-size:20px) {
   color: transparent;
   -webkit-text-stroke: $width $color;
   text-shadow: 0 0 $shadow-size rgba($color,$glow);
