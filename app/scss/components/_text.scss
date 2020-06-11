@@ -24,6 +24,12 @@
 .text-glow-green {
   @include text-glow-mixin($green);
 }
+.text-light-green {
+  color: $light-green;
+}
+.text-glow-light-green {
+  @include text-glow-mixin($light-green);
+}
 .text-violet {
   color: $violet;
 }
@@ -31,14 +37,23 @@
   @include text-glow-mixin($violet);
 }
 .text-stroke-glow-violet {
-  @include text-stroke-shadow($violet, $glow:0.6);
+  @include text-stroke-shadow($violet);
 }
 .text-glow-yellow {
   @include text-glow-mixin($yellow);
+}
+.text-stroke-glow-yellow  {
+  @include text-stroke-shadow($yellow);
 }
 .text-light-red {
   color: $light-red;
 }
 .text-glow-light-red {
   @include text-glow-mixin($light-red);
+}
+.text-stroke-glow-light-red  {
+  @include text-stroke-shadow($light-red);
+}
+.text-stroke-glow-blue {
+  @include text-stroke-shadow($blue);
 }

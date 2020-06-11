@@ -1,0 +1,39 @@
+@import "../components/mixins";
+@import "../components/variables";
+@import "../components/layout";
+@import "../components/text";
+
+body {
+  background-color: $semi-dark;
+  @extend .text-gray;
+}
+
+.user-info {
+  background: url("../../images/profile/topBg.png") no-repeat center top, $dark;
+  background-size: contain;
+  border-radius: $border-radius-lg;
+  height: 428px;
+  padding: 20px 35px;
+}
+
+.check-item {
+  .check-icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    .check-icon {
+      color: $dark;
+    }
+    border: 2px solid $light-dark;
+  }
+  &.checked {
+    .check-icon-container {
+      background: $light-green;
+      border: 2px solid transparent;
+      @include block-shadow($light-green);
+    }
+  }
+}

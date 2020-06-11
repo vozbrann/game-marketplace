@@ -33,6 +33,7 @@
   font-size: 18px!important;
   padding-top: 11px!important;
   padding-bottom: 11px!important;
+  border-radius: $border-radius-lg;
 
   &.btn-lg {
     padding-top: 16px!important;
@@ -60,6 +61,10 @@
   }
   &.btn-green-shine {
     @include button-shine($green);
+  }
+
+  &.btn-outline-dark {
+    @include button-outline(#3A3258);
   }
 
   &.btn-light-green {

@@ -4,19 +4,17 @@
 
 @mixin progress-mixin($color) {
   background-color: rgba($color, 0.2);
+  border-radius: $border-radius-lg;
   overflow: visible!important;
   .progress-bar {
     background-color: $color;
-    border-radius: 10px;
+    border-radius: $border-radius-lg;
     box-shadow: 0 0 10px rgba($color, 0.6);
   }
 }
 
 .progress {
-  &.progress-tiny {
-    width: 100px;
-    height: 6px;
-  }
+  height: 10px;
   &.bg-light-green {
     @include progress-mixin($light-green);
   }
@@ -25,5 +23,16 @@
   }
   &.bg-light-red {
     @include progress-mixin($light-red);
+  }
+  &.bg-violet {
+    @include progress-mixin($violet);
+  }
+  &.progress-tiny {
+    width: 100px;
+    height: 6px;
+  }
+  &.progress-lg {
+    width: 100%;
+    height: 20px;
   }
 }

@@ -1,0 +1,99 @@
+@import "../components/mixins";
+@import "../components/variables";
+@import "../components/layout";
+@import "../components/text";
+
+.levels-list {
+  overflow: auto;
+  white-space: nowrap;
+  padding: 0 0 30px 0;
+  .star {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    @extend .text-glow-yellow;
+    &:before {
+      content: url("../images/achievements/star.svg");
+      position: absolute;
+    }
+  }
+  .level-container {
+    white-space: initial;
+    display: inline-block;
+    width: calc(100%/5);
+    padding-right: 30px;
+    .content {
+      background-color: $dark;
+      border-radius: $border-radius-lg;
+      padding: 20px 30px;
+      border: 2px solid transparent;
+      &.current {
+        border: 2px solid $yellow;
+        @include block-shadow($yellow);
+      }
+      &.disabled {
+        filter: grayscale(1);
+        opacity: 0.6;
+      }
+    }
+  }
+}
+
+.quest {
+  position: relative;
+  z-index: 2;
+  &::after {
+    content: "";
+    background: rgba($dark, 0.8) url("../images/achievements/violet.png") no-repeat center ;
+    background-blend-mode: overlay;
+    background-size: cover;
+    border-radius: $border-radius-lg;
+    opacity: 0.2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -2;
+  }
+}
+
+.achievement-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  &.achievement-image-lg {
+    width: 140px;
+    height: 140px;
+  }
+  &.achievement-image-violet {
+    border: 3px solid $violet;
+    @include block-shadow($violet);
+  }
+  &.achievement-image-yellow {
+    border: 3px solid $yellow;
+    @include block-shadow($yellow);
+  }
+}
+
+.xp {
+  border: $green;
+  border: 2px solid $green;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 2px;
+  @include block-shadow($green);
+  border-radius: 50%;
+  &.xp-small {
+    width: 24px;
+    height: 24px;
+    font-size: 9px;
+    font-weight: bold;
+    border: 1px solid $green;
+  }
+}

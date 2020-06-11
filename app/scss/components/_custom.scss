@@ -4,12 +4,19 @@
 
 $primary:       #7750F8;
 $danger:        $light-red;
+$dark:        $dark;
+
+$spacer: 20px;
 
 $font-weight-lighter:         lighter;
 $font-weight-light:           300;
 $font-weight-normal:          400;
 $font-weight-bold:            700;
 $font-weight-bolder:          900;
+
+$border-radius:               8px;
+$border-radius-lg:            10px;
+$border-radius-sm:            8px;
 
 $btn-border-radius:           .5rem;
 $btn-border-radius-lg:        .6rem;
