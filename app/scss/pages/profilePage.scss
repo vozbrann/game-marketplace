@@ -8,32 +8,89 @@ body {
   @extend .text-gray;
 }
 
-.user-info {
-  background: url("../../images/profile/topBg.png") no-repeat center top, $dark;
-  background-size: contain;
-  border-radius: $border-radius-lg;
-  height: 428px;
-  padding: 20px 35px;
+a.d-flex {
+  text-decoration: none;
 }
 
-.check-item {
-  .check-icon-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    .check-icon {
-      color: $dark;
-    }
-    border: 2px solid $light-dark;
+.page-nav {
+  .setting-btn {
+    color: $violet;
+
   }
-  &.checked {
-    .check-icon-container {
-      background: $light-green;
-      border: 2px solid transparent;
-      @include block-shadow($light-green);
+}
+
+.progress-bar {
+  position: relative;
+  overflow: visible;
+  .percents {
+    right: 0;
+    bottom: -30px;
+    position: absolute;
+  }
+}
+
+.user-info-container {
+  position: relative;
+  z-index: 2;
+  min-height: 428px;
+  .bg-top {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+  }
+  .content {
+    width: 100%;
+    padding: 20px 35px;
+  }
+  .user-info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .user-image-container {
+      position: absolute;
+      bottom: 80%;
+    }
+  }
+}
+
+.items-section {
+  .items-nav {
+    .nav-item {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:after {
+        content: "";
+        position: absolute;
+        height: 65%;
+        width: 1px;
+        border-right: 1px solid $light-dark;
+        right: 0;
+      }
+      &:last-child:after {
+        border-right: none;
+      }
+    }
+    .nav-link {
+      transition: all 0.3s ease;
+      padding: 0;
+      span {
+        display: inline-block;
+        padding: 20px;
+        border-bottom: 2px solid transparent;
+      }
+      &.active {
+        span {
+          @extend .text-glow-green;
+          border-bottom: 2px solid $green;
+          box-shadow: 0 8px 6px -6px rgba($green, 0.4);
+        }
+      }
     }
   }
 }

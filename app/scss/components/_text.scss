@@ -24,11 +24,17 @@
 .text-glow-green {
   @include text-glow-mixin($green);
 }
+.text-stroke-glow-green  {
+  @include text-stroke-shadow($green);
+}
 .text-light-green {
   color: $light-green;
 }
 .text-glow-light-green {
   @include text-glow-mixin($light-green);
+}
+.text-stroke-glow-light-green  {
+  @include text-stroke-shadow($light-green);
 }
 .text-violet {
   color: $violet;
@@ -41,6 +47,9 @@
 }
 .text-glow-yellow {
   @include text-glow-mixin($yellow);
+}
+.text-stroke-glow-yellow  {
+  @include text-stroke-shadow($yellow);
 }
 .text-stroke-glow-yellow  {
   @include text-stroke-shadow($yellow);

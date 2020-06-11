@@ -2,8 +2,8 @@
 @import "mixins";
 @import "materialinput";
 
-@mixin button($color, $text-color:unset) {
-  @include block-shadow($color);
+@mixin button($color, $text-color:initial) {
+  @include block-shadow($color, 0.8);
   background-color: $color;
   color: $text-color;
 }
@@ -23,7 +23,7 @@
   }
 }
 
-@mixin button-shine($color, $text-color:unset) {
+@mixin button-shine($color, $text-color:initial) {
   @include block-shadow-lg($color);
   background-color: $color;
   color: $text-color;
@@ -47,14 +47,14 @@
   }
 
   &.btn-primary {
-    @include button($violet);
+    @include button($violet, #fff);
   }
   &.btn-outline-primary {
     @include button-outline($violet);
   }
 
   &.btn-green {
-    @include button($green);
+    @include button($green, #fff);
   }
   &.btn-outline-green {
     @include button-outline($green);

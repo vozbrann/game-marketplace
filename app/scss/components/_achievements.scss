@@ -57,6 +57,27 @@
     position: absolute;
     z-index: -2;
   }
+  .check-item {
+    .check-icon-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      .check-icon {
+        color: $dark;
+      }
+      border: 2px solid $light-dark;
+    }
+    &.checked {
+      .check-icon-container {
+        background: $light-green;
+        border: 2px solid transparent;
+        @include block-shadow($light-green);
+      }
+    }
+  }
 }
 
 .achievement-image {
@@ -86,13 +107,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-left: 2px;
   @include block-shadow($green);
   border-radius: 50%;
   &.xp-small {
     width: 24px;
     height: 24px;
-    font-size: 9px;
+    font-size: 8px;
     font-weight: bold;
     border: 1px solid $green;
   }
