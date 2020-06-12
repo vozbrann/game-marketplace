@@ -27,13 +27,12 @@
       font-size: $custom-font-size-lg;
     }
   }
+  color: rgba(#fff, 0.4);
   &.link {
     &:hover {
       border: 2px solid $color;
       @include block-shadow($color, 0.8);
-      .text {
-        @extend .text-light-gray;
-      }
+      color: rgba(#fff, 0.6);
     }
   }
 }

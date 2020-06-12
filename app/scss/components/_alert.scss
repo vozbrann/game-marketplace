@@ -6,13 +6,13 @@
   border: 3px solid $color;
   box-sizing: border-box;
   @include block-shadow($color);
-  border-radius: 10px;
+  border-radius: $border-radius-lg;
   .title {
     color: $color;
   }
   .text {
     color: rgba($textColor, 0.8);
-    font-weight: 500;
+    font-weight: normal;
     font-size: 14px;
     line-height: 1.2em;
   }

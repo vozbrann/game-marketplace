@@ -5,8 +5,27 @@
 
 .levels-list {
   overflow: auto;
+  &::-webkit-scrollbar-track
+  {
+
+  }
+
+  &::-webkit-scrollbar
+  {
+    height: 16px;
+    border:2px solid #393052;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb
+  {
+    background-color: #393052;
+    border-radius: 10px;
+    height: 2px;
+  }
+
   white-space: nowrap;
-  padding: 0 0 30px 0;
+  padding-bottom: 20px;
   .star {
     display: flex;
     align-items: center;
@@ -21,8 +40,11 @@
   .level-container {
     white-space: initial;
     display: inline-block;
-    width: calc(100%/5);
-    padding-right: 30px;
+    width: calc(95%/5);
+    margin: 0 1% 0 0;
+    &:last-child {
+      margin: 0;
+    }
     .content {
       background-color: $dark;
       border-radius: $border-radius-lg;

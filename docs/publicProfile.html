@@ -169,35 +169,20 @@
     </header>
 
     <div class="user-info-container mb-4 d-flex align-items-end">
-        <img class="bg-top rounded-lg" src="images/profile/topBg2.png" alt="">
-        <div class="content bg-dark d-flex justify-content-between align-items-center rounded-lg">
+        <img class="bg-top" src="images/profile/topBg2.png" alt="">
+        <div class="content bg-dark d-flex justify-content-between align-items-center">
             <div class="text-center user-info align-self-end">
                 <div class="user-image-container mb-3">
                     <img class="user-image user-image-lg"
                          src="https://source.unsplash.com/random" alt="">
+                    <span class="level">43</span>
                 </div>
                 <p class="text-white h3 font-weight-bold">John Doe</p>
                 <p class="mb-0">Registration date: 4/20/2018</p>
             </div>
-            <div class="w-50">
-                <div class="d-flex justify-content-between mb-2">
-                    <span>Level:</span>
-                </div>
-                <div class="progress progress-lg bg-light-green mb-2">
-                    <div class="progress-bar" role="progressbar" style="width: 80%"
-                         aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-                        <p class="percents h5 mb-0 text-glow-light-green">75.13</p>
-                    </div>
-
-                </div>
-                <div class="d-flex justify-content-between">
-                    <span>0</span>
-                    <p class="mb-0">100</p>
-                </div>
-            </div>
             <div>
                 <button class="btn btn-green font-weight-bold px-4 mr-3">Subscribe</button>
-                <button class="btn btn-primary font-weight-bold px-4">Send Message</button>
+                <button class="btn btn-violet font-weight-bold px-4">Send Message</button>
             </div>
         </div>
     </div>
@@ -205,37 +190,37 @@
     <div class="row mb-4">
         <div class="col">
             <div class="text-center bg-dark rounded-lg p-4">
-                <p class="h1 font-weight-bolder text-stroke-glow-violet">75.13%</p>
+                <p class="h1 mb-3 font-weight-bolder text-stroke-glow-violet">75.13%</p>
                 <p class="h5 mb-0">rating</p>
             </div>
         </div>
         <div class="col">
             <div class="text-center bg-dark rounded-lg p-4">
-                <p class="h1 font-weight-bolder text-stroke-glow-blue">160</p>
+                <p class="h1 mb-3 font-weight-bolder text-stroke-glow-blue">160</p>
                 <p class="h5 mb-0">items</p>
             </div>
         </div>
         <div class="col">
             <div class="text-center bg-dark rounded-lg p-4">
-                <p class="h1 font-weight-bolder text-stroke-glow-green">32480</p>
+                <p class="h1 mb-3 font-weight-bolder text-stroke-glow-green">32480</p>
                 <p class="h5 mb-0">total sales</p>
             </div>
         </div>
         <div class="col">
             <div class="text-center bg-dark rounded-lg p-4">
-                <p class="h1 font-weight-bolder text-stroke-glow-light-green">15</p>
+                <p class="h1 mb-3 font-weight-bolder text-stroke-glow-light-green">15</p>
                 <p class="h5 mb-0">refunds</p>
             </div>
         </div>
         <div class="col">
             <div class="text-center bg-dark rounded-lg p-4">
-                <p class="h1 font-weight-bolder text-stroke-glow-yellow">923</p>
+                <p class="h1 mb-3 font-weight-bolder text-stroke-glow-yellow">923</p>
                 <p class="h5 mb-0">positive reviews</p>
             </div>
         </div>
         <div class="col">
             <div class="text-center bg-dark rounded-lg p-4">
-                <p class="h1 font-weight-bolder text-stroke-glow-light-red">68</p>
+                <p class="h1 mb-3 font-weight-bolder text-stroke-glow-light-red">68</p>
                 <p class="h5 mb-0">negative reviews</p>
             </div>
         </div>
@@ -661,6 +646,270 @@ asd
                         <div class="progress bg-violet">
                             <div class="progress-bar" role="progressbar" style="width: 40%"
                                  aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mb-4">
+        <h2 class="h5 font-weight-bold mb-3">Reviews</h2>
+        <div class="outlined-nav-blue mb-5">
+            <nav class="nav text-center" id="nav-tab">
+                <a class="nav-item nav-link h5 mb-0 py-3 active" id="nav-home-tab"
+                   data-toggle="tab"
+                   href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">
+                    <span>All</span>
+                    <span class="badge badge-danger font-weight-normal ml-2 px-2">45</span>
+                </a>
+                <a class="nav-item nav-link h5 mb-0 py-3" id="nav-profile-tab" data-toggle="tab"
+                   href="#nav-profile" role="tab" aria-controls="nav-profile"
+                   aria-selected="false">
+                    <span>Positive</span>
+                    <span class="badge badge-danger font-weight-normal ml-2 px-2">300</span>
+                </a>
+                <a class="nav-item nav-link h5 mb-0 py-3" id="nav-contact-tab" data-toggle="tab"
+                   href="#nav-contact" role="tab" aria-controls="nav-contact"
+                   aria-selected="false">
+                    <span>Negative</span>
+                    <span class="badge badge-danger font-weight-normal ml-2 px-2">45</span>
+                </a>
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-home" role="tabpanel"
+                     aria-labelledby="nav-home-tab">
+                    <div class="review content p-4">
+                        <div class="mb-4">
+                            <div class="d-flex align-items-center">
+                                <span class="material-icons text-glow-green md-30 mr-4">thumb_up</span>
+                                <div class="user-image-container online mr-3">
+                                    <img class="user-image"
+                                         src="https://source.unsplash.com/random" alt="">
+                                </div>
+                                <p class="text-white h5 mb-0">
+                                    <span>John Doe </span>
+                                    <span class="text-violet px-1">|</span>
+                                    <a class="dark-violet" href="#">Grand Theft Auto V: Premium Online Edition Rockstar Key</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="mb-0">Habitant morbi tristique senectus et netus et. At in tellus
+                                integer feugiat scelerisque varius morbi. Faucibus turpis in
+                                eu mi bibendum neque egestas. Vestibulum mattis ullamcorper
+                                velit sed ullamcorper morbi. Dui sapien eget mi proin sed
+                                libero. Quam lacus suspendisse faucibus interdum posuere.
+                                Eleifend donec pretium vulputate sapien. Molestie ac feugiat
+                                sed lectus vestibulum mattis ullamcorper velit. Tortor
+                                posuere ac ut consequat semper viverra nam. Habitant morbi
+                                tristique senectus et netus et. At in tellus integer feugiat
+                                scelerisque varius morbi. Faucibus turpis in eu mi bibendum
+                                neque egestas. Vestibulum mattis ullamcorper velit sed
+                                ullamcorper morbi. Dui sapien eget mi proin sed libero. Quam
+                                lacus suspendisse faucibus interdum posuere.</p>
+                        </div>
+                    </div>
+                    <div class="review content p-4">
+                        <div class="mb-4">
+                            <div class="d-flex align-items-center">
+                                <span class="material-icons text-glow-light-red md-30 mr-3">thumb_down</span>
+                                <div class="user-image-container online mr-3">
+                                    <img class="user-image"
+                                         src="https://source.unsplash.com/random" alt="">
+                                </div>
+                                <p class="text-white h5 mb-0">
+                                    <span>John Doe </span>
+                                    <span class="text-violet px-1">|</span>
+                                    <a class="dark-violet" href="#">Grand Theft Auto V: Premium Online Edition Rockstar Key</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="mb-0">Habitant morbi tristique senectus et netus et. At in tellus
+                                integer feugiat scelerisque varius morbi. Faucibus turpis in
+                                eu mi bibendum neque egestas. Vestibulum mattis ullamcorper
+                                velit sed ullamcorper morbi. Dui sapien eget mi proin sed
+                                libero. Quam lacus suspendisse faucibus interdum posuere.
+                                Eleifend donec pretium vulputate sapien. Molestie ac feugiat
+                                sed lectus vestibulum mattis ullamcorper velit. Tortor
+                                posuere ac ut consequat semper viverra nam. Habitant morbi
+                                tristique senectus et netus et. At in tellus integer feugiat
+                                scelerisque varius morbi. Faucibus turpis in eu mi bibendum
+                                neque egestas. Vestibulum mattis ullamcorper velit sed
+                                ullamcorper morbi. Dui sapien eget mi proin sed libero. Quam
+                                lacus suspendisse faucibus interdum posuere.</p>
+                        </div>
+                    </div>
+                    <div class="text-center mb-4">
+                        <button class="btn btn-outline-light-dark px-5 font-weight-bold">Load more</button>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="nav-profile" role="tabpanel"
+                     aria-labelledby="nav-profile-tab">
+                    <div class="review content p-4">
+                        <div class="mb-4">
+                            <div class="d-flex align-items-center">
+                                <span class="material-icons text-glow-green md-30 mr-3">thumb_up</span>
+                                <div class="user-image-container online mr-4">
+                                    <img class="user-image"
+                                         src="https://source.unsplash.com/random" alt="">
+                                </div>
+                                <p class="text-white h5 mb-0">John Doe</p>
+                            </div>
+                        </div>
+                        <div>
+                            <p>Habitant morbi tristique senectus et netus et. At in tellus
+                                integer feugiat scelerisque varius morbi. Faucibus turpis in
+                                eu mi bibendum neque egestas. Vestibulum mattis ullamcorper
+                                velit sed ullamcorper morbi. Dui sapien eget mi proin sed
+                                libero. Quam lacus suspendisse faucibus interdum posuere.
+                                Eleifend donec pretium vulputate sapien. Molestie ac feugiat
+                                sed lectus vestibulum mattis ullamcorper velit. Tortor
+                                posuere ac ut consequat semper viverra nam. Habitant morbi
+                                tristique senectus et netus et. At in tellus integer feugiat
+                                scelerisque varius morbi. Faucibus turpis in eu mi bibendum
+                                neque egestas. Vestibulum mattis ullamcorper velit sed
+                                ullamcorper morbi. Dui sapien eget mi proin sed libero. Quam
+                                lacus suspendisse faucibus interdum posuere.</p>
+                        </div>
+                    </div>
+                    <div class="review content p-4">
+                        <div class="mb-4">
+                            <div class="d-flex align-items-center">
+                                <span class="material-icons text-glow-light-red md-30 mr-4">thumb_down</span>
+                                <div class="user-image-container online mr-4">
+                                    <img class="user-image"
+                                         src="https://source.unsplash.com/random" alt="">
+                                </div>
+                                <p class="text-white h5 mb-0">John Doe</p>
+                            </div>
+                        </div>
+                        <div>
+                            <p>Habitant morbi tristique senectus et netus et. At in tellus
+                                integer feugiat scelerisque varius morbi. Faucibus turpis in
+                                eu mi bibendum neque egestas. Vestibulum mattis ullamcorper
+                                velit sed ullamcorper morbi. Dui sapien eget mi proin sed
+                                libero. Quam lacus suspendisse faucibus interdum posuere.
+                                Eleifend donec pretium vulputate sapien. Molestie ac feugiat
+                                sed lectus vestibulum mattis ullamcorper velit. Tortor
+                                posuere ac ut consequat semper viverra nam. Habitant morbi
+                                tristique senectus et netus et. At in tellus integer feugiat
+                                scelerisque varius morbi. Faucibus turpis in eu mi bibendum
+                                neque egestas. Vestibulum mattis ullamcorper velit sed
+                                ullamcorper morbi. Dui sapien eget mi proin sed libero. Quam
+                                lacus suspendisse faucibus interdum posuere.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="nav-contact" role="tabpanel"
+                     aria-labelledby="nav-contact-tab">
+                    <div class="review content p-4">
+                        <div class="mb-4">
+                            <div class="d-flex align-items-center">
+                                <span class="material-icons text-glow-green md-30 mr-4">thumb_up</span>
+                                <div class="user-image-container online mr-4">
+                                    <img class="user-image"
+                                         src="https://source.unsplash.com/random" alt="">
+                                </div>
+                                <p class="text-white h5 mb-0">John Doe</p>
+                            </div>
+                        </div>
+                        <div>
+                            <p>Habitant morbi tristique senectus et netus et. At in tellus
+                                integer feugiat scelerisque varius morbi. Faucibus turpis in
+                                eu mi bibendum neque egestas. Vestibulum mattis ullamcorper
+                                velit sed ullamcorper morbi. Dui sapien eget mi proin sed
+                                libero. Quam lacus suspendisse faucibus interdum posuere.
+                                Eleifend donec pretium vulputate sapien. Molestie ac feugiat
+                                sed lectus vestibulum mattis ullamcorper velit. Tortor
+                                posuere ac ut consequat semper viverra nam. Habitant morbi
+                                tristique senectus et netus et. At in tellus integer feugiat
+                                scelerisque varius morbi. Faucibus turpis in eu mi bibendum
+                                neque egestas. Vestibulum mattis ullamcorper velit sed
+                                ullamcorper morbi. Dui sapien eget mi proin sed libero. Quam
+                                lacus suspendisse faucibus interdum posuere.</p>
+                        </div>
+                    </div>
+                    <div class="review content p-4">
+                        <div class="mb-4">
+                            <div class="d-flex align-items-center">
+                                <span class="material-icons text-glow-light-red md-30 mr-4">thumb_down</span>
+                                <div class="user-image-container online mr-4">
+                                    <img class="user-image"
+                                         src="https://source.unsplash.com/random" alt="">
+                                </div>
+                                <p class="text-white h5 mb-0">John Doe</p>
+                            </div>
+                        </div>
+                        <div>
+                            <p>Habitant morbi tristique senectus et netus et. At in tellus
+                                integer feugiat scelerisque varius morbi. Faucibus turpis in
+                                eu mi bibendum neque egestas. Vestibulum mattis ullamcorper
+                                velit sed ullamcorper morbi. Dui sapien eget mi proin sed
+                                libero. Quam lacus suspendisse faucibus interdum posuere.
+                                Eleifend donec pretium vulputate sapien. Molestie ac feugiat
+                                sed lectus vestibulum mattis ullamcorper velit. Tortor
+                                posuere ac ut consequat semper viverra nam. Habitant morbi
+                                tristique senectus et netus et. At in tellus integer feugiat
+                                scelerisque varius morbi. Faucibus turpis in eu mi bibendum
+                                neque egestas. Vestibulum mattis ullamcorper velit sed
+                                ullamcorper morbi. Dui sapien eget mi proin sed libero. Quam
+                                lacus suspendisse faucibus interdum posuere.</p>
+                        </div>
+                    </div>
+                    <div class="review content p-4">
+                        <div class="mb-4">
+                            <div class="d-flex align-items-center">
+                                <span class="material-icons text-glow-green md-30 mr-4">thumb_up</span>
+                                <div class="user-image-container online mr-4">
+                                    <img class="user-image"
+                                         src="https://source.unsplash.com/random" alt="">
+                                </div>
+                                <p class="text-white h5 mb-0">John Doe</p>
+                            </div>
+                        </div>
+                        <div>
+                            <p>Habitant morbi tristique senectus et netus et. At in tellus
+                                integer feugiat scelerisque varius morbi. Faucibus turpis in
+                                eu mi bibendum neque egestas. Vestibulum mattis ullamcorper
+                                velit sed ullamcorper morbi. Dui sapien eget mi proin sed
+                                libero. Quam lacus suspendisse faucibus interdum posuere.
+                                Eleifend donec pretium vulputate sapien. Molestie ac feugiat
+                                sed lectus vestibulum mattis ullamcorper velit. Tortor
+                                posuere ac ut consequat semper viverra nam. Habitant morbi
+                                tristique senectus et netus et. At in tellus integer feugiat
+                                scelerisque varius morbi. Faucibus turpis in eu mi bibendum
+                                neque egestas. Vestibulum mattis ullamcorper velit sed
+                                ullamcorper morbi. Dui sapien eget mi proin sed libero. Quam
+                                lacus suspendisse faucibus interdum posuere.</p>
+                        </div>
+                    </div>
+                    <div class="review content p-4">
+                        <div class="mb-4">
+                            <div class="d-flex align-items-center">
+                                <span class="material-icons text-glow-light-red md-30 mr-4">thumb_down</span>
+                                <div class="user-image-container online mr-4">
+                                    <img class="user-image"
+                                         src="https://source.unsplash.com/random" alt="">
+                                </div>
+                                <p class="text-white h5 mb-0">John Doe</p>
+                            </div>
+                        </div>
+                        <div>
+                            <p>Habitant morbi tristique senectus et netus et. At in tellus
+                                integer feugiat scelerisque varius morbi. Faucibus turpis in
+                                eu mi bibendum neque egestas. Vestibulum mattis ullamcorper
+                                velit sed ullamcorper morbi. Dui sapien eget mi proin sed
+                                libero. Quam lacus suspendisse faucibus interdum posuere.
+                                Eleifend donec pretium vulputate sapien. Molestie ac feugiat
+                                sed lectus vestibulum mattis ullamcorper velit. Tortor
+                                posuere ac ut consequat semper viverra nam. Habitant morbi
+                                tristique senectus et netus et. At in tellus integer feugiat
+                                scelerisque varius morbi. Faucibus turpis in eu mi bibendum
+                                neque egestas. Vestibulum mattis ullamcorper velit sed
+                                ullamcorper morbi. Dui sapien eget mi proin sed libero. Quam
+                                lacus suspendisse faucibus interdum posuere.</p>
                         </div>
                     </div>
                 </div>

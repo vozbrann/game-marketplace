@@ -48,7 +48,7 @@ body {
 
 .nav-info {
   .nav {
-    width: 260px;
+    width: 240px;
     .nav-link-yellow {
       @include nav-link-mixin($yellow);
     }

@@ -39,10 +39,13 @@ a.d-flex {
     top: 0;
     width: 100%;
     z-index: -1;
+    border-radius: $border-radius-lg $border-radius-lg 0 0;
   }
   .content {
     width: 100%;
     padding: 20px 35px;
+    min-height: 130px;
+    border-radius: 0 0 $border-radius-lg $border-radius-lg;
   }
   .user-info {
     position: relative;
@@ -53,6 +56,21 @@ a.d-flex {
     .user-image-container {
       position: absolute;
       bottom: 80%;
+      .level {
+        position: absolute;
+        bottom: 10%;
+        right: 10%;
+        width: 40px;
+        height: 40px;
+        background-color: $violet;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $light-gray;
+        font-size: 16px;
+        font-weight: bold;
+      }
     }
   }
 }
@@ -79,10 +97,14 @@ a.d-flex {
     .nav-link {
       transition: all 0.3s ease;
       padding: 0;
+      display: flex;
+      width: 100%;
+      justify-content: center;
       span {
         display: inline-block;
-        padding: 20px;
+        padding: 20px 0;
         border-bottom: 2px solid transparent;
+        color: $gray;
       }
       &.active {
         span {
@@ -91,6 +113,47 @@ a.d-flex {
           box-shadow: 0 8px 6px -6px rgba($green, 0.4);
         }
       }
+    }
+  }
+}
+
+.chart-container {
+  background-color: $dark;
+  border-radius: $border-radius-lg;
+  padding: 30px 30px 15px 30px;
+  color: rgba(255, 255, 255, 0.4);
+  .arrow_box {
+    background-color: $dark;
+    padding: 0 5px;
+  }
+  .focus-options {
+    span {
+      cursor: pointer;
+      margin: 0 15px;
+    }
+  }
+  &#apexSalesNumber {
+    .focus-options {
+      span.active {
+        font-weight: bold;
+        @include text-glow-mixin($light-red);
+      }
+    }
+    .arrow_box {
+      border: 2px solid $light-red;
+      color: $light-red;
+    }
+  }
+  &#apexSalesAmount {
+    .focus-options {
+      span.active {
+        font-weight: bold;
+        @include text-glow-mixin($violet);
+      }
+    }
+    .arrow_box {
+      border: 2px solid $violet;
+      color: $violet;
     }
   }
 }

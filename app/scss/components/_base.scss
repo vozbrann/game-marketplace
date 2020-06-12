@@ -17,20 +17,20 @@ html, body {
   min-height: 100vh;
 }
 
-a {
-  &:link {
-    color: rgba(#fff, 0.6);
-  }
-  &:visited {
-    color: rgba(#fff, 0.6);
-  }
-  &:hover {
-    color: rgba(#fff, 0.8);
-  }
-  &:active {
-    color: rgba(#fff, 0.8);
-  }
-}
+//a {
+//  &:link {
+//    color: rgba(#fff, 0.6);
+//  }
+//  &:visited {
+//    color: rgba(#fff, 0.6);
+//  }
+//  &:hover {
+//    color: rgba(#fff, 0.8);
+//  }
+//  &:active {
+//    color: rgba(#fff, 0.8);
+//  }
+//}
 
 //material-icons
 .material-icons, .material-icons-outlined {
@@ -40,6 +40,12 @@ a {
   &.md-30 { font-size: 30px; }
   &.md-36 { font-size: 36px; }
   &.md-48 { font-size: 48px; }
+}
+
+//bg-color
+
+.bg-semi-dark {
+  background-color: $semi-dark;
 }
 
 //scrollbar

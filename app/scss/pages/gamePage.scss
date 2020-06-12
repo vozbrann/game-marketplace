@@ -11,7 +11,7 @@ body {
 .chart-container {
   background-color: $dark;
   border-radius: $border-radius-lg;
-  padding: 30px;
+  padding: 30px 30px 15px 30px;
   color: rgba(255, 255, 255, 0.4);
   .arrow_box {
     background-color: $dark;
@@ -28,15 +28,13 @@ body {
       }
     }
   }
-  #chart {
-  }
 }
 
 .image-slider {
   position: relative;
   .image-preview {
     img {
-      height: 430px;
+      height: 432px;
       object-fit: cover;
       border-radius: $border-radius-lg;
     }
@@ -86,95 +84,31 @@ body {
   }
 }
 
-@mixin outlined-nav($color) {
-  cursor: pointer;
-  transition: all 0.3s ease;
-  background: $dark;
-  border-radius: $border-radius-md;
-  height: 145px;
-  border: 2px solid transparent;
-  .number {
-    @include text-stroke-shadow($color);
+.add-to-wishlist {
+  color: $gray;
+  border: 2px solid $light-red;
+  @include block-shadow($light-red);
+  background-color: $dark;
+  &:link {
+    color: $gray;
+  }
+  &:visited {
+    color: $gray;
   }
   &:hover {
-    border: 2px solid $color;
-    @include block-shadow($color);
+    color: $gray;
+  }
+  &:active {
+    color: $gray;
   }
 }
 
-.game-info-panes {
-  .pane {
-    &.pane-violet {
-      @include outlined-nav($violet);
-    }
-    &.pane-blue {
-      @include outlined-nav($blue);
-    }
-    &.pane-green {
-      @include outlined-nav($green);
-    }
-    &.pane-light-green {
-      @include outlined-nav($light-green);
-    }
-    &.pane-light-yellow {
-      @include outlined-nav($yellow);
-    }
-    &.pane-light-light-red {
-      @include outlined-nav($light-red);
-    }
-  }
-}
 .price-pane {
-  background: $light-dark;
+  background: #2B2541;
   border-radius: $border-radius-md;
-}
-
-@mixin outlined-nav($bgColor, $color) {
-  background: $bgColor;
-  border-radius: $border-radius-lg;
-  .nav {
-    margin-bottom: -2px;
-    flex-wrap: nowrap;
-    display: flex;
-    .badge {
-      border-radius: $border-radius-lg;
-    }
-  }
-  .nav-item {
-    width: 100%;
-    border: 2px solid transparent;
-    opacity: 0.7;
-    &.active {
-      opacity: 1;
-      background: $bgColor;
-      border-radius: $border-radius-lg $border-radius-lg 0 0;
-      border: 2px solid $color;
-      border-bottom: none $bgColor;
-      @include text-glow-mixin($color);
-      font-weight: bold;
-    }
-  }
-  .tab-content {
-    border: 2px solid $color;
-    border-radius: 0 0 $border-radius-md $border-radius-md;
-    .content {
-      margin: 30px;
-    }
-  }
-}
-
-.outlined-nav-violet {
-  @include outlined-nav($dark, $violet);
-}
-.outlined-nav-green {
-  @include outlined-nav($dark, $green);
-}
-
-.review {
-  border: 2px solid #393052;
-  border-radius: $border-radius-lg;
-  .control {
-    opacity: 0.6;
+  .text {
+    color: rgba(#fff, 0.5);
+    font-size: 10px;
   }
 }
 

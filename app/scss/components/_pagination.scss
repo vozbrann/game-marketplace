@@ -1,5 +1,6 @@
 @import "variables";
 @import "mixins";
+@import "text";
 
 .pagination-row {
   a,span {
@@ -14,11 +15,12 @@
     &.active {
       pointer-events: none;
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 800;
       color: $violet;
       border-radius: $border-radius-md;
       border: 2px solid $violet;
       @include block-shadow($violet);
+      @include text-glow-mixin($violet);
     }
   }
 }

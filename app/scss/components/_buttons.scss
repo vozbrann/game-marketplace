@@ -53,6 +53,13 @@
     @include button-outline($violet);
   }
 
+  &.btn-violet {
+    @include button($violet, #fff);
+  }
+  &.btn-outline-violet {
+    @include button-outline($violet);
+  }
+
   &.btn-green {
     @include button($green, #fff);
   }
@@ -63,8 +70,8 @@
     @include button-shine($green);
   }
 
-  &.btn-outline-dark {
-    @include button-outline(#3A3258);
+  &.btn-outline-light-dark {
+    @include button-outline(#483d66);
   }
 
   &.btn-light-green {

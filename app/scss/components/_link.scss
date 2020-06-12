@@ -1,0 +1,16 @@
+@import "variables";
+
+a {
+  &.violet {
+    color: $violet;
+    &:hover {
+      color: $violet;
+    }
+  }
+  &.dark-violet {
+    color: rgba($violet, 0.6);
+    &:hover {
+      color: rgba($violet, 0.6);
+    }
+  }
+}

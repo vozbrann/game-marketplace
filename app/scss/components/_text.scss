@@ -63,6 +63,9 @@
 .text-stroke-glow-light-red  {
   @include text-stroke-shadow($light-red);
 }
+.text-glow-blue  {
+  @include text-stroke-shadow($blue);
+}
 .text-stroke-glow-blue {
   @include text-stroke-shadow($blue);
 }
