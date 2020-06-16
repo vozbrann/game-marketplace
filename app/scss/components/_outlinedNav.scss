@@ -1,5 +1,3 @@
-@import "variables";
-
 @mixin outlined-nav($color, $bgColor: $dark) {
   background: $bgColor;
   border-radius: $border-radius-lg;

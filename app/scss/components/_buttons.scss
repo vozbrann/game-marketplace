@@ -1,7 +1,3 @@
-@import "variables";
-@import "mixins";
-@import "materialinput";
-
 @mixin button($color, $text-color:initial) {
   @include block-shadow($color, 0.8);
   background-color: $color;

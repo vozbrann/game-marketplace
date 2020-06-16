@@ -1,12 +1,6 @@
 @import "../components/mixins";
 @import "../components/variables";
-@import "../components/layout";
 @import "../components/text";
-
-body {
-  background-color: $semi-dark;
-  @extend .text-gray;
-}
 
 .banner {
   background: url("../../images/support/bannerBg.png") no-repeat center;

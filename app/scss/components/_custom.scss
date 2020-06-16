@@ -1,7 +1,4 @@
-@import "variables";
-
 // variable overrides
-
 $primary:       #7750F8;
 $danger:        $light-red;
 $dark:        $dark;
@@ -24,5 +21,6 @@ $btn-border-radius-sm:        .4rem;
 $input-border-radius:                   .5rem;
 $input-border-radius-lg:                .6rem;
 $input-border-radius-sm:                .4rem;
+
 // Bootstrap and its default variables
 @import "../../../node_modules/bootstrap/scss/bootstrap";

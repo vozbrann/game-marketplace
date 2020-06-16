@@ -1,6 +1,3 @@
-@import "mixins";
-@import "variables";
-
 @mixin alert-mixin($color, $textColor) {
   background: rgba($color, 0.15)!important;
   border: 3px solid $color;
