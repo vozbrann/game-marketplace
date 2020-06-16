@@ -42,8 +42,16 @@ html, body {
   &.md-48 { font-size: 48px; }
 }
 
-//bg-color
+//tooltip
+.tooltip-inner {
+  background-color: $light-dark !important;
+  color: rgba(#FFFFFF,  0.8);
+}
+.tooltip.bs-tooltip-top .arrow:before {
+  border-top-color: $light-dark !important;
+}
 
+//bg-color
 .bg-semi-dark {
   background-color: $semi-dark;
 }

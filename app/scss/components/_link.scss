@@ -13,4 +13,10 @@ a {
       color: rgba($violet, 0.6);
     }
   }
+  &.gray {
+    color: $gray;
+    &:hover {
+      color: $gray;
+    }
+  }
 }
