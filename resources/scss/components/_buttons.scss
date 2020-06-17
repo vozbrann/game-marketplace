@@ -56,6 +56,13 @@
     @include button-outline($violet);
   }
 
+  &.btn-light-red {
+    @include button($light-red, #fff);
+  }
+  &.btn-outline-light-red {
+    @include button-outline($light-red);
+  }
+
   &.btn-green {
     @include button($green, #fff);
   }

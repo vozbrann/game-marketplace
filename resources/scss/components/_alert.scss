@@ -25,6 +25,9 @@
   &.alert-danger {
     @include alert-mixin(#EE2A58, #FEB3C5);
   }
+  &.alert-blue {
+    @include alert-mixin($blue, #E0EFF4);
+  }
   &.alert-success {
     @include alert-mixin(#40D04F, #DFFBE2);
   }

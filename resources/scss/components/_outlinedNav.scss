@@ -41,6 +41,60 @@
   }
 }
 
+@mixin outlined-nav-multicolor($bgColor: $dark) {
+  background: $bgColor;
+  border-radius: $border-radius-lg;
+  a {
+    color: $gray;
+  }
+  .nav {
+    margin-bottom: -2px;
+    flex-wrap: nowrap;
+    display: flex;
+    .badge {
+      border-radius: $border-radius-lg;
+    }
+  }
+
+  .review {
+    border: 2px solid #393052;
+    border-radius: $border-radius-lg;
+    .control {
+      opacity: 0.6;
+    }
+  }
+}
+
+@mixin outlined-nav-item($color, $bgColor: $dark) {
+  width: 100%;
+  border: 2px solid transparent;
+  opacity: 0.7;
+  font-weight: bold;
+  color: $gray;
+  &.active {
+    opacity: 1;
+    background: $bgColor;
+    border-radius: $border-radius-lg $border-radius-lg 0 0;
+    border: 2px solid $color;
+    border-bottom: none $bgColor;
+    @include text-glow-mixin($color);
+
+  }
+}
+
+@mixin outlined-nav-content($color, $bgColor: $dark) {
+  transition: none;
+  border: 2px solid $color;
+  border-radius: 0 0 $border-radius-md $border-radius-md;
+  .content {
+    margin: 30px;
+  }
+}
+
+.outlined-nav {
+  @include outlined-nav-multicolor();
+}
+
 .outlined-nav-violet {
   @include outlined-nav($violet);
 }
@@ -49,4 +103,25 @@
 }
 .outlined-nav-blue {
   @include outlined-nav($blue);
+}
+.outlined-nav-yellow {
+  @include outlined-nav($yellow);
+}
+.outlined-nav-light-green {
+  @include outlined-nav($light-green);
+}
+
+
+.outlined-nav-item-yellow {
+  @include outlined-nav-item($yellow);
+}
+.outlined-nav-content-yellow {
+  @include outlined-nav-content($yellow);
+}
+
+.outlined-nav-item-light-green {
+  @include outlined-nav-item($light-green);
+}
+.outlined-nav-content-light-green {
+  @include outlined-nav-content($light-green);
 }
