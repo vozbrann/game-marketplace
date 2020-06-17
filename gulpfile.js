@@ -2,19 +2,18 @@
 var gulp = require('gulp');
 var cleanCSS = require('gulp-clean-css');
 var sass = require('gulp-sass');
-// var browserSync = require('browser-sync').create();
 
 // Sass task: compiles the style.scss file into style.css
 gulp.task('sass', function(){
-  return gulp.src('app/scss/**/*.scss')
+  return gulp.src('resources/scss/**/*.scss')
   .pipe(sass()) // compile SCSS to CSS
     .pipe(cleanCSS()) // minify CSS
-    .pipe(gulp.dest('docs/css')); // put final CSS in dist folder
+    .pipe(gulp.dest('assets/css')); // put final CSS in dist folder
 });
 
 // Watch task: watch SCSS and JS files for changes
 gulp.task('watch', function(){
-  gulp.watch('app/scss/**/*.scss', gulp.series('sass'));
+  gulp.watch('resources/scss/**/*.scss', gulp.series('sass'));
 });
 
 // Default task
