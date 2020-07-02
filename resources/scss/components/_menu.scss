@@ -34,7 +34,7 @@
   .category-title {
     color: rgba(255, 255, 255, 0.4);
   }
-  #menu-fixed-toggle {
+  .menu-fixed-toggle {
     cursor: pointer;
     &::before {
       content: "radio_button_checked";
@@ -68,17 +68,34 @@
     }
   }
 }
-
-.collapsed {
-  #menu-fixed-toggle {
-    &::before {
-      content: "radio_button_unchecked";
+@media screen and (min-width: 992px) {
+  .collapsed {
+    .main-menu {
+      .menu-fixed-toggle {
+        &::before {
+          content: "radio_button_unchecked";
+        }
+      }
+      &:not(:hover){
+        width: 90px;
+        .hidden-on-collapsed{
+          display: none;
+        }
+      }
     }
   }
+}
+
+
+@media screen and (max-width: 992px) {
   .main-menu {
-    &:not(:hover){
-      width: 90px;
-      .hidden-on-collapsed{
+    width: 0;
+  }
+  .collapsed {
+    .main-menu {
+      width: 280px;
+      padding: 15px;
+      .menu-fixed-toggle {
         display: none;
       }
     }

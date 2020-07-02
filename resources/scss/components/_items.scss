@@ -30,10 +30,38 @@
       color: rgba(#fff, 0.6);
     }
   }
+
+  @media screen and (max-width: 992px) {
+    font-size: 12px;
+    .reviews {
+      .material-icons {
+        font-size: 18px;
+      }
+    }
+    .reviews, .rating {
+      font-size: 10px;
+    }
+    .content {
+      .price {
+        font-size: $h4-font-size;
+      }
+    }
+    .user-image {
+      width: 30px;
+      height: 30px;
+    }
+  }
 }
 
 .item {
   @include item-mixin($violet);
+  @media screen and (max-width: 992px) {
+    .progress {
+      &.progress-tiny {
+        width: 100%;
+      }
+    }
+  }
 }
 .item-orange {
   @include item-mixin($orange);

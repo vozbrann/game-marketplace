@@ -20,16 +20,16 @@
     <img class="bg-image planet-4" data-depth="0.1" src="../images/auth/planet6.png" alt="">
     <img class="bg-image planet-5" data-depth="0.08" src="../images/auth/planet4.png" alt="">
 </div>
-<div class="container-fluid h-100 content">
-    <div class="row py-4 h-100">
-        <div class="col-8 title-container text-center">
+<div class="container-fluid h-100 d-flex align-items-center content">
+    <div class="row py-3" style="min-height: 100vh!important; width: 100vw">
+        <div class="col-xl-8 col-lg-7 title-container d-flex flex-column text-center">
             <p class="mb-0 pre-heading text-uppercase">Welcome to</p>
-            <h1 class="mb-4">GAMES SYSTEM</h1>
+            <h1 class="mb-2 mb-md-3">GAMES SYSTEM</h1>
             <p>Nulla facilisi etiam dignissim diam. Sed adipiscing diam donec adipiscing. Porttitor
                 leo a diam sollicitudin tempor id. Mi eget mauris pharetra et ultrices neque ornare
                 aenean.</p>
         </div>
-        <div class="col d-flex align-items-center h-100">
+        <div class="col d-flex align-items-center">
             <div id="form-register" class="form-container position-relative">
                 <div class="position-absolute scene-form">
                     <img class="fg-image planet-1" data-depth="0.08" src="../images/auth/planet3.png" alt="">
@@ -45,7 +45,7 @@
                         Login
                     </button>
                 </div>
-                <form class="border-bottom border-secondary mb-4">
+                <form class="border-bottom border-secondary mb-3">
                     <div class="material-input w-100 mb-3">
                         <input id="username" type="text" name="username">
                         <label for="username">Username</label>
@@ -71,16 +71,20 @@
                         to activate your account. If you have any problems, <a href="#">contact
                             us</a>!</p>
                 </form>
-                <p class="text-center mb-0 text-grey">Or Register with</p>
-                <div class="d-flex">
-                    <button type="button"
-                            class="btn btn-block btn-google active text-white font-weight-bold mt-4 mb-3 mr-3">
-                        Google
-                    </button>
-                    <button type="button"
-                            class="btn btn-block btn-facebook active text-white font-weight-bold mt-4 mb-3">
-                        Facebook
-                    </button>
+                <p class="text-center text-grey">Or Register with</p>
+                <div class="row">
+                    <div class="col-md">
+                        <button type="button"
+                                class="btn btn-block btn-google active text-white font-weight-bold mr-3 mb-2 mb-md-0">
+                            Google
+                        </button>
+                    </div>
+                    <div class="col-md">
+                        <button type="button"
+                                class="btn btn-block btn-facebook active text-white font-weight-bold">
+                            Facebook
+                        </button>
+                    </div>
                 </div>
             </div>
             <div id="form-login" class="form-container position-relative">
@@ -99,7 +103,7 @@
                         Login
                     </button>
                 </div>
-                <form class="border-bottom border-secondary mb-4">
+                <form class="border-bottom border-secondary mb-3">
                     <div class="material-input w-100 mb-3">
                         <input id="login" type="text" name="username">
                         <label for="login">Username or Email</label>
@@ -108,7 +112,7 @@
                         <input id="loginPassword" type="password" name="password">
                         <label for="loginPassword">Password</label>
                     </div>
-                    <div class="d-flex justify-content-between">
+                    <div class="d-flex justify-content-between align-items-center">
                         <div class="custom-control custom-checkbox">
                             <input type="checkbox" class="custom-control-input" id="remember">
                             <label class="custom-control-label" for="remember"><span class="text-grey">Remember Me</span></label>
@@ -120,16 +124,20 @@
                         Login to your account!
                     </button>
                 </form>
-                <p class="text-center mb-0 text-grey">Or Login with</p>
-                <div class="d-flex">
-                    <button type="button"
-                            class="btn btn-block btn-google active text-white font-weight-bold mt-4 mb-3 mr-3">
-                        Google
-                    </button>
-                    <button type="button"
-                            class="btn btn-block btn-facebook active text-white font-weight-bold mt-4 mb-3">
-                        Facebook
-                    </button>
+                <p class="text-center text-grey">Or Login with</p>
+                <div class="row">
+                    <div class="col-md">
+                        <button type="button"
+                                class="btn btn-block btn-google active text-white font-weight-bold mr-3 mb-2 mb-md-0">
+                            Google
+                        </button>
+                    </div>
+                    <div class="col-md">
+                        <button type="button"
+                                class="btn btn-block btn-facebook active text-white font-weight-bold">
+                            Facebook
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>

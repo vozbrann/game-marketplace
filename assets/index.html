@@ -8,18 +8,38 @@
     <link rel="stylesheet" href="./css/pages/mainPage.css">
     <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
           rel="stylesheet">
-
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+<!--    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>-->
     <title>Main</title>
 </head>
 <body>
-<nav class="main-menu p-3">
+<nav class="main-menu p-lg-3">
     <div class="menu-header d-flex align-items-center mb-2">
         <a class="d-flex align-items-center" href="index.html">
             <span class="material-icons md-36 text-primary">sports_esports</span>
             <p class="h5 mb-0 text-nowrap hidden-on-collapsed ml-2 text-primary">Games System</p>
         </a>
         <div class="hidden-on-collapsed">
-            <span id="menu-fixed-toggle" class="material-icons text-primary"></span>
+            <span class="menu-fixed-toggle material-icons text-primary"></span>
+        </div>
+    </div>
+    <div class="d-flex d-md-none flex-nowrap text-nowrap justify-content-between align-items-center mb-3">
+        <div>
+            <div class="mb-2 d-flex align-items-center justify-content-between">
+                <span class="">Level:</span>
+                <span>93.61</span>
+            </div>
+            <div class="progress progress-tiny bg-light-green">
+                <div class="progress-bar" role="progressbar" style="width: 80%"
+                     aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+        <div class="d-flex small align-items-center">
+            <div class="text-right mr-2">
+                <p class="mb-0">Balance:</p>
+                <p class="mb-0 balance-number">$ 1000.00</p>
+            </div>
+            <span class="material-icons text-green">add_circle_outline</span>
         </div>
     </div>
     <div class="nav accordion flex-column nav-pills" id="menu-nav" role="tablist"
@@ -30,7 +50,8 @@
         </a>
         <p class="category-title ml-3 mt-4 mb-2 hidden-on-collapsed">Market</p>
         <div>
-            <div class="nav-link d-flex justify-content-between menu-accordion-collapse-toggle" type="button">
+            <div class="nav-link d-flex justify-content-between menu-accordion-collapse-toggle"
+                 type="button">
                 <div class="d-flex">
                     <span class="material-icons">sports_esports</span>
                     <span class="hidden-on-collapsed ml-2">Games</span>
@@ -50,7 +71,8 @@
             </div>
         </div>
         <div>
-            <div class="nav-link d-flex justify-content-between menu-accordion-collapse-toggle" type="button">
+            <div class="nav-link d-flex justify-content-between menu-accordion-collapse-toggle"
+                 type="button">
                 <div class="d-flex">
                     <span class="material-icons">view_module</span>
                     <span class="hidden-on-collapsed ml-2">Services</span>
@@ -104,7 +126,8 @@
             <span class="hidden-on-collapsed ml-2">Luck</span>
         </a>
         <div>
-            <div class="nav-link d-flex justify-content-between menu-accordion-collapse-toggle" type="button">
+            <div class="nav-link d-flex justify-content-between menu-accordion-collapse-toggle"
+                 type="button">
                 <div class="d-flex">
                     <span class="material-icons">sports_esports</span>
                     <span class="hidden-on-collapsed ml-2">Games</span>
@@ -135,13 +158,13 @@
     </div>
 </nav>
 <main>
-    <header class="main-header px-4 d-flex mb-4 justify-content-between">
-        <div class="d-flex align-items-center my-3">
+    <header class="main-header px-lg-4 px-3 d-flex mb-4 justify-content-between">
+        <div class="d-none d-lg-flex align-items-center my-3">
             <span class="material-icons-outlined mr-4 md-30">shopping_cart</span>
             <span class="material-icons mr-4 md-30">chat_bubble_outline</span>
             <span class="material-icons text-glow-green mr-4 md-30">search</span>
         </div>
-        <div class="d-flex align-items-center">
+        <div class="d-none d-lg-flex align-items-center">
             <div class="d-flex align-items-center">
                 <div class="text-right mr-2">
                     <p class="mb-0">Balance:</p>
@@ -164,65 +187,94 @@
                 <span class="material-icons-outlined md-30 ml-3">account_circle</span>
             </div>
         </div>
-    </header>
-    <div class="alert alert-danger mb-4 px-4 py-3" role="alert">
-        <div class="d-flex justify-content-between title">
-            <p class="mb-1 d-flex align-items-center">
-                <span class="material-icons mr-2">error_outline</span>
-                <span class="text-uppercase h5 font-weight-bold mb-0">Attention!</span>
-            </p>
-            <span class="material-icons-outlined mr-2">cancel</span>
+        <button class="btn p-0 d-flex d-lg-none align-items-center menu-fixed-toggle">
+            <span class="material-icons md-30 text-gray">menu</span>
+        </button>
+        <div class="d-lg-none d-flex align-items-center my-2 ml-auto">
+            <span class="material-icons text-glow-green md-30 mr-2">search</span>
+            <span class="material-icons-outlined md-30 mr-2">shopping_cart</span>
+            <span class="material-icons-outlined md-30">account_circle</span>
         </div>
-        <p class="mb-0 text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque convallis a cras
-            semper auctor neque. Non odio euismod lacinia at. A condimentum vitae sapien
-            pellentesque. Faucibus pulvinar elementum integer enim neque. Nulla pharetra diam
-            sit amet nisl. Lacus vestibulum sed arcu non odio. Sit amet venenatis urna cursus.
-            Aliquet nec ullamcorper sit amet. Nunc id cursus metus aliquam eleifend mi in
-            nulla.</p>
-    </div>
-    <div id="carouselExampleCaptions" class="carousel slide carousel-fade mb-4" data-ride="carousel">
+    </header>
+        <div class="alert alert-danger mb-4 px-4 py-3" role="alert">
+            <div class="d-flex justify-content-between title">
+                <p class="mb-1 d-flex align-items-center">
+                    <span class="material-icons mr-2">error_outline</span>
+                    <span class="text-uppercase h5 font-weight-bold mb-0">Attention!</span>
+                </p>
+                <span class="material-icons-outlined mr-2">cancel</span>
+            </div>
+            <p class="mb-0 text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque convallis a cras
+                semper auctor neque. Non odio euismod lacinia at. A condimentum vitae sapien
+                pellentesque. Faucibus pulvinar elementum integer enim neque. Nulla pharetra diam
+                sit amet nisl. Lacus vestibulum sed arcu non odio. Sit amet venenatis urna cursus.
+                Aliquet nec ullamcorper sit amet. Nunc id cursus metus aliquam eleifend mi in
+                nulla.</p>
+        </div>
+    <div id="carouselExampleCaptions" class="carousel slide carousel-fade mb-4"
+         data-ride="carousel">
         <div class="carousel-inner d-flex">
             <div class="carousel-item active">
-                <div class="bg-image-container">
-                    <img class="bg-image" src="../images/main/mainCarousel1.png" alt="">
-                </div>
-                <div class="content text-right">
-                    <p class="title font-weight-bold">Lorem ipsum dolor sit amet
-                        elit, sed</p>
-                    <p class="text ml-auto text-right text-light-gray mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat.</p>
-                    <button class="btn btn-lg btn-green-shine font-weight-bold text-white px-4">Start Now!</button>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="bg-image-container">
-                    <img class="bg-image" src="../images/main/mainCarousel1.png" alt="">
-                </div>
-                <div class="content text-right">
-                    <p class="title font-weight-bolder">Lorem ipsum
-                        elit, sed</p>
-                    <p class="text ml-auto text-right text-light-gray mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat.</p>
-                    <button class="btn btn-lg btn-green-shine font-weight-bold text-white px-4">Start Now!</button>
+                <div class="row">
+                    <div class="col-6 h-100 bg-image-container">
+                        <img class="img-fluid bg-image" src="../images/main/mainCarousel1.png"
+                             alt="">
+                    </div>
+                    <div class="col content text-right">
+                        <p class="title h1 font-weight-bold">Lorem ipsum dolor sit amet
+                            elit, sed</p>
+                        <p class="text ml-auto text-right text-light-gray mb-0">Lorem ipsum dolor
+                            sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                            veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat.</p>
+                        <button class="d-none d-lg-inline-block mt-4 btn btn-lg btn-green-shine font-weight-bold text-white px-4">
+                            Start Now!
+                        </button>
+                    </div>
                 </div>
             </div>
             <div class="carousel-item">
-                <div class="bg-image-container">
-                    <img class="bg-image" src="../images/main/mainCarousel1.png" alt="">
+                <div class="row">
+                    <div class="col-6 h-100 bg-image-container">
+                        <img class="img-fluid bg-image" src="../images/main/mainCarousel1.png"
+                             alt="">
+                    </div>
+                    <div class="col content text-right">
+                        <p class="title h1 font-weight-bold">Ut enim ad minim
+                            veniam</p>
+                        <p class="text ml-auto text-right text-light-gray mb-0">Lorem ipsum dolor
+                            sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                            veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat.</p>
+                        <button class="d-none d-lg-inline-block mt-4 btn btn-lg btn-green-shine font-weight-bold text-white px-4">
+                            Start Now!
+                        </button>
+                    </div>
                 </div>
-                <div class="content text-right">
-                    <p class="title font-weight-bolder">Lorem ipsum dolor sit amet
-                        elit, sed</p>
-                    <p class="text ml-auto text-right text-light-gray mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat.</p>
-                    <button class="btn btn-lg btn-green-shine font-weight-bold text-white px-4">Start Now!</button>
+            </div>
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="col-6 h-100 bg-image-container">
+                        <img class="img-fluid bg-image" src="../images/main/mainCarousel1.png"
+                             alt="">
+                    </div>
+                    <div class="col content text-right">
+                        <p class="title h1 font-weight-bold">Quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
+                        <p class="text ml-auto text-right text-light-gray mb-0">Lorem ipsum dolor
+                            sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                            veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat.</p>
+                        <button class="d-none d-lg-inline-block mt-4 btn btn-lg btn-green-shine font-weight-bold text-white px-4">
+                            Start Now!
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -237,7 +289,7 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
-    <div class="imageList px-1 row mb-4">
+    <div class="imageList games-carousel px-1 row mb-4">
         <a class="col px-2" href="#">
             <img class="img-fluid" src="https://source.unsplash.com/random" alt="">
         </a>
@@ -258,292 +310,304 @@
         </a>
     </div>
     <div class="row mb-3">
-        <div class="col-3 itemList">
-            <p class="h5 font-weight-bold mb-3">Advertisements</p>
-            <a href="#" class="item-orange link mb-3">
-                <div class="content py-3 pl-4 pr-3">
-                    <p class="title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                        consectetur
-                        adipiscing elit, sed do</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="user-image-container online">
-                            <img class="user-image user-image-sm"
-                                 src="https://source.unsplash.com/random" alt="">
-                        </div>
-                        <div class="d-flex flex-column align-items-center justify-content-center">
-                            <div class="progress progress-tiny bg-light-red mb-2">
-                                <div class="progress-bar" role="progressbar" style="width: 30%"
-                                     aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+        <div class="col-12 col-xl-auto small-col">
+            <p class="h5 font-weight-bold mb-2 mb-md-3">Advertisements</p>
+            <div class="mob-items-carousel">
+                <a href="#" class="item-orange d-flex link mb-3">
+                    <div class="content w-100 py-3 pl-4 pr-3">
+                        <p class="title">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed
+                            consectetur
+                            adipiscing elit, sed do</p>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="user-image-container online">
+                                <img class="user-image user-image-sm"
+                                     src="https://source.unsplash.com/random" alt="">
                             </div>
-                            <span class="rating text-light-gray">25.69/<small>100</small></span>
-                        </div>
-                        <span class="text-glow-green price">$45.00</span>
-                    </div>
-                </div>
-            </a>
-            <a href="#" class="item-orange link mb-3">
-                <div class="content py-3 px-4">
-                    <p class="title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                        consectetur
-                        adipiscing elit, sed do</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="user-image-container online">
-                            <img class="user-image user-image-sm"
-                                 src="https://source.unsplash.com/random" alt="">
-                        </div>
-                        <div class="d-flex flex-column align-items-center justify-content-center">
-                            <div class="progress progress-tiny bg-light-red mb-2">
-                                <div class="progress-bar" role="progressbar" style="width: 30%"
-                                     aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="d-flex flex-column align-items-center justify-content-center">
+                                <div class="progress progress-tiny bg-light-red mb-2">
+                                    <div class="progress-bar" role="progressbar" style="width: 30%"
+                                         aria-valuenow="30" aria-valuemin="0"
+                                         aria-valuemax="100"></div>
+                                </div>
+                                <span class="rating text-light-gray">25.69/<small>100</small></span>
                             </div>
-                            <span class="rating text-light-gray">25.69/<small>100</small></span>
+                            <span class="text-glow-green price">$45.00</span>
                         </div>
-                        <span class="text-glow-green price">$45.00</span>
                     </div>
-                </div>
-            </a>
-            <a href="#" class="item-orange link mb-3">
-                <div class="content py-3 px-4">
-                    <p class="title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                        consectetur
-                        adipiscing elit, sed do</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="user-image-container online">
-                            <img class="user-image user-image-sm"
-                                 src="https://source.unsplash.com/random" alt="">
-                        </div>
-                        <div class="d-flex flex-column align-items-center justify-content-center">
-                            <div class="progress progress-tiny bg-light-red mb-2">
-                                <div class="progress-bar" role="progressbar" style="width: 30%"
-                                     aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                </a>
+                <a href="#" class="item-orange d-flex link mb-3">
+                    <div class="content w-100 py-3 pl-4 pr-3">
+                        <p class="title">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed
+                            consectetur
+                            adipiscing elit, sed do</p>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="user-image-container online">
+                                <img class="user-image user-image-sm"
+                                     src="https://source.unsplash.com/random" alt="">
                             </div>
-                            <span class="rating text-light-gray">25.69/<small>100</small></span>
-                        </div>
-                        <span class="text-glow-green price">$45.00</span>
-                    </div>
-                </div>
-            </a>
-            <a href="#" class="item-orange link mb-3">
-                <div class="content py-3 px-4">
-                    <p class="title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                        consectetur
-                        adipiscing elit, sed do</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="user-image-container online">
-                            <img class="user-image user-image-sm"
-                                 src="https://source.unsplash.com/random" alt="">
-                        </div>
-                        <div class="d-flex flex-column align-items-center justify-content-center">
-                            <div class="progress progress-tiny bg-light-red mb-2">
-                                <div class="progress-bar" role="progressbar" style="width: 30%"
-                                     aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="d-flex flex-column align-items-center justify-content-center">
+                                <div class="progress progress-tiny bg-light-red mb-2">
+                                    <div class="progress-bar" role="progressbar" style="width: 30%"
+                                         aria-valuenow="30" aria-valuemin="0"
+                                         aria-valuemax="100"></div>
+                                </div>
+                                <span class="rating text-light-gray">25.69/<small>100</small></span>
                             </div>
-                            <span class="rating text-light-gray">25.69/<small>100</small></span>
+                            <span class="text-glow-green price">$45.00</span>
                         </div>
-                        <span class="text-glow-green price">$45.00</span>
                     </div>
-                </div>
-            </a>
+                </a>
+                <a href="#" class="item-orange d-flex link mb-3">
+                    <div class="content w-100 py-3 pl-4 pr-3">
+                        <p class="title">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed
+                            consectetur
+                            adipiscing elit, sed do</p>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="user-image-container online">
+                                <img class="user-image user-image-sm"
+                                     src="https://source.unsplash.com/random" alt="">
+                            </div>
+                            <div class="d-flex flex-column align-items-center justify-content-center">
+                                <div class="progress progress-tiny bg-light-red mb-2">
+                                    <div class="progress-bar" role="progressbar" style="width: 30%"
+                                         aria-valuenow="30" aria-valuemin="0"
+                                         aria-valuemax="100"></div>
+                                </div>
+                                <span class="rating text-light-gray">25.69/<small>100</small></span>
+                            </div>
+                            <span class="text-glow-green price">$45.00</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="item-orange d-flex link mb-3">
+                    <div class="content w-100 py-3 pl-4 pr-3">
+                        <p class="title">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed
+                            consectetur
+                            adipiscing elit, sed do</p>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="user-image-container online">
+                                <img class="user-image user-image-sm"
+                                     src="https://source.unsplash.com/random" alt="">
+                            </div>
+                            <div class="d-flex flex-column align-items-center justify-content-center">
+                                <div class="progress progress-tiny bg-light-red mb-2">
+                                    <div class="progress-bar" role="progressbar" style="width: 30%"
+                                         aria-valuenow="30" aria-valuemin="0"
+                                         aria-valuemax="100"></div>
+                                </div>
+                                <span class="rating text-light-gray">25.69/<small>100</small></span>
+                            </div>
+                            <span class="text-glow-green price">$45.00</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
         </div>
         <div class="col">
-            <p class="h5 font-weight-bold mb-3">Recommend</p>
-            <a href="#" class="item link mb-3">
-                <div class="content py-2 px-4 w-100 d-flex align-items-center">
-                    <div class="user-image-container online mr-4">
-                        <img class="user-image" src="https://source.unsplash.com/random" alt="">
-                    </div>
-                    <p class="mb-0 mr-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            <p class="h5 font-weight-bold mb-2 mb-md-3">Recommend</p>
+            <a href="#" class="item link mb-2 mb-xl-3">
+                <div class="row content py-2 pl-4 w-100 align-items-center">
+                    <p class="col-xxl order-xxl-2 mb-2 mb-xxl-0 line-clamp-3">Lorem ipsum dolor sit
+                        amet, consectetur adipiscing elit,
                         sed consectetur
                         adipiscing elit, sed do</p>
-                    <div class="d-flex align-items-center ml-5 text-light-gray">
-                        <div class="d-flex flex-column align-items-center justify-content-center">
-                            <span class="material-icons text-glow-green mb-2">thumb_up</span>
-                            <span>10000</span>
-                        </div>
-                        <div class="d-flex flex-column align-items-center justify-content-center pl-4">
-                            <span class="material-icons text-glow-light-red mb-2">thumb_down</span>
-                            <span>10000</span>
+                    <div class="col col-xxl-auto order-xxl-1 d-flex">
+                        <div class="user-image-container online">
+                            <img class="user-image" src="https://source.unsplash.com/random" alt="">
                         </div>
                     </div>
-                    <div class="d-flex flex-column align-items-center justify-content-center ml-5 text-light-gray">
-                        <div class="progress progress-tiny bg-light-red mb-3 mt-2">
-                            <div class="progress-bar" role="progressbar" style="width: 30%"
-                                 aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="col-auto order-xxl-3 ml-auto d-flex align-items-center justify-content-end">
+                        <div class="d-flex align-items-center reviews text-light-gray mr-3 ml-xxxl-3 mr-xxxl-5">
+                            <div class="d-flex flex-column align-items-center justify-content-center mr-2 mr-xxxl-4">
+                                <span class="material-icons text-glow-green mb-1 mb-xxxl-2">thumb_up</span>
+                                <span>10000</span>
+                            </div>
+                            <div class="d-flex flex-column align-items-center justify-content-center">
+                                <span class="material-icons text-glow-light-red mb-1 mb-xxxl-2">thumb_down</span>
+                                <span>10000</span>
+                            </div>
                         </div>
-                        <span class="rating">25.69/<small>100</small></span>
+                        <div class="d-flex flex-column align-items-center justify-content-center text-light-gray mr-3 mr-xxxl-5">
+                            <div class="progress progress-tiny bg-light-red mb-2 mb-xxxl-3 mt-xxl-2">
+                                <div class="progress-bar" role="progressbar" style="width: 30%"
+                                     aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <span class="rating">25.69/<small>100</small></span>
+                        </div>
+                        <span class="text-glow-green price">$45.00</span>
                     </div>
-                    <span class="text-glow-green price ml-5">$45.00</span>
                 </div>
             </a>
-            <a href="#" class="item link mb-3">
-                <div class="content py-2 px-4 w-100 d-flex align-items-center">
-                    <div class="user-image-container online mr-4">
-                        <img class="user-image" src="https://source.unsplash.com/random" alt="">
-                    </div>
-                    <p class="mb-0 mr-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            <a href="#" class="item link mb-2 mb-xl-3">
+                <div class="row content py-2 pl-4 w-100 align-items-center">
+                    <p class="col-xxl order-xxl-2 mb-2 mb-xxl-0 line-clamp-3">Lorem ipsum dolor sit
+                        amet, consectetur adipiscing elit,
                         sed consectetur
                         adipiscing elit, sed do</p>
-                    <div class="d-flex align-items-center ml-5 text-light-gray">
-                        <div class="d-flex flex-column align-items-center justify-content-center">
-                            <span class="material-icons text-glow-green mb-2">thumb_up</span>
-                            <span>10000</span>
-                        </div>
-                        <div class="d-flex flex-column align-items-center justify-content-center pl-4">
-                            <span class="material-icons text-glow-light-red mb-2">thumb_down</span>
-                            <span>10000</span>
+                    <div class="col col-xxl-auto order-xxl-1 d-flex">
+                        <div class="user-image-container online">
+                            <img class="user-image" src="https://source.unsplash.com/random" alt="">
                         </div>
                     </div>
-                    <div class="d-flex flex-column align-items-center justify-content-center ml-5 text-light-gray">
-                        <div class="progress progress-tiny bg-light-red mb-3 mt-2">
-                            <div class="progress-bar" role="progressbar" style="width: 30%"
-                                 aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="col-auto order-xxl-3 ml-auto d-flex align-items-center justify-content-end">
+                        <div class="d-flex align-items-center reviews text-light-gray mr-3 ml-xxxl-3 mr-xxxl-5">
+                            <div class="d-flex flex-column align-items-center justify-content-center mr-2 mr-xxxl-4">
+                                <span class="material-icons text-glow-green mb-1 mb-xxxl-2">thumb_up</span>
+                                <span>10000</span>
+                            </div>
+                            <div class="d-flex flex-column align-items-center justify-content-center">
+                                <span class="material-icons text-glow-light-red mb-1 mb-xxxl-2">thumb_down</span>
+                                <span>10000</span>
+                            </div>
                         </div>
-                        <span class="rating">25.69/<small>100</small></span>
+                        <div class="d-flex flex-column align-items-center justify-content-center text-light-gray mr-3 mr-xxxl-5">
+                            <div class="progress progress-tiny bg-light-red mb-2 mb-xxxl-3 mt-xxl-2">
+                                <div class="progress-bar" role="progressbar" style="width: 30%"
+                                     aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <span class="rating">25.69/<small>100</small></span>
+                        </div>
+                        <span class="text-glow-green price">$45.00</span>
                     </div>
-                    <span class="text-glow-green price ml-5">$45.00</span>
                 </div>
             </a>
-            <a href="#" class="item link mb-3">
-                <div class="content py-2 px-4 w-100 d-flex align-items-center">
-                    <div class="user-image-container online mr-4">
-                        <img class="user-image" src="https://source.unsplash.com/random" alt="">
-                    </div>
-                    <p class="mb-0 mr-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            <a href="#" class="item link mb-2 mb-xl-3">
+                <div class="row content py-2 pl-4 w-100 align-items-center">
+                    <p class="col-xxl order-xxl-2 mb-2 mb-xxl-0 line-clamp-3">Lorem ipsum dolor sit
+                        amet, consectetur adipiscing elit,
                         sed consectetur
                         adipiscing elit, sed do</p>
-                    <div class="d-flex align-items-center ml-5 text-light-gray">
-                        <div class="d-flex flex-column align-items-center justify-content-center">
-                            <span class="material-icons text-glow-green mb-2">thumb_up</span>
-                            <span>10000</span>
-                        </div>
-                        <div class="d-flex flex-column align-items-center justify-content-center pl-4">
-                            <span class="material-icons text-glow-light-red mb-2">thumb_down</span>
-                            <span>10000</span>
+                    <div class="col col-xxl-auto order-xxl-1 d-flex">
+                        <div class="user-image-container online">
+                            <img class="user-image" src="https://source.unsplash.com/random" alt="">
                         </div>
                     </div>
-                    <div class="d-flex flex-column align-items-center justify-content-center ml-5 text-light-gray">
-                        <div class="progress progress-tiny bg-light-red mb-3 mt-2">
-                            <div class="progress-bar" role="progressbar" style="width: 30%"
-                                 aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="col-auto order-xxl-3 ml-auto d-flex align-items-center justify-content-end">
+                        <div class="d-flex align-items-center reviews text-light-gray mr-3 ml-xxxl-3 mr-xxxl-5">
+                            <div class="d-flex flex-column align-items-center justify-content-center mr-2 mr-xxxl-4">
+                                <span class="material-icons text-glow-green mb-1 mb-xxxl-2">thumb_up</span>
+                                <span>10000</span>
+                            </div>
+                            <div class="d-flex flex-column align-items-center justify-content-center">
+                                <span class="material-icons text-glow-light-red mb-1 mb-xxxl-2">thumb_down</span>
+                                <span>10000</span>
+                            </div>
                         </div>
-                        <span class="rating">25.69/<small>100</small></span>
+                        <div class="d-flex flex-column align-items-center justify-content-center text-light-gray mr-3 mr-xxxl-5">
+                            <div class="progress progress-tiny bg-light-red mb-2 mb-xxxl-3 mt-xxl-2">
+                                <div class="progress-bar" role="progressbar" style="width: 30%"
+                                     aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <span class="rating">25.69/<small>100</small></span>
+                        </div>
+                        <span class="text-glow-green price">$45.00</span>
                     </div>
-                    <span class="text-glow-green price ml-5">$45.00</span>
                 </div>
             </a>
-            <a href="#" class="item link mb-3">
-                <div class="content py-2 px-4 w-100 d-flex align-items-center">
-                    <div class="user-image-container online mr-4">
-                        <img class="user-image" src="https://source.unsplash.com/random" alt="">
-                    </div>
-                    <p class="mb-0 mr-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            <a href="#" class="item link mb-2 mb-xl-3">
+                <div class="row content py-2 pl-4 w-100 align-items-center">
+                    <p class="col-xxl order-xxl-2 mb-2 mb-xxl-0 line-clamp-3">Lorem ipsum dolor sit
+                        amet, consectetur adipiscing elit,
                         sed consectetur
                         adipiscing elit, sed do</p>
-                    <div class="d-flex align-items-center ml-5 text-light-gray">
-                        <div class="d-flex flex-column align-items-center justify-content-center">
-                            <span class="material-icons text-glow-green mb-2">thumb_up</span>
-                            <span>10000</span>
-                        </div>
-                        <div class="d-flex flex-column align-items-center justify-content-center pl-4">
-                            <span class="material-icons text-glow-light-red mb-2">thumb_down</span>
-                            <span>10000</span>
+                    <div class="col col-xxl-auto order-xxl-1 d-flex">
+                        <div class="user-image-container online">
+                            <img class="user-image" src="https://source.unsplash.com/random" alt="">
                         </div>
                     </div>
-                    <div class="d-flex flex-column align-items-center justify-content-center ml-5 text-light-gray">
-                        <div class="progress progress-tiny bg-light-red mb-3 mt-2">
-                            <div class="progress-bar" role="progressbar" style="width: 30%"
-                                 aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="col-auto order-xxl-3 ml-auto d-flex align-items-center justify-content-end">
+                        <div class="d-flex align-items-center reviews text-light-gray mr-3 ml-xxxl-3 mr-xxxl-5">
+                            <div class="d-flex flex-column align-items-center justify-content-center mr-2 mr-xxxl-4">
+                                <span class="material-icons text-glow-green mb-1 mb-xxxl-2">thumb_up</span>
+                                <span>10000</span>
+                            </div>
+                            <div class="d-flex flex-column align-items-center justify-content-center">
+                                <span class="material-icons text-glow-light-red mb-1 mb-xxxl-2">thumb_down</span>
+                                <span>10000</span>
+                            </div>
                         </div>
-                        <span class="rating">25.69/<small>100</small></span>
+                        <div class="d-flex flex-column align-items-center justify-content-center text-light-gray mr-3 mr-xxxl-5">
+                            <div class="progress progress-tiny bg-light-red mb-2 mb-xxxl-3 mt-xxl-2">
+                                <div class="progress-bar" role="progressbar" style="width: 30%"
+                                     aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <span class="rating">25.69/<small>100</small></span>
+                        </div>
+                        <span class="text-glow-green price">$45.00</span>
                     </div>
-                    <span class="text-glow-green price ml-5">$45.00</span>
                 </div>
             </a>
-            <a href="#" class="item link mb-3">
-                <div class="content py-2 px-4 w-100 d-flex align-items-center">
-                    <div class="user-image-container online mr-4">
-                        <img class="user-image" src="https://source.unsplash.com/random" alt="">
-                    </div>
-                    <p class="mb-0 mr-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            <a href="#" class="item link mb-2 mb-xl-3">
+                <div class="row content py-2 pl-4 w-100 align-items-center">
+                    <p class="col-xxl order-xxl-2 mb-2 mb-xxl-0 line-clamp-3">Lorem ipsum dolor sit
+                        amet, consectetur adipiscing elit,
                         sed consectetur
                         adipiscing elit, sed do</p>
-                    <div class="d-flex align-items-center ml-5 text-light-gray">
-                        <div class="d-flex flex-column align-items-center justify-content-center">
-                            <span class="material-icons text-glow-green mb-2">thumb_up</span>
-                            <span>10000</span>
-                        </div>
-                        <div class="d-flex flex-column align-items-center justify-content-center pl-4">
-                            <span class="material-icons text-glow-light-red mb-2">thumb_down</span>
-                            <span>10000</span>
+                    <div class="col col-xxl-auto order-xxl-1 d-flex">
+                        <div class="user-image-container online">
+                            <img class="user-image" src="https://source.unsplash.com/random" alt="">
                         </div>
                     </div>
-                    <div class="d-flex flex-column align-items-center justify-content-center ml-5 text-light-gray">
-                        <div class="progress progress-tiny bg-light-red mb-3 mt-2">
-                            <div class="progress-bar" role="progressbar" style="width: 30%"
-                                 aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="col-auto order-xxl-3 ml-auto d-flex align-items-center justify-content-end">
+                        <div class="d-flex align-items-center reviews text-light-gray mr-3 ml-xxxl-3 mr-xxxl-5">
+                            <div class="d-flex flex-column align-items-center justify-content-center mr-2 mr-xxxl-4">
+                                <span class="material-icons text-glow-green mb-1 mb-xxxl-2">thumb_up</span>
+                                <span>10000</span>
+                            </div>
+                            <div class="d-flex flex-column align-items-center justify-content-center">
+                                <span class="material-icons text-glow-light-red mb-1 mb-xxxl-2">thumb_down</span>
+                                <span>10000</span>
+                            </div>
                         </div>
-                        <span class="rating">25.69/<small>100</small></span>
+                        <div class="d-flex flex-column align-items-center justify-content-center text-light-gray mr-3 mr-xxxl-5">
+                            <div class="progress progress-tiny bg-light-red mb-2 mb-xxxl-3 mt-xxl-2">
+                                <div class="progress-bar" role="progressbar" style="width: 30%"
+                                     aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <span class="rating">25.69/<small>100</small></span>
+                        </div>
+                        <span class="text-glow-green price">$45.00</span>
                     </div>
-                    <span class="text-glow-green price ml-5">$45.00</span>
                 </div>
             </a>
-            <a href="#" class="item link mb-3">
-                <div class="content py-2 px-4 w-100 d-flex align-items-center">
-                    <div class="user-image-container online mr-4">
-                        <img class="user-image" src="https://source.unsplash.com/random" alt="">
-                    </div>
-                    <p class="mb-0 mr-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            <a href="#" class="item link mb-2 mb-xl-3">
+                <div class="row content py-2 pl-4 w-100 align-items-center">
+                    <p class="col-xxl order-xxl-2 mb-2 mb-xxl-0 line-clamp-3">Lorem ipsum dolor sit
+                        amet, consectetur adipiscing elit,
                         sed consectetur
                         adipiscing elit, sed do</p>
-                    <div class="d-flex align-items-center ml-5 text-light-gray">
-                        <div class="d-flex flex-column align-items-center justify-content-center">
-                            <span class="material-icons text-glow-green mb-2">thumb_up</span>
-                            <span>10000</span>
-                        </div>
-                        <div class="d-flex flex-column align-items-center justify-content-center pl-4">
-                            <span class="material-icons text-glow-light-red mb-2">thumb_down</span>
-                            <span>10000</span>
+                    <div class="col col-xxl-auto order-xxl-1 d-flex">
+                        <div class="user-image-container online">
+                            <img class="user-image" src="https://source.unsplash.com/random" alt="">
                         </div>
                     </div>
-                    <div class="d-flex flex-column align-items-center justify-content-center ml-5 text-light-gray">
-                        <div class="progress progress-tiny bg-light-red mb-3 mt-2">
-                            <div class="progress-bar" role="progressbar" style="width: 30%"
-                                 aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="col-auto order-xxl-3 ml-auto d-flex align-items-center justify-content-end">
+                        <div class="d-flex align-items-center reviews text-light-gray mr-3 ml-xxxl-3 mr-xxxl-5">
+                            <div class="d-flex flex-column align-items-center justify-content-center mr-2 mr-xxxl-4">
+                                <span class="material-icons text-glow-green mb-1 mb-xxxl-2">thumb_up</span>
+                                <span>10000</span>
+                            </div>
+                            <div class="d-flex flex-column align-items-center justify-content-center">
+                                <span class="material-icons text-glow-light-red mb-1 mb-xxxl-2">thumb_down</span>
+                                <span>10000</span>
+                            </div>
                         </div>
-                        <span class="rating">25.69/<small>100</small></span>
+                        <div class="d-flex flex-column align-items-center justify-content-center text-light-gray mr-3 mr-xxxl-5">
+                            <div class="progress progress-tiny bg-light-red mb-2 mb-xxxl-3 mt-xxl-2">
+                                <div class="progress-bar" role="progressbar" style="width: 30%"
+                                     aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <span class="rating">25.69/<small>100</small></span>
+                        </div>
+                        <span class="text-glow-green price">$45.00</span>
                     </div>
-                    <span class="text-glow-green price ml-5">$45.00</span>
                 </div>
             </a>
-            <a href="#" class="item link mb-3">
-                <div class="content py-2 px-4 w-100 d-flex align-items-center">
-                    <div class="user-image-container online mr-4">
-                        <img class="user-image" src="https://source.unsplash.com/random" alt="">
-                    </div>
-                    <p class="mb-0 mr-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed consectetur
-                        adipiscing elit, sed do</p>
-                    <div class="d-flex align-items-center ml-5 text-light-gray">
-                        <div class="d-flex flex-column align-items-center justify-content-center">
-                            <span class="material-icons text-glow-green mb-2">thumb_up</span>
-                            <span>10000</span>
-                        </div>
-                        <div class="d-flex flex-column align-items-center justify-content-center pl-4">
-                            <span class="material-icons text-glow-light-red mb-2">thumb_down</span>
-                            <span>10000</span>
-                        </div>
-                    </div>
-                    <div class="d-flex flex-column align-items-center justify-content-center ml-5 text-light-gray">
-                        <div class="progress progress-tiny bg-light-red mb-3 mt-2">
-                            <div class="progress-bar" role="progressbar" style="width: 30%"
-                                 aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                        <span class="rating">25.69/<small>100</small></span>
-                    </div>
-                    <span class="text-glow-green price ml-5">$45.00</span>
-                </div>
-            </a>
-            <nav class="pagination-row d-flex">
+            <nav class="pagination-row d-flex justify-content-center justify-content-md-start mt-3">
                 <a class="active ml-0" href="#">1</a>
                 <a href="#">2</a>
                 <a href="#">3</a>
@@ -566,9 +630,85 @@
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
 <!-- Optional JavaScript -->
+<script type="text/javascript" src="slick/slick.min.js"></script>
 <script>
-  $('#menu-fixed-toggle').click(function() {
+  $(window).on('load resize orientationchange', function() {
+    $('.mob-items-carousel').each(function() {
+      var $carousel = $(this);
+      /* Initializes a slick carousel only on mobile screens */
+      // slick on mobile
+      if ($(window).width() > 1200) {
+        if ($carousel.hasClass('slick-initialized')) {
+          $carousel.slick('unslick');
+        }
+      } else {
+        if (!$carousel.hasClass('slick-initialized')) {
+          setTimeout(function() {
+            $carousel.slick({
+              infinite: true,
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              arrows: false,
+              dots: true,
+            });
+          }, 600);
+        }
+      }
+    });
+  });
+
+  $('.games-carousel').slick({
+    infinite: false,
+    arrows: false,
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1440,
+        settings: {
+          slidesToShow: 5,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  });
+
+  $('.menu-fixed-toggle').click(function() {
     $('body').toggleClass('collapsed');
+    setTimeout(function() {
+      $('.games-carousel').slick('resize');
+    }, 600);
+  });
+
+  $(document).click(function(e) {
+    if ($(window).width() < 992 && !$(e.target).closest('.main-menu').length &&
+      !$(e.target).closest('.menu-fixed-toggle').length) {
+      $('body').removeClass('collapsed');
+      setTimeout(function() {
+        $('.games-carousel').slick('resize');
+      }, 600);
+    }
   });
 
   //info accordion

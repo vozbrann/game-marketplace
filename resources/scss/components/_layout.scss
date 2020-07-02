@@ -13,8 +13,24 @@ main {
   padding: 20px 36px;
 }
 
-.collapsed {
+
+@media screen and (min-width: 992px) {
+  .collapsed {
+    main {
+      margin: 0 0 0 90px;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
   main {
-    margin: 0 0 0 90px;
+    margin-left: 0;
+    padding: 15px 0 15px 10px;
+  }
+  .collapsed {
+    main {
+      height: 100vh;
+      overflow: hidden;
+    }
   }
 }

@@ -97,3 +97,23 @@
     box-shadow: none!important;
   }
 }
+
+  @media screen and (max-width: 1600px) {
+    .btn {
+      font-size: 14px!important;
+      padding-top: 8px!important;
+      padding-bottom: 8px!important;
+      border-radius: $border-radius-lg;
+
+      &.btn-lg {
+        padding-top: 12px!important;
+        padding-bottom: 12px!important;
+      }
+
+      &.btn-sm {
+        font-size: 13px!important;
+        padding-top: 5px!important;
+        padding-bottom: 5px!important;
+      }
+    }
+  }
