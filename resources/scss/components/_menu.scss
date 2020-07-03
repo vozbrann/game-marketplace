@@ -77,7 +77,7 @@
         }
       }
       &:not(:hover){
-        width: 90px;
+        width: 96px;
         .hidden-on-collapsed{
           display: none;
         }
@@ -90,6 +90,8 @@
 @media screen and (max-width: 992px) {
   .main-menu {
     width: 0;
+    background-color: rgba($dark, 0.9);
+    backdrop-filter: blur(8px);
   }
   .collapsed {
     .main-menu {

@@ -6,4 +6,9 @@
     font-weight: 900;
     @include text-stroke-shadow($green, 1.5px, 0.4, 20px);
   }
+  @media screen and (max-width: 992px) {
+    h1 {
+      font-size: $h3-font-size;
+    }
+  }
 }

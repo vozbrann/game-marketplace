@@ -21,6 +21,11 @@
   background-size: cover;
   height: 300px;
   padding: 0 8%;
+  border-radius: $border-radius-lg;
+
+  .content {
+    padding: 30px 0;
+  }
 
   .form-control {
     border: none;
@@ -38,11 +43,27 @@
       color: $light-gray;
     }
   }
+  @media screen and (max-width: 992px) {
+    .form-control {
+      width: 100%;
+    }
+    height: unset;
+  }
 }
 
 .nav-info {
   .nav {
     width: 240px;
+    .nav-link {
+      display: inline-flex;
+      .title {
+        font-size: 18px;
+        line-height: 1em;
+      }
+      .text {
+        font-size: 12px;
+      }
+    }
     .nav-link-yellow {
       @include nav-link-mixin($yellow);
     }
@@ -58,6 +79,33 @@
     .nav-link-violet {
       @include nav-link-mixin($violet);
     }
+    @media screen and (max-width: 992px) {
+      display: flex;
+      flex-wrap: nowrap;
+      width: 100%;
+      overflow-x: auto;
+      overflow-y: hidden;
+      flex-basis: 400px;
+      &::-webkit-scrollbar-track
+      {
+        background-color: $dark;
+      }
+      &::-webkit-scrollbar
+      {
+        height: 8px;
+      }
+      .nav-link {
+        margin-right: 15px;
+        width: 140px;
+        box-sizing: content-box;
+        .title {
+          font-size: 14px;
+        }
+        .text {
+          font-size: 8px;
+        }
+      }
+    }
   }
   .accordion-item {
     transition: all 0.3s ease;
@@ -65,7 +113,11 @@
     background-color: $dark;
     border: 2px solid transparent;
     .toggle-icon {
+      font-size: 46px;
       transition: transform 0.3s ease;
+    }
+    .title {
+      font-size: 18px;
     }
     &.expanded {
       border: 2px solid $violet;
@@ -75,6 +127,17 @@
       }
       .toggle-icon {
         transform: rotate(-180deg);
+      }
+    }
+    @media screen and (max-width: 992px) {
+      .title {
+        font-size: 14px;
+      }
+      .text {
+        font-size: 10px;
+      }
+      .toggle-icon {
+        font-size: 30px;
       }
     }
   }
