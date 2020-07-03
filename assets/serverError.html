@@ -10,6 +10,9 @@
     <title>Server error</title>
 </head>
 <body>
+<div class="scene h-100 w-100 d-none d-lg-block">
+    <img src="../images/serverError/shuttle.png" data-depth="0.2" alt="">
+</div>
 <div class="content d-flex">
     <div class="title d-flex flex-column align-items-center">
         <p class="warning-text mb-2 mb-md-0 text-uppercase px-4">internal server error</p>
@@ -25,5 +28,10 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 <!-- Optional JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+<script>
+  var scene = $('.scene').get(0);
+  new Parallax(scene);
+</script>
 </body>
 </html>

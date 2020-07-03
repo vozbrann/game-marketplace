@@ -4,10 +4,8 @@
 body {
   font-size: 14px;
   color: rgba(255, 255, 255, 0.4);
-  background:
-          url("../../../images/serverError/shuttle.png") no-repeat 90% 80%,
-          url("../../../images/serverError/bg.png") no-repeat center;
-  background-size: 30vh auto, cover;
+  background: url("../../../images/serverError/bg.png") no-repeat center;
+  background-size: cover;
   height: 100vh;
   overflow: hidden;
   .content {
@@ -21,6 +19,15 @@ body {
     .error-img {
       max-width: 70vh;
     }
+  }
+}
+
+.scene {
+  position: absolute;
+  overflow: hidden;
+  img {
+    margin-left: 70vw;
+    margin-top: 55vh;
   }
 }
 

@@ -4,10 +4,8 @@
 body {
   font-size: 14px;
   color: rgba(255, 255, 255, 0.4);
-  background:
-          url("../../../images/notFound/spaceShuttle2.png") no-repeat 80% 80%,
-          url("../../../images/notFound/galaxy.png") no-repeat center;
-  background-size: 30vh auto, cover;
+  background: url("../../../images/notFound/galaxy.png") no-repeat center;
+  background-size: cover;
   height: 100vh;
   overflow: hidden;
   .content {
@@ -17,6 +15,16 @@ body {
       margin-left: 10vw;
       margin-bottom: 30vh;
     }
+  }
+}
+
+.scene {
+  position: absolute;
+  overflow: hidden;
+  img {
+    margin-left: 70vw;
+    margin-top: 65vh;
+    width: 200px;
   }
 }
 
@@ -40,10 +48,8 @@ h1 {
 
 @media screen and (max-width: 767px) {
   body {
-    background:
-            url("../../../images/notFound/spaceShuttle2.png") no-repeat 90% 98%,
-            url("../../../images/notFound/mobBg.png") no-repeat center;
-    background-size: 16vh auto, cover;
+    background: url("../../../images/notFound/mobBg.png") no-repeat center;
+    background-size: cover;
     .content {
       display: flex;
       justify-content: center;
@@ -53,6 +59,15 @@ h1 {
         margin-left: 0;
         margin-bottom: 0;
       }
+    }
+  }
+  .scene {
+    position: absolute;
+    overflow: hidden;
+    img {
+      margin-left: 55vw;
+      margin-top: 80vh;
+      width: 140px;
     }
   }
   .warning-text {
