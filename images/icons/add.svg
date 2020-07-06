@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>Group 36</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M20,10 C20,15.522827 15.522827,20 10,20 C4.477173,20 0,15.522827 0,10 C0,4.477173 4.477173,0 10,0 C15.522827,0 20,4.477173 20,10 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Main" transform="translate(-1583.000000, -57.000000)">
+            <g id="Group-36" transform="translate(1583.000000, 57.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Clip-35"></g>
+                <path d="M18,10 C18,14.418278 14.418278,18 10,18 L10,22 C16.627417,22 22,16.627417 22,10 L18,10 Z M10,18 C5.581722,18 2,14.418278 2,10 L-2,10 C-2,16.627417 3.372583,22 10,22 L10,18 Z M2,10 C2,5.581722 5.581722,2 10,2 L10,-2 C3.372583,-2 -2,3.372583 -2,10 L2,10 Z M10,2 C14.418278,2 18,5.581722 18,10 L22,10 C22,3.372583 16.627417,-2 10,-2 L10,2 Z" id="Fill-34" fill="#40D04F" mask="url(#mask-2)"></path>
+                <polygon id="Fill-37" fill="#40D04F" mask="url(#mask-2)" points="14.285783 10.952421 10.994801 10.952421 10.994801 14.285754 9.005337 14.285754 9.005337 10.952421 5.714355 10.952421 5.714355 9.047659 9.005337 9.047659 9.005337 5.714325 10.994801 5.714325 10.994801 9.047659 14.285783 9.047659"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

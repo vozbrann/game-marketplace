@@ -7,6 +7,9 @@ $input-bg: transparent;
 $component-active-color: $light-dark;
 $component-active-bg: $green;
 
+html, body {
+  overflow-y: unset;
+}
 
 body {
   position: relative;

@@ -1,0 +1,53 @@
+.icon-add {
+  mask: url(../../images/icons/add.svg);
+}
+.icon-analytics {
+  mask: url(../../images/icons/analytics.svg);
+}
+.icon-arrow-left {
+  mask: url(../../images/icons/arrow-left.svg);
+}
+.icon-arrow-right {
+  mask: url(../../images/icons/arrow-right.svg);
+}
+.icon-bell-notification {
+  mask: url(../../images/icons/bell-notification.svg);
+}
+.icon-buyer {
+  mask: url(../../images/icons/buyer.svg);
+}
+.icon-cart {
+  mask: url(../../images/icons/cart.svg);
+}
+.icon-chat {
+  mask: url(../../images/icons/chat.svg);
+}
+.icon-check {
+  mask: url(../../images/icons/check.svg);
+}
+.icon-check-fill {
+  mask: url(../../images/icons/check-fill.svg);
+}
+.icon-close {
+  mask: url(../../images/icons/close.svg);
+}
+.icon-home {
+  mask: url(../../images/icons/home.svg);
+}
+.icon-joystick {
+  mask: url(../../images/icons/joystick.svg);
+}
+.icon-arrow {
+  mask: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/icon-arrow-black.svg);
+}
+.icon {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  background: #fff;
+  mask-size: cover;
+}
+.icon:hover,
+.icon:focus {
+  background: red;
+}

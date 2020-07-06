@@ -2,11 +2,15 @@
 var gulp = require('gulp');
 var cleanCSS = require('gulp-clean-css');
 var sass = require('gulp-sass');
+const autoprefixer = require('gulp-autoprefixer');
 
 // Sass task: compiles the style.scss file into style.css
 gulp.task('sass', function(){
   return gulp.src('resources/scss/**/*.scss')
   .pipe(sass()) // compile SCSS to CSS
+    .pipe(autoprefixer({
+      cascade: false
+    }))
     .pipe(cleanCSS()) // minify CSS
     .pipe(gulp.dest('assets/css')); // put final CSS in dist folder
 });
