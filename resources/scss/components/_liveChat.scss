@@ -43,3 +43,31 @@
     cursor: pointer;
   }
 }
+
+@include media-breakpoint-down(lg) {
+  .live-chat {
+    .message {
+      width: 100%;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .live-chat {
+    padding: 15px 10px;
+    .message {
+      .text {
+        font-size: 12px;
+        padding: 15px;
+        line-height: 15px;
+        font-weight: 500;
+      }
+      .user-image-container {
+        .user-image {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+  }
+}
