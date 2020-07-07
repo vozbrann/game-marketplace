@@ -11,19 +11,38 @@
     <title>Account profile</title>
 </head>
 <body>
-<nav class="main-menu p-3">
+<nav class="main-menu p-lg-3">
     <div class="menu-header d-flex align-items-center mb-2">
         <a class="d-flex align-items-center" href="index.html">
             <span class="material-icons md-36 text-primary">sports_esports</span>
             <p class="h5 mb-0 text-nowrap hidden-on-collapsed ml-2 text-primary">Games System</p>
         </a>
         <div class="hidden-on-collapsed">
-            <span id="menu-fixed-toggle" class="material-icons text-primary"></span>
+            <span class="menu-fixed-toggle material-icons text-primary"></span>
+        </div>
+    </div>
+    <div class="d-flex d-md-none flex-nowrap text-nowrap justify-content-between align-items-center mb-3">
+        <div>
+            <div class="mb-2 d-flex align-items-center justify-content-between">
+                <span class="">Level:</span>
+                <span>93.61</span>
+            </div>
+            <div class="progress progress-tiny bg-light-green">
+                <div class="progress-bar" role="progressbar" style="width: 80%"
+                     aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+        <div class="d-flex small align-items-center">
+            <div class="text-right mr-2">
+                <p class="mb-0">Balance:</p>
+                <p class="mb-0 balance-number">$ 1000.00</p>
+            </div>
+            <span class="material-icons text-green">add_circle_outline</span>
         </div>
     </div>
     <div class="nav accordion flex-column nav-pills" id="menu-nav" role="tablist"
          aria-orientation="vertical">
-        <a class="nav-link d-flex" href="#">
+        <a class="nav-link d-flex active" href="#">
             <span class="material-icons">home</span>
             <span class="hidden-on-collapsed ml-2">Home</span>
         </a>
@@ -126,7 +145,7 @@
             </div>
         </div>
         <p class="category-title ml-3 mt-3 mb-2 hidden-on-collapsed text-uppercase">info</p>
-        <a class="nav-link d-flex active" href="support.html">
+        <a class="nav-link d-flex" href="support.html">
             <span class="material-icons">sentiment_satisfied_alt</span>
             <span class="hidden-on-collapsed ml-2">Support</span>
         </a>
@@ -136,14 +155,14 @@
         </a>
     </div>
 </nav>
-<main class="px-4 py-3">
-    <header class="main-header px-4 d-flex mb-4 justify-content-between">
-        <div class="d-flex align-items-center my-3">
+<main>
+    <header class="main-header px-lg-4 px-3 d-flex mb-3 mb-lg-4 justify-content-between">
+        <div class="d-none d-lg-flex align-items-center my-3">
             <span class="material-icons-outlined mr-4 md-30">shopping_cart</span>
             <span class="material-icons mr-4 md-30">chat_bubble_outline</span>
             <span class="material-icons text-glow-green mr-4 md-30">search</span>
         </div>
-        <div class="d-flex align-items-center">
+        <div class="d-none d-lg-flex align-items-center">
             <div class="d-flex align-items-center">
                 <div class="text-right mr-2">
                     <p class="mb-0">Balance:</p>
@@ -166,9 +185,17 @@
                 <span class="material-icons-outlined md-30 ml-3">account_circle</span>
             </div>
         </div>
+        <button class="btn p-0 d-flex d-lg-none align-items-center menu-fixed-toggle">
+            <span class="material-icons md-30 text-gray">menu</span>
+        </button>
+        <div class="d-lg-none d-flex align-items-center my-2 ml-auto">
+            <span class="material-icons text-glow-green md-30 mr-2">search</span>
+            <span class="material-icons-outlined md-30 mr-2">shopping_cart</span>
+            <span class="material-icons-outlined md-30">account_circle</span>
+        </div>
     </header>
 
-    <nav class="page-nav mb-4 d-flex justify-content-between align-items-center">
+    <nav class="page-nav mb-3 mb-lg-4 d-flex justify-content-between align-items-center">
         <h1 class="mb-0">Profile</h1>
         <div class="mb-0 d-flex">
             <a href="#" class="setting-btn d-flex">
@@ -177,18 +204,18 @@
         </div>
     </nav>
 
-    <div class="user-info-container mb-4 d-flex align-items-end">
+    <div class="container-fluid user-info-container bg-dark mb-3 mb-lg-4 d-flex flex-column justify-content-end">
         <img class="bg-top" src="../images/profile/topBg.png" alt="">
-        <div class="content bg-dark d-flex justify-content-between align-items-end">
-            <div class="text-center user-info">
-                <div class="user-image-container mb-3">
+        <div class="content bg-dark row">
+            <div class="col-auto text-center user-info">
+                <div class="user-image-container mb-lg-3">
                     <img class="user-image user-image-lg"
                          src="https://source.unsplash.com/random" alt="">
                 </div>
-                <p class="text-white h3 font-weight-bold">John Doe</p>
-                <p class="h5 mb-0">mail@gmail.com</p>
+                <p class="text-white font-weight-bold username mb-0">John Doe</p>
+                <p class="mb-0 email">mail@gmail.com</p>
             </div>
-            <div class="w-50">
+            <div class="col pl-0 pl-md-3 mb-3 mb-lg-0 progress-container">
                 <div class="d-flex justify-content-between mb-2">
                     <span>Level:</span>
                     <p class="mb-0"><span class="mr-2">To the next level:</span><span
@@ -202,141 +229,188 @@
                 </div>
                 <div class="d-flex justify-content-between">
                     <span>0</span>
-                    <p class="mb-0">100</p>
                 </div>
             </div>
-            <div>
-                <div class="d-flex justify-content-between mb-3"><span>Balance:</span><span
+            <div class="col-12 col-lg-auto balance-container">
+                <div class="d-flex justify-content-between mb-2 mb-lg-3"><span>Balance:</span><span
                         class="text-light-gray">$ 1000.00</span></div>
-                <button class="btn btn-outline-green font-weight-bold px-4">Refill balance</button>
+                <button class="btn btn-outline-green btn-block font-weight-bold px-4">Refill balance</button>
             </div>
         </div>
     </div>
 
-    <div class="levels-list mb-5">
-        <div class="level-container">
-            <div class="content text-center">
-                <div class="mb-4">
-                    <p class="mb-3">level</p>
+    <div class="levels-list mb-3 mb-xxl-5">
+        <div class="level-container container-fluid">
+            <div class="row py-1 py-xl-3 content text-center">
+                <div class="col col-xl-12 pr-0 pl-xl-0 pr-xl-0 mb-2 mb-xl-4 star-container d-flex flex-column align-items-center justify-content-center">
+                    <p class="mb-1 mb-xl-3">level</p>
                     <span class="star">1</span>
                 </div>
-                <img class="achievement-image achievement-image-yellow mb-4"
-                     src="../images/achievements/gold.png" alt="">
-                <p class="h5 mb-3 font-weight-bold text-light-gray">Feugiat sed lectus</p>
-                <p>Nam aliquam sem et tortor consequat id porta. Sit amet nisl purus in.</p>
+                <div class="col col-xl-12 d-flex align-items-center justify-content-center">
+                    <img class="achievement-image achievement-image-yellow mb-xl-4"
+                         src="../images/achievements/gold.png" alt="">
+                </div>
+                <div class="col-12 px-1 pt-1 px-xl-2">
+                    <p class="mb-1 mb-xl-3 font-weight-bold text-light-gray title">Feugiat sed lectus</p>
+                    <p class="text mb-0">Nam aliquam sem et tortor consequat id porta. Sit amet nisl purus in.</p>
+                </div>
             </div>
         </div>
-        <div class="level-container">
-            <div class="content text-center">
-                <div class="mb-4">
-                    <p class="mb-3">level</p>
+        <div class="level-container container-fluid">
+            <div class="row py-1 py-xl-3 content text-center current">
+                <div class="col col-xl-12 pr-0 pl-xl-0 pr-xl-0 mb-2 mb-xl-4 star-container d-flex flex-column align-items-center justify-content-center">
+                    <p class="mb-1 mb-xl-3">level</p>
                     <span class="star">2</span>
                 </div>
-                <img class="achievement-image achievement-image-yellow mb-4"
-                     src="../images/achievements/gold.png" alt="">
-                <p class="h5 mb-3 font-weight-bold text-light-gray">Feugiat sed lectus</p>
-                <p>Nam aliquam sem et tortor consequat id porta. Sit amet nisl purus in.</p>
+                <div class="col col-xl-12 d-flex align-items-center justify-content-center">
+                    <img class="achievement-image achievement-image-yellow mb-xl-4"
+                         src="../images/achievements/gold.png" alt="">
+                </div>
+                <div class="col-12 px-1 pt-1 px-xl-2">
+                    <p class="mb-1 mb-xl-3 font-weight-bold text-light-gray title">Feugiat sed lectus</p>
+                    <p class="text mb-0">Nam aliquam sem et tortor consequat id porta. Sit amet nisl purus in.</p>
+                </div>
             </div>
         </div>
-        <div class="level-container">
-            <div class="content text-center current">
-                <div class="mb-4">
-                    <p class="mb-3">level</p>
+        <div class="level-container container-fluid">
+            <div class="row py-1 py-xl-3 content text-center disabled">
+                <div class="col col-xl-12 pr-0 pl-xl-0 pr-xl-0 mb-2 mb-xl-4 star-container d-flex flex-column align-items-center justify-content-center">
+                    <p class="mb-1 mb-xl-3">level</p>
                     <span class="star">3</span>
                 </div>
-                <img class="achievement-image achievement-image-yellow mb-4"
-                     src="../images/achievements/gold.png" alt="">
-                <p class="h5 mb-3 font-weight-bold text-light-gray">Feugiat sed lectus</p>
-                <p>Nam aliquam sem et tortor consequat id porta. Sit amet nisl purus in.</p>
+                <div class="col col-xl-12 d-flex align-items-center justify-content-center">
+                    <img class="achievement-image achievement-image-yellow mb-xl-4"
+                         src="../images/achievements/gold.png" alt="">
+                </div>
+                <div class="col-12 px-1 pt-1 px-xl-2">
+                    <p class="mb-1 mb-xl-3 font-weight-bold text-light-gray title">Feugiat sed lectus</p>
+                    <p class="text mb-0">Nam aliquam sem et tortor consequat id porta. Sit amet nisl purus in.</p>
+                </div>
             </div>
         </div>
-        <div class="level-container">
-            <div class="content text-center disabled">
-                <div class="mb-4">
-                    <p class="mb-3">level</p>
+        <div class="level-container container-fluid">
+            <div class="row py-1 py-xl-3 content text-center">
+                <div class="col col-xl-12 pr-0 pl-xl-0 pr-xl-0 mb-2 mb-xl-4 star-container d-flex flex-column align-items-center justify-content-center">
+                    <p class="mb-1 mb-xl-3">level</p>
                     <span class="star">4</span>
                 </div>
-                <img class="achievement-image achievement-image-yellow mb-4"
-                     src="../images/achievements/gold.png" alt="">
-                <p class="h5 mb-3 font-weight-bold text-light-gray">Feugiat sed lectus</p>
-                <p>Nam aliquam sem et tortor consequat id porta. Sit amet nisl purus in.</p>
+                <div class="col col-xl-12 d-flex align-items-center justify-content-center">
+                    <img class="achievement-image achievement-image-yellow mb-xl-4"
+                         src="../images/achievements/gold.png" alt="">
+                </div>
+                <div class="col-12 px-1 pt-1 px-xl-2">
+                    <p class="mb-1 mb-xl-3 font-weight-bold text-light-gray title">Feugiat sed lectus</p>
+                    <p class="text mb-0">Nam aliquam sem et tortor consequat id porta. Sit amet nisl purus in.</p>
+                </div>
             </div>
         </div>
-        <div class="level-container">
-            <div class="content text-center disabled">
-                <div class="mb-4">
-                    <p class="mb-3">level</p>
-                    <span class="star">5</span>
+        <div class="level-container container-fluid">
+            <div class="row py-1 py-xl-3 content text-center">
+                <div class="col col-xl-12 pr-0 pl-xl-0 pr-xl-0 mb-2 mb-xl-4 star-container d-flex flex-column align-items-center justify-content-center">
+                    <p class="mb-1 mb-xl-3">level</p>
+                    <span class="star">1</span>
                 </div>
-                <img class="achievement-image achievement-image-yellow mb-4"
-                     src="../images/achievements/gold.png" alt="">
-                <p class="h5 mb-3 font-weight-bold text-light-gray">Feugiat sed lectus</p>
-                <p>Nam aliquam sem et tortor consequat id porta. Sit amet nisl purus in.</p>
+                <div class="col col-xl-12 d-flex align-items-center justify-content-center">
+                    <img class="achievement-image achievement-image-yellow mb-xl-4"
+                         src="../images/achievements/gold.png" alt="">
+                </div>
+                <div class="col-12 px-1 pt-1 px-xl-2">
+                    <p class="mb-1 mb-xl-3 font-weight-bold text-light-gray title">Feugiat sed lectus</p>
+                    <p class="text mb-0">Nam aliquam sem et tortor consequat id porta. Sit amet nisl purus in.</p>
+                </div>
             </div>
         </div>
-        <div class="level-container">
-            <div class="content text-center disabled">
-                <div class="mb-4">
-                    <p class="mb-3">level</p>
-                    <span class="star">6</span>
+        <div class="level-container container-fluid">
+            <div class="row py-1 py-xl-3 content text-center">
+                <div class="col col-xl-12 pr-0 pl-xl-0 pr-xl-0 mb-2 mb-xl-4 star-container d-flex flex-column align-items-center justify-content-center">
+                    <p class="mb-1 mb-xl-3">level</p>
+                    <span class="star">1</span>
                 </div>
-                <img class="achievement-image achievement-image-yellow mb-4"
-                     src="../images/achievements/gold.png" alt="">
-                <p class="h5 mb-3 font-weight-bold text-light-gray">Feugiat sed lectus</p>
-                <p>Nam aliquam sem et tortor consequat id porta. Sit amet nisl purus in.</p>
+                <div class="col col-xl-12 d-flex align-items-center justify-content-center">
+                    <img class="achievement-image achievement-image-yellow mb-xl-4"
+                         src="../images/achievements/gold.png" alt="">
+                </div>
+                <div class="col-12 px-1 pt-1 px-xl-2">
+                    <p class="mb-1 mb-xl-3 font-weight-bold text-light-gray title">Feugiat sed lectus</p>
+                    <p class="text mb-0">Nam aliquam sem et tortor consequat id porta. Sit amet nisl purus in.</p>
+                </div>
             </div>
         </div>
-        <div class="level-container">
-            <div class="content text-center disabled">
-                <div class="mb-4">
-                    <p class="mb-3">level</p>
-                    <span class="star">7</span>
+        <div class="level-container container-fluid">
+            <div class="row py-1 py-xl-3 content text-center">
+                <div class="col col-xl-12 pr-0 pl-xl-0 pr-xl-0 mb-2 mb-xl-4 star-container d-flex flex-column align-items-center justify-content-center">
+                    <p class="mb-1 mb-xl-3">level</p>
+                    <span class="star">1</span>
                 </div>
-                <img class="achievement-image achievement-image-yellow mb-4"
-                     src="../images/achievements/gold.png" alt="">
-                <p class="h5 mb-3 font-weight-bold text-light-gray">Feugiat sed lectus</p>
-                <p>Nam aliquam sem et tortor consequat id porta. Sit amet nisl purus in.</p>
+                <div class="col col-xl-12 d-flex align-items-center justify-content-center">
+                    <img class="achievement-image achievement-image-yellow mb-xl-4"
+                         src="../images/achievements/gold.png" alt="">
+                </div>
+                <div class="col-12 px-1 pt-1 px-xl-2">
+                    <p class="mb-1 mb-xl-3 font-weight-bold text-light-gray title">Feugiat sed lectus</p>
+                    <p class="text mb-0">Nam aliquam sem et tortor consequat id porta. Sit amet nisl purus in.</p>
+                </div>
             </div>
         </div>
-        <div class="level-container">
-            <div class="content text-center disabled">
-                <div class="mb-4">
-                    <p class="mb-3">level</p>
-                    <span class="star">8</span>
+        <div class="level-container container-fluid">
+            <div class="row py-1 py-xl-3 content text-center">
+                <div class="col col-xl-12 pr-0 pl-xl-0 pr-xl-0 mb-2 mb-xl-4 star-container d-flex flex-column align-items-center justify-content-center">
+                    <p class="mb-1 mb-xl-3">level</p>
+                    <span class="star">1</span>
                 </div>
-                <img class="achievement-image achievement-image-yellow mb-4"
-                     src="../images/achievements/gold.png" alt="">
-                <p class="h5 mb-3 font-weight-bold text-light-gray">Feugiat sed lectus</p>
-                <p>Nam aliquam sem et tortor consequat id porta. Sit amet nisl purus in.</p>
+                <div class="col col-xl-12 d-flex align-items-center justify-content-center">
+                    <img class="achievement-image achievement-image-yellow mb-xl-4"
+                         src="../images/achievements/gold.png" alt="">
+                </div>
+                <div class="col-12 px-1 pt-1 px-xl-2">
+                    <p class="mb-1 mb-xl-3 font-weight-bold text-light-gray title">Feugiat sed lectus</p>
+                    <p class="text mb-0">Nam aliquam sem et tortor consequat id porta. Sit amet nisl purus in.</p>
+                </div>
+            </div>
+        </div>
+        <div class="level-container container-fluid">
+            <div class="row py-1 py-xl-3 content text-center">
+                <div class="col col-xl-12 pr-0 pl-xl-0 pr-xl-0 mb-2 mb-xl-4 star-container d-flex flex-column align-items-center justify-content-center">
+                    <p class="mb-1 mb-xl-3">level</p>
+                    <span class="star">1</span>
+                </div>
+                <div class="col col-xl-12 d-flex align-items-center justify-content-center">
+                    <img class="achievement-image achievement-image-yellow mb-xl-4"
+                         src="../images/achievements/gold.png" alt="">
+                </div>
+                <div class="col-12 px-1 pt-1 px-xl-2">
+                    <p class="mb-1 mb-xl-3 font-weight-bold text-light-gray title">Feugiat sed lectus</p>
+                    <p class="text mb-0">Nam aliquam sem et tortor consequat id porta. Sit amet nisl purus in.</p>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="mb-4">
+    <div class="mb-2 mb-lg-4 statistics">
         <h2 class="h5 font-weight-bold mb-3">Purchase statistics</h2>
         <div class="row">
-            <div class="col">
-                <div class=" text-center bg-dark rounded-lg p-4">
-                    <p class="h1 mb-3 font-weight-bolder text-stroke-glow-blue">10674</p>
-                    <p class="h5 mb-0">all purchases</p>
+            <div class="col-6 col-lg-3 mb-3 px-2">
+                <div class="h-100 text-center bg-dark rounded-lg p-3 p-xl-4">
+                    <p class="mb-0 mb-md-1 mb-xl-3 font-weight-bolder text-stroke-glow-blue number">10674</p>
+                    <p class="mb-0 text">all purchases</p>
                 </div>
             </div>
-            <div class="col">
-                <div class=" text-center bg-dark rounded-lg p-4">
-                    <p class="h1 mb-3 font-weight-bolder text-stroke-glow-violet">45</p>
-                    <p class="h5 mb-0">monthly purchases</p>
+            <div class="col-6 col-lg-3 mb-3 px-2">
+                <div class="h-100 text-center bg-dark rounded-lg p-3 p-xl-4">
+                    <p class="mb-0 mb-md-1 mb-xl-3 font-weight-bolder text-stroke-glow-violet number">45</p>
+                    <p class="mb-0 text">monthly purchases</p>
                 </div>
             </div>
-            <div class="col">
-                <div class=" text-center bg-dark rounded-lg p-4">
-                    <p class="h1 mb-3 font-weight-bolder text-stroke-glow-light-red">$ 30485.98</p>
-                    <p class="h5 mb-0">total spent</p>
+            <div class="col-6 col-lg-3 mb-3 px-2">
+                <div class="h-100 text-center bg-dark rounded-lg p-3 p-xl-4">
+                    <p class="mb-0 mb-md-1 mb-xl-3 font-weight-bolder text-stroke-glow-light-red number">$ 30485.98</p>
+                    <p class="mb-0 text">total spent</p>
                 </div>
             </div>
-            <div class="col">
-                <div class=" text-center bg-dark rounded-lg p-4">
-                    <p class="h1 mb-3 font-weight-bolder text-stroke-glow-yellow">$ 180.00</p>
-                    <p class="h5 mb-0">spent in this month</p>
+            <div class="col-6 col-lg-3 mb-3 px-2">
+                <div class="h-100 text-center bg-dark rounded-lg p-3 p-xl-4">
+                    <p class="mb-0 mb-md-1 mb-xl-3 font-weight-bolder text-stroke-glow-yellow number">$ 180.00</p>
+                    <p class="mb-0 text">spent in this month</p>
                 </div>
             </div>
         </div>
@@ -345,55 +419,67 @@
     <div class="mb-4">
         <h2 class="h5 font-weight-bold mb-3">Purchased</h2>
         <div class="item mb-2">
-            <div class="content py-2 px-4 w-100 d-flex align-items-center">
-                <p class="mb-0 mr-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            <div class="row content py-2 pl-4  w-100 d-flex align-items-center">
+                <p class="col-12 col-md mb-2 mb-lg-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                     sed consectetur
                     adipiscing elit, sed do</p>
-                <p class="h5 mb-0 mr-5"><span class="font-weight-bold">10</span> <small>pcs</small>
+                <p class="col col-md-auto h5 mb-0 text-center">
+                    <span class="font-weight-bold">10</span> <small>pcs</small>
                 </p>
-                <p class="h5 mb-0 d-flex align-items-center mr-5">
+                <p class="col col-md-auto h5 mb-0 ml-xxxl-4 text-center d-flex align-items-center justify-content-center">
                     <span class="text-green material-icons-outlined md-30 mr-3">check_circle_outline</span>
                     <span class="text-green">Paid</span></p>
-                <a href="#" class="d-flex"><span class="material-icons md-30 text-light-red">delete_outline</span></a>
+                <a href="#" class="col col-md-auto d-flex justify-content-center ml-xxxl-4">
+                    <span class="material-icons md-30 text-light-red">delete_outline</span>
+                </a>
             </div>
         </div>
         <div class="item mb-2">
-            <div class="content py-2 px-4 w-100 d-flex align-items-center">
-                <p class="mb-0 mr-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            <div class="row content py-2 pl-4  w-100 d-flex align-items-center">
+                <p class="col-12 col-md mb-2 mb-lg-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                     sed consectetur
                     adipiscing elit, sed do</p>
-                <p class="h5 mb-0 mr-5"><span class="font-weight-bold">10</span> <small>pcs</small>
+                <p class="col col-md-auto h5 mb-0 text-center">
+                    <span class="font-weight-bold">10</span> <small>pcs</small>
                 </p>
-                <p class="h5 mb-0 d-flex align-items-center mr-5">
+                <p class="col col-md-auto h5 mb-0 ml-xxxl-4 text-center d-flex align-items-center justify-content-center">
                     <span class="text-green material-icons-outlined md-30 mr-3">check_circle_outline</span>
                     <span class="text-green">Paid</span></p>
-                <a href="#" class="d-flex"><span class="material-icons md-30 text-light-red">delete_outline</span></a>
+                <a href="#" class="col col-md-auto d-flex justify-content-center ml-xxxl-4">
+                    <span class="material-icons md-30 text-light-red">delete_outline</span>
+                </a>
             </div>
         </div>
         <div class="item mb-2">
-            <div class="content py-2 px-4 w-100 d-flex align-items-center">
-                <p class="mb-0 mr-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            <div class="row content py-2 pl-4  w-100 d-flex align-items-center">
+                <p class="col-12 col-md mb-2 mb-lg-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                     sed consectetur
                     adipiscing elit, sed do</p>
-                <p class="h5 mb-0 mr-5"><span class="font-weight-bold">10</span> <small>pcs</small>
+                <p class="col col-md-auto h5 mb-0 text-center">
+                    <span class="font-weight-bold">10</span> <small>pcs</small>
                 </p>
-                <p class="h5 mb-0 d-flex align-items-center mr-5">
+                <p class="col col-md-auto h5 mb-0 ml-xxxl-4 text-center d-flex align-items-center justify-content-center">
                     <span class="text-green material-icons-outlined md-30 mr-3">check_circle_outline</span>
                     <span class="text-green">Paid</span></p>
-                <a href="#" class="d-flex"><span class="material-icons md-30 text-light-red">delete_outline</span></a>
+                <a href="#" class="col col-md-auto d-flex justify-content-center ml-xxxl-4">
+                    <span class="material-icons md-30 text-light-red">delete_outline</span>
+                </a>
             </div>
         </div>
         <div class="item mb-2">
-            <div class="content py-2 px-4 w-100 d-flex align-items-center">
-                <p class="mb-0 mr-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            <div class="row content py-2 pl-4  w-100 d-flex align-items-center">
+                <p class="col-12 col-md mb-2 mb-lg-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                     sed consectetur
                     adipiscing elit, sed do</p>
-                <p class="h5 mb-0 mr-5"><span class="font-weight-bold">10</span> <small>pcs</small>
+                <p class="col col-md-auto h5 mb-0 text-center">
+                    <span class="font-weight-bold">10</span> <small>pcs</small>
                 </p>
-                <p class="h5 mb-0 d-flex align-items-center mr-5">
+                <p class="col col-md-auto h5 mb-0 ml-xxxl-4 text-center d-flex align-items-center justify-content-center">
                     <span class="text-green material-icons-outlined md-30 mr-3">check_circle_outline</span>
                     <span class="text-green">Paid</span></p>
-                <a href="#" class="d-flex"><span class="material-icons md-30 text-light-red">delete_outline</span></a>
+                <a href="#" class="col col-md-auto d-flex justify-content-center ml-xxxl-4">
+                    <span class="material-icons md-30 text-light-red">delete_outline</span>
+                </a>
             </div>
         </div>
         <div class="text-center mt-4">
@@ -403,148 +489,142 @@
 
     <div class="mb-4">
         <h2 class="h5 font-weight-bold mb-3">Quests</h2>
-        <div class="row">
-            <div class="col-4">
-                <div class="quest rounded-lg p-4">
-                    <div class="d-flex justify-content-between mb-2">
-                        <div>
-                            <p class="h5 font-weight-bold text-light-gray">Lorem ipsum</p>
-                            <p class="mb-0">Et netus et malesuada</p>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <span class="mr-2 xp text-glow-green">XP</span>
-                            <p class="h5 mb-0">+100</p>
-                        </div>
-                    </div>
-                    <div class="text-center">
-                        <img class="achievement-image achievement-image-lg achievement-image-violet mb-4"
-                             src="../images/achievements/violet.png" alt="">
-                    </div>
-                    <div class="mb-3">
-                        <div class="d-flex check-item mb-3 checked">
-                            <div class="check-icon-container mr-2">
-                                <span class="material-icons font-weight-bold md-18 check-icon">done</span>
-                            </div>
-                            <p class="mb-0 h5 font-weight-normal">Euismod quis viverra nibh cras
-                                pulvinar mattis</p>
-                        </div>
-                        <div class="d-flex check-item mb-3">
-                            <div class="check-icon-container mr-2">
-                                <span class="material-icons font-weight-bold md-18 check-icon">done</span>
-                            </div>
-                            <p class="mb-0 h5 font-weight-normal">Euismod quis viverra nibh cras
-                                pulvinar mattis</p>
-                        </div>
-                        <div class="d-flex check-item mb-3">
-                            <div class="check-icon-container mr-2">
-                                <span class="material-icons font-weight-bold md-18 check-icon">done</span>
-                            </div>
-                            <p class="mb-0 h5 font-weight-normal">Euismod quis viverra nibh cras
-                                pulvinar mattis</p>
-                        </div>
-                    </div>
+        <div class="achievement-list d-flex">
+            <div class="quest rounded-lg p-4 mb-3">
+                <div class="d-flex justify-content-between mb-2">
                     <div>
-                        <p class="h5 text-light">1 / 3</p>
-                        <div class="progress bg-violet">
-                            <div class="progress-bar" role="progressbar" style="width: 40%"
-                                 aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                        <p class="h5 font-weight-bold text-light-gray">Lorem ipsum</p>
+                        <p class="mb-0">Et netus et malesuada</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <span class="mr-2 xp text-glow-green">XP</span>
+                        <p class="h5 mb-0">+100</p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <img class="achievement-image achievement-image-lg achievement-image-violet mb-4"
+                         src="../images/achievements/violet.png" alt="">
+                </div>
+                <div class="mb-3">
+                    <div class="d-flex check-item mb-3 checked">
+                        <div class="check-icon-container mr-2">
+                            <span class="material-icons font-weight-bold md-18 check-icon">done</span>
                         </div>
+                        <p class="mb-0 h5 font-weight-normal">Euismod quis viverra nibh cras
+                            pulvinar mattis</p>
+                    </div>
+                    <div class="d-flex check-item mb-3">
+                        <div class="check-icon-container mr-2">
+                            <span class="material-icons font-weight-bold md-18 check-icon">done</span>
+                        </div>
+                        <p class="mb-0 h5 font-weight-normal">Euismod quis viverra nibh cras
+                            pulvinar mattis</p>
+                    </div>
+                    <div class="d-flex check-item mb-3">
+                        <div class="check-icon-container mr-2">
+                            <span class="material-icons font-weight-bold md-18 check-icon">done</span>
+                        </div>
+                        <p class="mb-0 h5 font-weight-normal">Euismod quis viverra nibh cras
+                            pulvinar mattis</p>
+                    </div>
+                </div>
+                <div>
+                    <p class="h5 text-light">1 / 3</p>
+                    <div class="progress bg-violet">
+                        <div class="progress-bar" role="progressbar" style="width: 40%"
+                             aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                 </div>
             </div>
-            <div class="col-4">
-                <div class="quest rounded-lg p-4">
-                    <div class="d-flex justify-content-between mb-2">
-                        <div>
-                            <p class="h5 font-weight-bold text-light-gray">Lorem ipsum</p>
-                            <p class="mb-0">Et netus et malesuada</p>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <span class="mr-2 xp text-glow-green">XP</span>
-                            <p class="h5 mb-0">+100</p>
-                        </div>
-                    </div>
-                    <div class="text-center">
-                        <img class="achievement-image achievement-image-lg achievement-image-violet mb-4"
-                             src="../images/achievements/violet.png" alt="">
-                    </div>
-                    <div class="mb-3">
-                        <div class="d-flex check-item mb-3 checked">
-                            <div class="check-icon-container mr-2">
-                                <span class="material-icons font-weight-bold md-18 check-icon">done</span>
-                            </div>
-                            <p class="mb-0 h5 font-weight-normal">Euismod quis viverra nibh cras
-                                pulvinar mattis</p>
-                        </div>
-                        <div class="d-flex check-item mb-3">
-                            <div class="check-icon-container mr-2">
-                                <span class="material-icons font-weight-bold md-18 check-icon">done</span>
-                            </div>
-                            <p class="mb-0 h5 font-weight-normal">Euismod quis viverra nibh cras
-                                pulvinar mattis</p>
-                        </div>
-                        <div class="d-flex check-item mb-3">
-                            <div class="check-icon-container mr-2">
-                                <span class="material-icons font-weight-bold md-18 check-icon">done</span>
-                            </div>
-                            <p class="mb-0 h5 font-weight-normal">Euismod quis viverra nibh cras
-                                pulvinar mattis</p>
-                        </div>
-                    </div>
+            <div class="quest rounded-lg p-4 mb-3">
+                <div class="d-flex justify-content-between mb-2">
                     <div>
-                        <p class="h5 text-light">1 / 3</p>
-                        <div class="progress bg-violet">
-                            <div class="progress-bar" role="progressbar" style="width: 40%"
-                                 aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                        <p class="h5 font-weight-bold text-light-gray">Lorem ipsum</p>
+                        <p class="mb-0">Et netus et malesuada</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <span class="mr-2 xp text-glow-green">XP</span>
+                        <p class="h5 mb-0">+100</p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <img class="achievement-image achievement-image-lg achievement-image-violet mb-4"
+                         src="../images/achievements/violet.png" alt="">
+                </div>
+                <div class="mb-3">
+                    <div class="d-flex check-item mb-3 checked">
+                        <div class="check-icon-container mr-2">
+                            <span class="material-icons font-weight-bold md-18 check-icon">done</span>
                         </div>
+                        <p class="mb-0 h5 font-weight-normal">Euismod quis viverra nibh cras
+                            pulvinar mattis</p>
+                    </div>
+                    <div class="d-flex check-item mb-3">
+                        <div class="check-icon-container mr-2">
+                            <span class="material-icons font-weight-bold md-18 check-icon">done</span>
+                        </div>
+                        <p class="mb-0 h5 font-weight-normal">Euismod quis viverra nibh cras
+                            pulvinar mattis</p>
+                    </div>
+                    <div class="d-flex check-item mb-3">
+                        <div class="check-icon-container mr-2">
+                            <span class="material-icons font-weight-bold md-18 check-icon">done</span>
+                        </div>
+                        <p class="mb-0 h5 font-weight-normal">Euismod quis viverra nibh cras
+                            pulvinar mattis</p>
+                    </div>
+                </div>
+                <div>
+                    <p class="h5 text-light">1 / 3</p>
+                    <div class="progress bg-violet">
+                        <div class="progress-bar" role="progressbar" style="width: 40%"
+                             aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                 </div>
             </div>
-            <div class="col-4">
-                <div class="quest rounded-lg p-4">
-                    <div class="d-flex justify-content-between mb-2">
-                        <div>
-                            <p class="h5 font-weight-bold text-light-gray">Lorem ipsum</p>
-                            <p class="mb-0">Et netus et malesuada</p>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <span class="mr-2 xp text-glow-green">XP</span>
-                            <p class="h5 mb-0">+100</p>
-                        </div>
-                    </div>
-                    <div class="text-center">
-                        <img class="achievement-image achievement-image-lg achievement-image-violet mb-4"
-                             src="../images/achievements/violet.png" alt="">
-                    </div>
-                    <div class="mb-3">
-                        <div class="d-flex check-item mb-3 checked">
-                            <div class="check-icon-container mr-2">
-                                <span class="material-icons font-weight-bold md-18 check-icon">done</span>
-                            </div>
-                            <p class="mb-0 h5 font-weight-normal">Euismod quis viverra nibh cras
-                                pulvinar mattis</p>
-                        </div>
-                        <div class="d-flex check-item mb-3">
-                            <div class="check-icon-container mr-2">
-                                <span class="material-icons font-weight-bold md-18 check-icon">done</span>
-                            </div>
-                            <p class="mb-0 h5 font-weight-normal">Euismod quis viverra nibh cras
-                                pulvinar mattis</p>
-                        </div>
-                        <div class="d-flex check-item mb-3">
-                            <div class="check-icon-container mr-2">
-                                <span class="material-icons font-weight-bold md-18 check-icon">done</span>
-                            </div>
-                            <p class="mb-0 h5 font-weight-normal">Euismod quis viverra nibh cras
-                                pulvinar mattis</p>
-                        </div>
-                    </div>
+            <div class="quest rounded-lg p-4 mb-3">
+                <div class="d-flex justify-content-between mb-2">
                     <div>
-                        <p class="h5 text-light">1 / 3</p>
-                        <div class="progress bg-violet">
-                            <div class="progress-bar" role="progressbar" style="width: 40%"
-                                 aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                        <p class="h5 font-weight-bold text-light-gray">Lorem ipsum</p>
+                        <p class="mb-0">Et netus et malesuada</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <span class="mr-2 xp text-glow-green">XP</span>
+                        <p class="h5 mb-0">+100</p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <img class="achievement-image achievement-image-lg achievement-image-violet mb-4"
+                         src="../images/achievements/violet.png" alt="">
+                </div>
+                <div class="mb-3">
+                    <div class="d-flex check-item mb-3 checked">
+                        <div class="check-icon-container mr-2">
+                            <span class="material-icons font-weight-bold md-18 check-icon">done</span>
                         </div>
+                        <p class="mb-0 h5 font-weight-normal">Euismod quis viverra nibh cras
+                            pulvinar mattis</p>
+                    </div>
+                    <div class="d-flex check-item mb-3">
+                        <div class="check-icon-container mr-2">
+                            <span class="material-icons font-weight-bold md-18 check-icon">done</span>
+                        </div>
+                        <p class="mb-0 h5 font-weight-normal">Euismod quis viverra nibh cras
+                            pulvinar mattis</p>
+                    </div>
+                    <div class="d-flex check-item mb-3">
+                        <div class="check-icon-container mr-2">
+                            <span class="material-icons font-weight-bold md-18 check-icon">done</span>
+                        </div>
+                        <p class="mb-0 h5 font-weight-normal">Euismod quis viverra nibh cras
+                            pulvinar mattis</p>
+                    </div>
+                </div>
+                <div>
+                    <p class="h5 text-light">1 / 3</p>
+                    <div class="progress bg-violet">
+                        <div class="progress-bar" role="progressbar" style="width: 40%"
+                             aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                 </div>
             </div>
@@ -716,8 +796,15 @@
     }
   });
 
-  $('#menu-fixed-toggle').click(function() {
+  $('.menu-fixed-toggle').click(function() {
     $('body').toggleClass('collapsed');
+  });
+
+  $(document).click(function(e) {
+    if ($(window).width() < 992 && !$(e.target).closest('.main-menu').length &&
+      !$(e.target).closest('.menu-fixed-toggle').length) {
+      $('body').removeClass('collapsed');
+    }
   });
 
   //info accordion

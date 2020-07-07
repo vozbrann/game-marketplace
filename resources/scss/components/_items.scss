@@ -7,6 +7,9 @@
   position: relative;
   display: flex;
   align-items: center;
+  a {
+    text-decoration: none;
+  }
   &:before {
     content: "";
     height: 85%;

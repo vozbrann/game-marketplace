@@ -2,6 +2,42 @@
 .page-nav {
   .setting-btn {
     color: $violet;
+    text-decoration: none;
+  }
+}
+
+.statistics {
+  .number {
+    font-size: 36px;
+    white-space: nowrap;
+  }
+  .text {
+    font-size: 18px;
+    line-height: 1em;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .statistics {
+    .number {
+      font-size: 20px;
+      -webkit-text-stroke-width: 1.5px;
+    }
+    .text {
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .statistics {
+    .number {
+      font-size: 20px;
+      -webkit-text-stroke-width: 1px;
+    }
+    .text {
+      font-size: 12px;
+    }
   }
 }
 
