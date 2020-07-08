@@ -4,10 +4,10 @@
 @import "components/base";
 @import "components/buttons";
 @import "components/text";
-//@import "components/icons";
+@import "components/icons";
 @import "components/userImage";
 @import "components/layout";
-@import "components/materialinput";
+@import "components/materialInput";
 @import "components/alert";
 @import "components/progressBar";
 @import "components/items";
@@ -19,3 +19,6 @@
 @import "components/profileUserPanel";
 @import "components/navTabsUnderlined";
 @import "components/liveChat";
+@import "components/materialSelect";
+@import "components/materialTextarea";
+@import "components/customCheckbox";

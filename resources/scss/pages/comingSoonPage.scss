@@ -58,6 +58,8 @@ form {
     box-shadow: 0 0 10px rgba($green, 0.65);
     background-color: rgba(#2B2541, 0.4);
 
+    height: 100% !important;
+
     &:focus {
       background-color: rgba(#2B2541, 0.4);
       color: #fff;

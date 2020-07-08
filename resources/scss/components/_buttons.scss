@@ -20,26 +20,41 @@
 }
 
 @mixin button-shine($color, $text-color:initial) {
-  @include block-shadow-lg($color);
+  @include block-shadow($color);
   background-color: $color;
   color: $text-color;
 }
 
 .btn {
-  font-size: 18px!important;
-  padding-top: 11px!important;
-  padding-bottom: 11px!important;
+  transition: 0.1s;
   border-radius: $border-radius-lg;
+  min-height: $input-height-normal;
+  font-weight: bold;
+  padding-left: 22px;
+  padding-right: 22px;
+  font-size: $h5-font-size;
+  display: flex;
+  align-items: center;
 
-  &.btn-lg {
-    padding-top: 16px!important;
-    padding-bottom: 16px!important;
+  @include media-breakpoint-up(xxxl) {
+    &.btn-lg {
+      min-height: $input-height-large;
+      font-weight: 800;
+      padding-left: 25px;
+      padding-right: 25px;
+    }
   }
 
   &.btn-sm {
-    font-size: 15px!important;
-    padding-top: 5px!important;
-    padding-bottom: 5px!important;
+    min-height: $input-height-small;
+    padding-left: 16px;
+    padding-right: 16px;
+    font-size: $h6-font-size;
+  }
+
+  &.btn-block {
+    padding-left: 0;
+    padding-right: 0;
   }
 
   &.btn-primary {
@@ -62,6 +77,9 @@
   &.btn-outline-light-red {
     @include button-outline($light-red);
   }
+  &.btn-light-red-shine {
+    @include button-shine($light-red, #fff);
+  }
 
   &.btn-green {
     @include button($green, #fff);
@@ -70,7 +88,7 @@
     @include button-outline($green);
   }
   &.btn-green-shine {
-    @include button-shine($green);
+    @include button-shine($green, #fff);
   }
 
   &.btn-outline-light-dark {
@@ -95,25 +113,6 @@
   }
   &:active {
     box-shadow: none!important;
+    filter: brightness(0.9);
   }
 }
-
-  @media screen and (max-width: 1600px) {
-    .btn {
-      font-size: 14px!important;
-      padding-top: 8px!important;
-      padding-bottom: 8px!important;
-      border-radius: $border-radius-lg;
-
-      &.btn-lg {
-        padding-top: 12px!important;
-        padding-bottom: 12px!important;
-      }
-
-      &.btn-sm {
-        font-size: 13px!important;
-        padding-top: 5px!important;
-        padding-bottom: 5px!important;
-      }
-    }
-  }

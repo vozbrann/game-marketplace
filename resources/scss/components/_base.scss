@@ -39,6 +39,10 @@ html, body {
   background-color: $semi-dark;
 }
 
+.slick-slide {
+  outline: none
+}
+
 //scrollbar
 html, body {
   overflow-y: scroll;

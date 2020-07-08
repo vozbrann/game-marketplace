@@ -1,7 +1,10 @@
-@import "../components/mixins";
 @import "../components/variables";
-@import "../components/buttons";
+@import "../components/custom";
+@import "../components/base";
+@import "../components/mixins";
 @import "../components/text";
+@import "../components/buttons";
+
 
 $input-bg: transparent;
 $component-active-color: $light-dark;
@@ -113,28 +116,6 @@ canvas {
   }
 }
 
-//material input
-@mixin size($width, $height) {
-  width: $width;
-  height: $height;
-}
-.material-input {
-  position: relative;
-  margin-top: 7px;
-  @include size(366px, 60px);
-  label {
-    margin: 18px 0 0 12px;
-  }
-}
-.custom-control-label {
-  &:before{
-   background-color: transparent;
-  }
-}
-.custom-control-input:checked~.custom-control-label::before {
-  background-color: $green;
-}
-
 .text-grey {
   opacity: 0.7;
 }
@@ -154,6 +135,8 @@ h1 {
   z-index: 0;
   .btn {
     @include button-outline($violet);
+    padding-left: 0;
+    padding-right: 0;
     &.active {
       color: #fff!important;
       @include button($violet);
@@ -167,7 +150,7 @@ h1 {
   border-radius: .6rem;
   background-color: $dark;
   padding: 50px 60px 36px;
-  box-sizing: border-box;
+  //box-sizing: border-box;
 }
 
 @media screen and (max-width: 1600px) {
@@ -185,13 +168,6 @@ h1 {
   }
   .form-container {
     padding: 40px;
-  }
-  .material-input {
-    position: relative;
-    @include size(366px, 50px);
-    label {
-      margin: 13px 0 0 12px;
-    }
   }
 }
 

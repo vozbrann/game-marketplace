@@ -56,16 +56,20 @@
       &:hover{
         margin-left: 8px;
       }
-
       &.active {
         color: $violet;
         border: 2px solid $violet;
         @include block-shadow($violet, 0.4);
-
         border-radius: 8px;
+        .custom-icon {
+          background-color: $violet;
+        }
         &:hover{
           margin-left: unset;
         }
+      }
+      .custom-icon {
+        background-color: rgba(255, 255, 255, 0.5);
       }
     }
   }
@@ -90,6 +94,9 @@
 
 
 @media screen and (max-width: 992px) {
+  .expand-icon {
+    display: none;
+  }
   .main-menu {
     width: 0;
   }
