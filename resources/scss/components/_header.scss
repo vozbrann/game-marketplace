@@ -7,6 +7,18 @@
   .balance-number {
     color: rgba(255, 255, 255, 0.6);
   }
+  .custom-icon {
+    width: 24px;
+    height: 24px;
+    background: rgba(255, 255, 255, 0.35);;
+  }
+  .custom-icon.icon-search {
+    background: $green;
+  }
+  .custom-icon.icon-chat {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 @media screen and (max-width: 992px) {

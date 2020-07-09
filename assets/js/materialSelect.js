@@ -6,6 +6,8 @@ $( document ).ready(function() {
     let classes = $( this ).attr('class');
     let options = $( this ).find('option');
     let placeholder = $( this ).attr('data-placeholder');
+    let placeholderString = !!placeholder ?
+      '<span class="placeholder">'+ placeholder +'</span>' : '';
     $( this ).addClass('d-none');
     $( this ).wrap( `<div class="material-select-wrapper ${classes}">`);
     let optionList = options.map(function() {
@@ -17,13 +19,26 @@ $( document ).ready(function() {
     <div class="material-select-body">
         <span class="expand-toggle material-icons">expand_more</span>
         <span class="clear-button material-icons">close</span>
-        <span class="placeholder">${placeholder}</span>
+        ${placeholderString}
         <span class="selected"></span>
         <ul class="select-list collapse list-unstyled">
             ${optionList}
         </ul>
     </div>
     `);
+
+    //default selected value
+    let selectedOption = options.filter(function() { return $(this).attr('selected') }).slice(-1)[0];
+    if ( selectedOption ) {
+      $( this ).append(`
+        <option value></option>
+      `);
+      $(this).siblings('.material-select-body').find('.selected').text($(selectedOption).text());
+    } else {
+      $( this ).append(`
+        <option selected value></option>
+      `);
+    }
   });
 
 
@@ -53,6 +68,7 @@ $( document ).ready(function() {
   // material select clear button
   $('.material-select-body .clear-button').click(function() {
     $(this).parent().find('.selected').html('');
+    $(this).parent().parent().find('select').val('');
     $(this).parent().find('.select-list').collapse('hide');
   });
 });

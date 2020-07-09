@@ -9,12 +9,13 @@
     position: relative;
     padding: 0 20px;
     .expand-toggle, .clear-button {
+      transition: 0.3s;
       cursor: pointer;
       z-index: 2;
       position: absolute;
-      right: 20px;
+      right: 15px;
       top: 50%;
-      transform: translate(0, -50%);
+      transform: translate(0, -50%) rotate(-90deg);
     }
     .selected {
       width: 100%;
@@ -87,6 +88,24 @@
     &:not(.active) {
       .clear-button {
         display: none;
+      }
+    }
+  }
+  &.material-select-required {
+    .material-select-body {
+      .clear-button {
+        display: none;
+      }
+      &.active {
+        .expand-toggle {
+          display: block;
+        }
+      }
+      &.expanded {
+        .expand-toggle {
+          display: block;
+          transform: translate(0, -50%) rotate(0);
+        }
       }
     }
   }
