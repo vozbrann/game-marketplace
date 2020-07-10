@@ -35,6 +35,7 @@
   font-size: $h5-font-size;
   display: flex;
   align-items: center;
+  justify-content: center;
 
   @include media-breakpoint-up(xxxl) {
     &.btn-lg {

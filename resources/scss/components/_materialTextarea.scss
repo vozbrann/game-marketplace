@@ -1,102 +1,232 @@
-.material-textarea-wrapper {
-  position: relative;
-  height: $input-height-normal;
-  width: 100%;
-  border: 2px solid $light-dark;
-  border-radius: $border-radius-lg;
-  padding: 16px 20px;
-  display: flex;
+//.material-textarea-wrapper {
+//  position: relative;
+//  height: $input-height-normal;
+//  width: 100%;
+//  border: 2px solid $light-dark;
+//  border-radius: $border-radius-lg;
+//  padding: 16px 20px;
+//  display: flex;
+//
+//  .placeholder {
+//    z-index: 5;
+//    transition: all .1s linear;
+//    background: $dark;
+//    color: $gray-500;
+//    font-size: 16px;
+//    position: absolute;
+//    line-height: 1em;
+//    pointer-events: none;
+//    white-space: nowrap;
+//    text-overflow: ellipsis;
+//    overflow: hidden;
+//    max-width: 80%;
+//  }
+//
+//  textarea {
+//    padding: 0;
+//    margin: 0;
+//    resize: none;
+//    box-sizing: border-box;
+//    color: #fff;
+//    outline: none;
+//    width: 100%;
+//    height: 100%;
+//    border: none;
+//    background-color: transparent;
+//    line-height: 1em;
+//    z-index: 8;
+//  }
+//
+//  &:focus-within, &.active {
+//    .placeholder {
+//      transform: translate(0, -100%);
+//      font-size: $small-font-size;
+//      line-height: 2.5em;
+//      padding: 0 10px;
+//    }
+//  }
+//
+//  &:focus-within {
+//    @include block-shadow($green);
+//    border-color: $green;
+//
+//    .placeholder {
+//      color: $gray-200;
+//    }
+//  }
+//}
+//
+//.material-textarea-wrapper {
+//  @include media-breakpoint-up(xxxl) {
+//    &.material-textarea-lg {
+//      height: $input-height-large;
+//      .placeholder {
+//        font-size: $h5-font-size;
+//      }
+//      &:focus-within, &.active {
+//        .placeholder {
+//          font-size: $h6-font-size;
+//        }
+//      }
+//    }
+//  }
+//
+//  &.material-textarea-sm {
+//    height: $input-height-small;
+//    padding: 8px 20px;
+//
+//    textarea {
+//      line-height: 1.4em;
+//    }
+//
+//    .placeholder {
+//      font-size: unset;
+//      line-height: unset;
+//    }
+//
+//    &:focus-within, &.active {
+//      .placeholder {
+//        font-size: $small-font-size;
+//      }
+//    }
+//  }
+//
+//  &.material-textarea-violet {
+//    &:focus-within {
+//      @include block-shadow($violet);
+//      border-color: $violet;
+//    }
+//  }
+//}
 
-  .placeholder {
-    z-index: 5;
-    transition: all .1s linear;
-    background: $dark;
-    color: $gray-500;
-    font-size: 16px;
-    position: absolute;
-    line-height: 1em;
-    pointer-events: none;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    max-width: 80%;
+@mixin material-textarea($color: $primary, $border-color: $light-dark)  {
+  &.material-textarea-lg {
+    height: $input-height-large;
+    .placeholder {
+      line-height: calc(#{$input-height-large} - 4px);
+    }
+  }
+  &.material-textarea-sm {
+    padding-top: 12px;
+    padding-bottom: 10px;
+    height: $input-height-small;
+    .placeholder {
+      line-height: calc(#{$input-height-small} - 4px);
+    }
   }
 
+  width: 100%;
+  color: $light-gray;
+  height: $input-height-normal;
+  border: 2px solid $border-color;
+  border-radius: $border-radius-lg;
+  position: relative;
+  padding-top: 16px;
+  padding-bottom: 10px;
   textarea {
-    padding: 0;
-    margin: 0;
-    resize: none;
-    box-sizing: border-box;
-    color: #fff;
-    outline: none;
+    padding: 0 20px;
     width: 100%;
     height: 100%;
+    line-height: 1.2em;
     border: none;
     background-color: transparent;
-    line-height: 1em;
-    z-index: 8;
+    color: $light-gray;
+    resize: none;
+    &:focus, &:active {
+      border: none;
+      outline: none;
+    }
   }
-
-  &:focus-within, &.active {
+  .placeholder {
+    pointer-events: none;
+    transition: line-height 0.2s, font-size 0.2s;
+    position: absolute;
+    top: 0;
+    width: calc(100% + 4px);
+    margin-left: -2px;
+    color: $gray-500;
+    border-radius: $border-radius-lg;
+    font-size: 16px;
+    line-height: calc(#{$input-height-normal} - 4px);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: flex;
+    height: 100%;
+    &:before {
+      opacity: 0;
+      content: "";
+      width: 20px;
+      margin-right: 10px;
+      display: block;
+      border-top-left-radius: $border-radius-lg;
+      border-bottom-left-radius: $border-radius-lg;
+    }
+    &:after {
+      opacity: 0;
+      content: "";
+      width: 100%;
+      margin-left: 10px;
+      border-top-right-radius: $border-radius-lg;
+      border-bottom-right-radius: $border-radius-lg;
+      display: block;
+    }
+  }
+  &.active {
+    border-top: none;
     .placeholder {
-      transform: translate(0, -100%);
       font-size: $small-font-size;
-      line-height: 2.5em;
-      padding: 0 10px;
+      line-height: 1px;
+      &:before {
+        opacity: 1;
+        border-top: 2px solid $border-color;
+        border-left: 2px solid $border-color;
+      }
+      &:after {
+        opacity: 1;
+        border-top: 2px solid $border-color;
+        border-right: 2px solid $border-color;
+      }
     }
   }
 
   &:focus-within {
-    @include block-shadow($green);
-    border-color: $green;
-
+    border-top: none;
+    border-color: $color;
+    @include block-shadow($color);
     .placeholder {
-      color: $gray-200;
+      font-size: $small-font-size;
+      line-height: 1px;
+      &:before {
+        opacity: 1;
+        border-top: 2px solid $color;
+        border-left: 2px solid $color;
+      }
+      &:after {
+        opacity: 1;
+        border-top: 2px solid $color;
+        border-right: 2px solid $color;
+      }
     }
   }
 }
 
-.material-textarea-wrapper {
-  @include media-breakpoint-up(xxxl) {
-    &.material-textarea-lg {
-      height: $input-height-large;
-      .placeholder {
-        font-size: $h5-font-size;
-      }
-      &:focus-within, &.active {
-        .placeholder {
-          font-size: $h6-font-size;
-        }
-      }
-    }
-  }
-
-  &.material-textarea-sm {
-    height: $input-height-small;
-    padding: 8px 20px;
-
-    textarea {
-      line-height: 1.4em;
-    }
-
-    .placeholder {
-      font-size: unset;
-      line-height: unset;
-    }
-
-    &:focus-within, &.active {
-      .placeholder {
-        font-size: $small-font-size;
-      }
-    }
-  }
-
-  &.material-textarea-violet {
-    &:focus-within {
-      @include block-shadow($violet);
-      border-color: $violet;
-    }
-  }
+.material-textarea {
+  @include material-textarea();
+}
+.material-textarea.material-textarea-primary {
+  @include material-textarea($primary);
+}
+.material-textarea.material-textarea-warning{
+  @include material-textarea($warning);
+}
+.material-textarea.material-textarea-danger{
+  @include material-textarea($danger);
+}
+.material-textarea.material-textarea-success{
+  @include material-textarea($success);
+}
+.material-textarea.material-textarea-info{
+  @include material-textarea($info);
 }
 
 

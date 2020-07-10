@@ -7,8 +7,10 @@ $( document ).ready(function() {
     let options = $( this ).find('option');
     let placeholder = $( this ).attr('data-placeholder');
     let placeholderString = !!placeholder ?
-      '<span class="placeholder">'+ placeholder +'</span>' : '';
-    $( this ).addClass('d-none');
+      '<span class="placeholder"><span>'+ placeholder +'</span></span>' : '';
+    // $( this ).addClass('d-none');
+    $( this ).hide();
+    $( this ).removeClass('d-block');
     $( this ).wrap( `<div class="material-select-wrapper ${classes}">`);
     let optionList = options.map(function() {
       let value = $(this).attr('value');

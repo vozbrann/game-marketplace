@@ -1,182 +1,366 @@
-/* PREFIXES material design inputs */
-@mixin size($width, $height) {
-  width: $width;
-  height: $height;
-}
+///* PREFIXES material design inputs */
+//@mixin size($width, $height) {
+//  width: $width;
+//  height: $height;
+//}
+//
+//@mixin same($size) {
+//  width: $size;
+//  height: $size;
+//}
+//
+//@mixin noSelect {
+//  -webkit-touch-callout: none;
+//  -webkit-user-select: none;
+//  -khtml-user-select: none;
+//  -moz-user-select: none;
+//  -ms-user-select: none;
+//  user-select: none;
+//  outline: none;
+//  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+//}
+//
+//.material-input {
+//  position: relative;
+//  @include size(100%, #{$input-height-normal});
+//  box-sizing: border-box;
+//  input {
+//    @include same(100%);
+//    /* Chrome, Safari, Edge, Opera */
+//    &::-webkit-outer-spin-button,
+//    &::-webkit-inner-spin-button {
+//      -webkit-appearance: none;
+//      margin: 0;
+//    }
+//
+//    /* Firefox */
+//    -moz-appearance: textfield;
+//
+//    color: #fff;
+//    background-color: transparent;
+//    position: absolute;
+//    padding: 0 20px;
+//    border: 2px solid #3A3258;
+//    border-radius: .6rem;
+//    box-sizing: border-box;
+//    transition: border-color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+//    @include noSelect;
+//
+//    &:focus {
+//      border: 2px solid $green;
+//      @include block-shadow($green, 0.3);
+//
+//      & + label {
+//        color: $gray-200;
+//        font-size: $small-font-size;
+//        transform: translate(0, -50%);
+//        padding: 0 10px;
+//        line-height: 2em;
+//        margin-top: 0;
+//      }
+//    }
+//  }
+//
+//  label {
+//    margin: 0 20px;
+//    margin-top: 3px;
+//    transition: all .1s linear;
+//    background: $dark;
+//    color: $gray-500;
+//    font-size: 16px;
+//    position: absolute;
+//    line-height: calc(#{$input-height-normal} - 6px);
+//    white-space: nowrap;
+//    text-overflow: ellipsis;
+//    overflow: hidden;
+//    max-width: 80%;
+//  }
+//
+//  &.active {
+//    label {
+//      font-size: $small-font-size;
+//      transform: translate(0, -50%);
+//      padding: 0 10px;
+//      line-height: 2em;
+//      margin-top: 0;
+//    }
+//  }
+//
+//  .hint {
+//    position: absolute;
+//    display: block;
+//    font-size: 12px;
+//    bottom: -17px;
+//    left: 1px;
+//    margin: 0;
+//
+//    &.red {
+//      color: red;
+//    }
+//
+//    &.green {
+//      color: green;
+//    }
+//  }
+//
+//  &.material-input-sm {
+//    @include size(100%, #{$input-height-small});
+//    label {
+//      line-height: calc(#{$input-height-small} - 6px);
+//      font-size: unset;
+//    }
+//    &.active {
+//      label {
+//        line-height: 2em;
+//        font-size: $small-font-size;
+//      }
+//    }
+//  }
+//  @include media-breakpoint-up(xxxl) {
+//    &.material-input-lg {
+//      @include size(100%, #{$input-height-large});
+//      label {
+//        line-height: calc(#{$input-height-large} - 6px);
+//        font-size: $h5-font-size;
+//      }
+//      &.active, &:focus-within {
+//        label {
+//          line-height: 2em;
+//          font-size: $h6-font-size;
+//        }
+//      }
+//    }
+//  }
+//  &.material-input-violet {
+//    input {
+//      &:focus {
+//        border: 2px solid $violet;
+//        @include block-shadow($violet);
+//      }
+//    }
+//  }
+//
+//  .material-input-icon {
+//    pointer-events: none;
+//  }
+//  &.icon-append {
+//    .material-input-icon {
+//      position: absolute;
+//      line-height: $input-height-normal;
+//      top: 50%;
+//      right: 20px;
+//      transform: translate(0, -50%);
+//    }
+//    label {
+//      max-width: calc(100% - 70px);
+//    }
+//    input {
+//      padding-right: 50px;
+//    }
+//  }
+//
+//  &.icon-prepend {
+//    .material-input-icon {
+//      position: absolute;
+//      line-height: $input-height-normal;
+//      top: 50%;
+//      left: 20px;
+//      transform: translate(0, -50%);
+//    }
+//    label {
+//      margin-left: 50px;
+//    }
+//    &.active, &:focus-within {
+//      label {
+//        margin: 0 20px;
+//      }
+//    }
+//    input {
+//      padding-left: 50px;
+//    }
+//  }
+//}
 
-@mixin same($size) {
-  width: $size;
-  height: $size;
-}
-
-@mixin noSelect {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
-.material-input {
-  position: relative;
-  @include size(100%, #{$input-height-normal});
-  box-sizing: border-box;
-  input {
-    @include same(100%);
-    /* Chrome, Safari, Edge, Opera */
-    &::-webkit-outer-spin-button,
-    &::-webkit-inner-spin-button {
-      -webkit-appearance: none;
-      margin: 0;
+@mixin material-input($color: $primary, $border-color: $light-dark) {
+  &.material-input-lg {
+    height: $input-height-large;
+    input {
+      line-height: $input-height-large;
     }
-
-    /* Firefox */
-    -moz-appearance: textfield;
-
-    color: #fff;
-    background-color: transparent;
-    position: absolute;
-    padding: 0 20px;
-    border: 2px solid #3A3258;
-    border-radius: .6rem;
-    box-sizing: border-box;
-    transition: border-color 150ms cubic-bezier(0.4, 0, 0.2, 1);
-    @include noSelect;
-
-    &:focus {
-      border: 2px solid $green;
-      @include block-shadow($green, 0.3);
-
-      & + label {
-        color: $gray-200;
-        font-size: $small-font-size;
-        transform: translate(0, -50%);
-        padding: 0 10px;
-        line-height: 2em;
-        margin-top: 0;
-      }
+    label {
+      line-height: calc(#{$input-height-large} - 4px);
+    }
+  }
+  &.material-input-sm {
+    height: $input-height-small;
+    input {
+      line-height: $input-height-small;
+    }
+    label {
+      line-height: calc(#{$input-height-small} - 4px);
     }
   }
 
+  width: 100%;
+  color: $light-gray;
+  height: $input-height-normal;
+  border: 2px solid $border-color;
+  border-radius: $border-radius-lg;
+  position: relative;
+  input {
+    padding: 0 20px;
+    width: 100%;
+    height: 100%;
+    line-height: $input-height-normal;
+    border: none;
+    background-color: transparent;
+    color: $light-gray;
+    &:focus, &:active {
+      border: none;
+      outline: none;
+    }
+  }
   label {
-    margin: 0 20px;
-    margin-top: 3px;
-    transition: all .1s linear;
-    background: $dark;
-    color: $gray-500;
-    font-size: 16px;
+    pointer-events: none;
     position: absolute;
-    line-height: calc(#{$input-height-normal} - 6px);
+    top: 0;
+    left: 0;
+    transition: line-height 0.2s, font-size 0.2s;
+    width: calc(100% + 4px);
+    margin-left: -2px;
+    color: $gray-500;
+    border-radius: $border-radius-lg;
+    font-size: 16px;
+    line-height: calc(#{$input-height-normal} - 4px);
     white-space: nowrap;
     text-overflow: ellipsis;
-    overflow: hidden;
-    max-width: 80%;
+    display: flex;
+    height: 100%;
+    &:before {
+      transition: width 0.2s;
+      opacity: 0;
+      content: "";
+      width: 20px;
+      margin-right: 10px;
+      display: block;
+      border-top-left-radius: $border-radius-lg;
+      border-bottom-left-radius: $border-radius-lg;
+    }
+    &:after {
+      opacity: 0;
+      content: "";
+      width: 100%;
+      margin-left: 10px;
+      border-top-right-radius: $border-radius-lg;
+      border-bottom-right-radius: $border-radius-lg;
+      display: block;
+    }
   }
-
-  &.active {
-    label {
-      font-size: $small-font-size;
+  &.icon-prepend {
+    padding-left: 24px;
+    .material-input-icon {
+      position: absolute;
+      top: 50%;
+      left: 14px;
       transform: translate(0, -50%);
-      padding: 0 10px;
-      line-height: 2em;
-      margin-top: 0;
     }
-  }
-
-  .hint {
-    position: absolute;
-    display: block;
-    font-size: 12px;
-    bottom: -17px;
-    left: 1px;
-    margin: 0;
-
-    &.red {
-      color: red;
-    }
-
-    &.green {
-      color: green;
-    }
-  }
-
-  &.material-input-sm {
-    @include size(100%, #{$input-height-small});
     label {
-      line-height: calc(#{$input-height-small} - 6px);
-      font-size: unset;
-    }
-    &.active {
-      label {
-        line-height: 2em;
-        font-size: $small-font-size;
+      &:before {
+        width: 44px;
       }
     }
-  }
-  @include media-breakpoint-up(xxxl) {
-    &.material-input-lg {
-      @include size(100%, #{$input-height-large});
-      label {
-        line-height: calc(#{$input-height-large} - 6px);
-        font-size: $h5-font-size;
+    &.active, &:focus-within {
+      .material-input-icon {
+        margin-top: 1px;
       }
-      &.active, &:focus-within {
-        label {
-          line-height: 2em;
-          font-size: $h6-font-size;
+      &.without-label {
+        .material-input-icon {
+          margin-top: 0;
+        }
+      }
+      label {
+        &:before {
+          width: 20px;
         }
       }
     }
   }
-  &.material-input-violet {
-    input {
-      &:focus {
-        border: 2px solid $violet;
-        @include block-shadow($violet);
-      }
-    }
-  }
-
-  .material-input-icon {
-    pointer-events: none;
-  }
   &.icon-append {
+    padding-right: 24px;
     .material-input-icon {
       position: absolute;
-      line-height: $input-height-normal;
       top: 50%;
-      right: 20px;
+      right: 14px;
       transform: translate(0, -50%);
-    }
-    label {
-      max-width: calc(100% - 70px);
-    }
-    input {
-      padding-right: 50px;
-    }
-  }
-
-  &.icon-prepend {
-    .material-input-icon {
-      position: absolute;
-      line-height: $input-height-normal;
-      top: 50%;
-      left: 20px;
-      transform: translate(0, -50%);
-    }
-    label {
-      margin-left: 50px;
     }
     &.active, &:focus-within {
-      label {
-        margin: 0 20px;
+      .material-input-icon {
+        margin-top: 1px;
       }
     }
-    input {
-      padding-left: 50px;
+  }
+
+  &.active {
+    border-top: none;
+    label {
+      font-size: $small-font-size;
+      line-height: 1px;
+      &:before {
+        opacity: 1;
+        border-top: 2px solid $border-color;
+        border-left: 2px solid $border-color;
+      }
+      &:after {
+        opacity: 1;
+        border-top: 2px solid $border-color;
+        border-right: 2px solid $border-color;
+      }
+    }
+  }
+
+  &:focus-within {
+    border-top: none;
+    border-color: $color;
+    @include block-shadow($color);
+    label {
+      font-size: $small-font-size;
+      line-height: 1px;
+      &:before {
+        opacity: 1;
+        border-top: 2px solid $color;
+        border-left: 2px solid $color;
+      }
+      &:after {
+        opacity: 1;
+        border-top: 2px solid $color;
+        border-right: 2px solid $color;
+      }
+    }
+  }
+  &.without-label {
+    &:focus-within, &.active {
+      border-top: 2px solid $color;
     }
   }
 }
+
+.material-input {
+  @include material-input();
+}
+.material-input.material-input-primary {
+  @include material-input($primary);
+}
+.material-input.material-input-danger {
+  @include material-input($danger);
+}
+.material-input.material-input-success {
+  @include material-input($success);
+}
+.material-input.material-input-warning {
+  @include material-input($warning);
+}
+.material-input.material-input-info {
+  @include material-input($info);
+}
+
+
