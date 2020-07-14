@@ -13,6 +13,14 @@
     background-color: $dark;
     border: 2px solid $color;
     @include block-shadow($color);
+    .custom-icon {
+      background: $color;
+    }
+  }
+  .custom-icon {
+    background: rgba($color, 0.5);
+    width: 36px;
+    height: 36px;
   }
 }
 
@@ -44,6 +52,7 @@
     }
   }
   @media screen and (max-width: 992px) {
+    background: url("../../../images/info/maskGroup.png") no-repeat 60%;
     .form-control {
       width: 100%;
     }
@@ -82,10 +91,10 @@
     .nav-link-violet {
       @include nav-link-mixin($violet);
     }
-    @media screen and (max-width: 992px) {
+    @media screen and (max-width: 768px) {
       width: 100%;
       .nav-link {
-        width: 155px;
+        width: 140px;
         box-sizing: border-box;
         display: flex;
         margin-right: 15px;
@@ -106,9 +115,10 @@
     background-color: $dark;
     border: 2px solid transparent;
     .toggle-icon {
-      font-size: 46px;
       transition: transform 0.3s ease;
       transform: rotate(-90deg);
+      width: 26px;
+      height: 26px;
     }
     .title {
       font-size: 18px;
@@ -124,6 +134,10 @@
       }
     }
     @media screen and (max-width: 992px) {
+      .toggle-icon {
+        width: 20px;
+        height: 20px;
+      }
       .title {
         font-size: 14px;
       }
