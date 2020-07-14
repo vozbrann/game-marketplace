@@ -159,7 +159,10 @@
   &:focus-within {
     border-top: none;
     .material-input-icon {
-      background: $color;
+      color: $color;
+      &.custom-icon {
+        background: $color;
+      }
     }
     border-color: $color;
     @include block-shadow($color);
