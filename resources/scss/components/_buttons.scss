@@ -2,6 +2,9 @@
   @include block-shadow($color, 0.8);
   background-color: $color;
   color: $text-color;
+  .custom-icon {
+    background: $text-color;
+  }
 }
 
 @mixin button-outline($color, $text-color:white) {
@@ -29,6 +32,9 @@
   @include block-shadow($color);
   background-color: $color;
   color: $text-color;
+  .custom-icon {
+    background: $text-color;
+  }
 }
 
 .btn {

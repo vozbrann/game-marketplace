@@ -2,9 +2,9 @@
   border-radius: $border-radius-md;
   background-color: $dark;
   padding: 30px;
+  position: relative;
   .message-list {
     max-height: 400px;
-    overflow-y: scroll;
   }
   .message {
     width: 50%;
@@ -26,21 +26,12 @@
       }
     }
   }
-  input[type="text"] {
-    padding: 28px;
-    font-size: 16px;
-    font-weight: 600;
-    border: 2px solid #3A3258;
-    background-color: transparent;
-    border-radius: $border-radius-md;
-    color: $light-gray;
-    &::placeholder {
-      color: $gray;
-    }
-  }
-  .attach-file-icon {
-    transform: rotate(45deg);
+  .attach-file-label {
     cursor: pointer;
+    .custom-icon {
+      width: 26px;
+      height: 26px;
+    }
   }
 }
 
@@ -55,17 +46,20 @@
 @include media-breakpoint-down(sm) {
   .live-chat {
     padding: 15px 10px;
-    .message {
-      .text {
-        font-size: 12px;
-        padding: 15px;
-        line-height: 15px;
-        font-weight: 500;
-      }
-      .user-image-container {
-        .user-image {
-          width: 30px;
-          height: 30px;
+    .message-list {
+      padding-right: 10px;
+      .message {
+        .text {
+          font-size: 12px;
+          padding: 15px;
+          line-height: 15px;
+          font-weight: 500;
+        }
+        .user-image-container {
+          .user-image {
+            width: 30px;
+            height: 30px;
+          }
         }
       }
     }
