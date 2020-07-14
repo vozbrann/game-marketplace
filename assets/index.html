@@ -163,7 +163,7 @@
     <header class="main-header d-flex px-lg-4 px-3 py-2 mb-3 mb-xl-4">
         <form class="search-container container-fluid collapse px-2 px-lg-4"
               id="header-search-container">
-            <div class="material-input material-input-success material-input-violet icon-prepend bg-dark">
+            <div class="material-input material-input-success material-input-violet icon-append bg-dark">
                 <input id="login111" type="text" name="username">
                 <label for="login111">Search</label>
                 <span class="custom-icon icon-search material-input-icon"></span>
@@ -1070,11 +1070,6 @@
 <script type="text/javascript" src="js/materialInput.js"></script>
 <script type="text/javascript" src="js/header.js"></script>
 <script>
-  $(function() {
-    $(".main-menu").overlayScrollbars({});
-    $("body").overlayScrollbars({});
-    $(".notifications-dropdown-menu > .content").overlayScrollbars({});
-  });
   $(window).on('load resize orientationchange', function() {
     $('.mob-items-carousel').each(function() {
       var $carousel = $(this);

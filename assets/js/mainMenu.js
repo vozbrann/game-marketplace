@@ -2,6 +2,15 @@ $('.menu-fixed-toggle').click(function() {
   $('body').toggleClass('collapsed');
 });
 
+$(document).ready(function(e) {
+  $(".main-menu").overlayScrollbars({
+    overflowBehavior: {
+      x: "hidden",
+    },
+  });
+  $("body").overlayScrollbars({});
+});
+
 $(document).click(function(e) {
   if ($(window).width() < 992 && !$(e.target).closest('.main-menu').length &&
     !$(e.target).closest('.menu-fixed-toggle').length) {

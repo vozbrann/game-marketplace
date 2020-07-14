@@ -124,11 +124,11 @@
     }
   }
   &.icon-append {
-    padding-right: 24px;
+    padding-right: 34px;
     .material-input-icon {
       position: absolute;
       top: 50%;
-      right: 14px;
+      right: 20px;
       transform: translate(0, -50%);
     }
     &.active, &:focus-within {
@@ -158,6 +158,9 @@
 
   &:focus-within {
     border-top: none;
+    .material-input-icon {
+      background: $color;
+    }
     border-color: $color;
     @include block-shadow($color);
     label {

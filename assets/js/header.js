@@ -1,4 +1,5 @@
 $( document ).ready(function() {
+  $(".notifications-dropdown-menu > .content").overlayScrollbars({});
   $( document ).click(function(e) {
     if (!$(e.target).parents(".search-container").length && !$(e.target).parents(".main-header .search-button").length) {
       $( '.search-container' ).collapse('hide');
