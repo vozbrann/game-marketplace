@@ -43,16 +43,16 @@
     </div>
     <div class="nav accordion flex-column nav-pills" id="menu-nav" role="tablist"
          aria-orientation="vertical">
-        <a class="nav-link d-flex active" href="#">
-            <span class="material-icons">home</span>
+        <a class="nav-link d-flex" href="#">
+            <span class="custom-icon icon-home"></span>
             <span class="hidden-on-collapsed ml-2">Home</span>
         </a>
-        <p class="category-title ml-3 mt-4 mb-2 hidden-on-collapsed">Market</p>
+        <p class="category-title ml-3 my-2 hidden-on-collapsed text-uppercase">Market</p>
         <div>
             <div class="nav-link d-flex justify-content-between menu-accordion-collapse-toggle"
                  type="button">
                 <div class="d-flex">
-                    <span class="material-icons">sports_esports</span>
+                    <span class="custom-icon icon-joystick"></span>
                     <span class="hidden-on-collapsed ml-2">Games</span>
                 </div>
                 <span class="material-icons hidden-on-collapsed expand-icon">expand_more</span>
@@ -73,7 +73,7 @@
             <div class="nav-link d-flex justify-content-between menu-accordion-collapse-toggle"
                  type="button">
                 <div class="d-flex">
-                    <span class="material-icons">view_module</span>
+                    <span class="custom-icon icon-services"></span>
                     <span class="hidden-on-collapsed ml-2">Services</span>
                 </div>
                 <span class="material-icons hidden-on-collapsed expand-icon">expand_more</span>
@@ -98,70 +98,98 @@
                 </a>
             </div>
         </div>
-        <p class="category-title ml-3 mt-3 mb-2 hidden-on-collapsed">Market</p>
         <a class="nav-link d-flex" href="#">
-            <span class="material-icons">format_list_bulleted</span>
+            <span class="custom-icon icon-items"></span>
             <span class="hidden-on-collapsed ml-2">Items</span>
         </a>
         <a class="nav-link d-flex" href="#">
-            <span class="material-icons">local_offer</span>
+            <span class="custom-icon icon-discounts"></span>
             <span class="hidden-on-collapsed ml-2">Discounts</span>
         </a>
         <a class="nav-link d-flex" href="#">
-            <span class="material-icons">casino</span>
+            <span class="custom-icon icon-luck"></span>
             <span class="hidden-on-collapsed ml-2">Luck</span>
         </a>
-        <p class="category-title ml-3 mt-3 mb-2 hidden-on-collapsed">Market</p>
+        <p class="category-title ml-3 mt-3 mb-2 hidden-on-collapsed text-uppercase">seller</p>
         <a class="nav-link d-flex" href="#">
-            <span class="material-icons">format_list_bulleted</span>
-            <span class="hidden-on-collapsed ml-2">Items</span>
+            <span class="custom-icon icon-analytics"></span>
+            <span class="hidden-on-collapsed ml-2">Analytics</span>
         </a>
         <a class="nav-link d-flex" href="#">
-            <span class="material-icons">local_offer</span>
-            <span class="hidden-on-collapsed ml-2">Discounts</span>
+            <span class="custom-icon icon-management"></span>
+            <span class="hidden-on-collapsed ml-2">Management</span>
         </a>
         <a class="nav-link d-flex" href="#">
-            <span class="material-icons">casino</span>
-            <span class="hidden-on-collapsed ml-2">Luck</span>
+            <span class="custom-icon icon-chat"></span>
+            <span class="hidden-on-collapsed ml-2">Chat</span>
         </a>
-        <div>
-            <div class="nav-link d-flex justify-content-between menu-accordion-collapse-toggle"
-                 type="button">
-                <div class="d-flex">
-                    <span class="material-icons">sports_esports</span>
-                    <span class="hidden-on-collapsed ml-2">Games</span>
-                </div>
-                <span class="material-icons hidden-on-collapsed expand-icon">expand_more</span>
-            </div>
-            <div class="collapse hidden-on-collapsed pl-2"
-                 data-parent="#menu-nav">
-                <a class="nav-link d-flex align-items-center" href="#">
-                    <span class="material-icons md-10">trip_origin</span>
-                    <span class="ml-3">Keys/License</span>
-                </a>
-                <a class="nav-link d-flex align-items-center" href="#">
-                    <span class="material-icons md-10">trip_origin</span>
-                    <span class="ml-3">Accounts</span>
-                </a>
-            </div>
-        </div>
+        <p class="category-title ml-3 mt-3 mb-2 hidden-on-collapsed text-uppercase">account</p>
+        <a class="nav-link d-flex" href="#">
+            <span class="custom-icon icon-profile"></span>
+            <span class="hidden-on-collapsed ml-2">Profile</span>
+        </a>
+        <a class="nav-link d-flex" href="#">
+            <span class="custom-icon icon-library"></span>
+            <span class="hidden-on-collapsed ml-2">Library</span>
+        </a>
+        <a class="nav-link d-flex" href="#">
+            <span class="custom-icon icon-settings"></span>
+            <span class="hidden-on-collapsed ml-2">Settings</span>
+        </a>
         <p class="category-title ml-3 mt-3 mb-2 hidden-on-collapsed text-uppercase">info</p>
-        <a class="nav-link d-flex" href="support.html">
-            <span class="material-icons">sentiment_satisfied_alt</span>
+        <a class="nav-link d-flex" href="#">
+            <span class="custom-icon icon-support"></span>
             <span class="hidden-on-collapsed ml-2">Support</span>
         </a>
-        <a class="nav-link d-flex" href="info.html">
-            <span class="material-icons">help_outline</span>
+        <a class="nav-link d-flex" href="#">
+            <span class="custom-icon icon-faq"></span>
             <span class="hidden-on-collapsed ml-2">FAQ</span>
         </a>
+        <a class="nav-link d-flex" href="#">
+            <span class="custom-icon icon-info"></span>
+            <span class="hidden-on-collapsed ml-2">Knowledge Base</span>
+        </a>
+
+        <select class="d-block d-lg-none material-select material-select-required hidden-on-collapsed mt-3"
+                name="" aria-label="">
+            <option selected value="1">En</option>
+            <option value="2">Ru</option>
+        </select>
     </div>
 </nav>
 <main>
-    <header class="main-header px-lg-4 px-3 d-flex mb-3 mb-lg-4 justify-content-between">
-        <div class="d-none d-lg-flex align-items-center my-3">
-            <span class="material-icons-outlined mr-4 md-30">shopping_cart</span>
-            <span class="material-icons mr-4 md-30">chat_bubble_outline</span>
-            <span class="material-icons text-glow-green mr-4 md-30">search</span>
+    <header class="main-header d-flex px-lg-4 px-3 py-1 mb-3 mb-xl-4">
+        <form class="search-container container-fluid collapse px-2 px-lg-4 py-lg-1 bg-dark" id="header-search-container">
+            <div class="row">
+                <div class="col pr-2">
+                    <div class="material-input material-input-success material-input-violet icon-prepend bg-dark">
+                        <input id="login111" type="text" name="username">
+                        <label for="login111">Search</label>
+                        <span class="material-icons material-input-icon">search</span>
+                    </div>
+                </div>
+                <div class="pl-0 col-auto">
+                    <button class="btn btn-outline-green px-3"><span class="custom-icon icon-search"></span></button>
+                </div>
+            </div>
+        </form>
+        <div class="d-none d-lg-flex align-items-center mr-auto">
+            <div class="mr-3 mr-xxl-4" style="width: 100px;">
+                <select class="material-select material-select-required" name="" aria-label="">
+                    <option selected value="1">En</option>
+                    <option value="2">Ru</option>
+                </select>
+            </div>
+            <a class="mr-3 mr-xxl-4" href="#">
+                <span class="custom-icon icon-cart"></span>
+            </a>
+            <a class="mr-3 mr-xxl-4" href="#">
+                <span class="custom-icon icon-chat"></span>
+            </a>
+            <a class="mr-3 mr-xxl-4 search-button" data-toggle="collapse" href="#header-search-container"
+               role="button" aria-expanded="false" aria-controls="header-search-container">
+                <span class="custom-icon custom-icon-success icon-search"></span>
+            </a>
         </div>
         <div class="d-none d-lg-flex align-items-center">
             <div class="d-flex align-items-center">
@@ -169,9 +197,9 @@
                     <p class="mb-0">Balance:</p>
                     <p class="mb-0 balance-number">$ 1000.00</p>
                 </div>
-                <span class="material-icons text-green">add_circle_outline</span>
+                <span class="custom-icon custom-icon-success icon-add"></span>
             </div>
-            <div class="ml-5">
+            <div class="ml-3 ml-xxl-5">
                 <div class="mb-2 d-flex align-items-center justify-content-between">
                     <span class="">Level:</span>
                     <span>93.61</span>
@@ -181,18 +209,34 @@
                          aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
             </div>
-            <div class="my-3 ml-4">
-                <span class="material-icons md-30">notifications_none</span>
-                <span class="material-icons-outlined md-30 ml-3">account_circle</span>
+            <div class="my-3 ml-3 ml-xxl-4 d-flex">
+                <a class="mr-3 notifications active" href="#">
+                    <span class="custom-icon icon-bell"></span>
+                </a>
+                <a href="#">
+                    <span class="custom-icon icon-user"></span>
+                </a>
             </div>
         </div>
         <button class="btn p-0 d-flex d-lg-none align-items-center menu-fixed-toggle">
-            <span class="material-icons md-30 text-gray">menu</span>
+            <a class="mr-3 mr-xxl-4" href="#">
+                <span class="custom-icon icon-burger"></span>
+            </a>
         </button>
-        <div class="d-lg-none d-flex align-items-center my-2 ml-auto">
-            <span class="material-icons text-glow-green md-30 mr-2">search</span>
-            <span class="material-icons-outlined md-30 mr-2">shopping_cart</span>
-            <span class="material-icons-outlined md-30">account_circle</span>
+        <div class="d-lg-none d-flex align-items-center ml-auto">
+            <a class="mr-3 mr-xxl-4 search-button" data-toggle="collapse" href="#header-search-container"
+               role="button" aria-expanded="false" aria-controls="header-search-container">
+                <span class="custom-icon custom-icon-success icon-search"></span>
+            </a>
+            <a class=" mr-3 mr-xxl-4" href="#">
+                <span class="custom-icon icon-cart"></span>
+            </a>
+            <a class="text mr-3 notifications active" href="#">
+                <span class="custom-icon icon-bell"></span>
+            </a>
+            <a class="" href="#">
+                <span class="custom-icon icon-user"></span>
+            </a>
         </div>
     </header>
 
@@ -207,17 +251,17 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <form class="my-2 my-lg-0 w-100">
                 <div class="row">
-                    <div class="col-auto mr-auto">
-                        <h1 class="d-none d-lg-block mr-auto mb-2 mb-xxxl-0">Games</h1>
+                    <div class="col-auto mr-auto order-xl-0 order-xxxxl-0">
+                        <h1 class="d-none d-lg-block mr-auto mb-2 mb-xxxxl-0">Games</h1>
                     </div>
-                    <div class="col-xxl-10 col-xxxl-2 mb-3 mb-xxxl-0">
+                    <div class="col-xl-8 col-xxxxl-2 mb-3 mb-xxxxl-0 order-xl-1 order-xxxxl-0">
                         <div class="material-input material-input-violet icon-append">
                             <input id="search" type="text" name="search">
                             <label for="search">Search</label>
                             <span class="material-icons material-input-icon">search</span>
                         </div>
                     </div>
-                    <div class="col-xxl-4 col-xxxl-2 mb-3 mb-xxxl-0">
+                    <div class="col-xl-4 col-xxxxl-2 mb-3 mb-xxxxl-0 order-xl-3 order-xxxxl-0">
                         <select class="material-select material-select-violet"
                                 name="" data-placeholder="Choose A Game" aria-label="">
                             <option value="1">1 Lorem ipsum dolor sit amet.</option>
@@ -225,7 +269,7 @@
                             <option value="3">3 Lorem ipsum dolor sit amet.</option>
                         </select>
                     </div>
-                    <div class="col-xxl-4 col-xxxl-2 mb-3 mb-xxxl-0">
+                    <div class="col-xl-4 col-xxxxl-2 mb-3 mb-xxxxl-0 order-xl-4 order-xxxxl-0">
                         <select class="material-select material-select-violet mr-3"
                                 name="" data-placeholder="By Relevance" aria-label="">
                             <option value="1">1 Lorem ipsum dolor sit amet.</option>
@@ -233,18 +277,18 @@
                             <option value="3">3 Lorem ipsum dolor sit amet.</option>
                         </select>
                     </div>
-                    <div class="col col-xxl-4 col-xxxl-3 d-flex mb-3 mb-xxxl-0">
+                    <div class="col col-xl-4 col-xxxxl-3 d-flex mb-3 mb-xxxxl-0 order-xl-5 order-xxxxl-0">
                         <div class="material-input without-label icon-prepend">
                             <input id="from" type="number" value="30" name="from" aria-label="">
-                            <span class="material-icons material-input-icon">attach_money</span>
+                            <span class="h5 mb-0 material-input-icon text-gray pl-1">$</span>
                         </div>
                         <span class="px-2 d-flex font-weight-bold align-items-center">—</span>
                         <div class="material-input without-label icon-prepend">
                             <input id="to" type="number" value="1000" name="from" aria-label="">
-                            <span class="material-icons material-input-icon">attach_money</span>
+                            <span class="h5 mb-0 material-input-icon text-gray pl-1">$</span>
                         </div>
                     </div>
-                    <div class="col-xxxl-auto ">
+                    <div class="col-xl col-xxxxl-auto order-xl-2 order-xxxxl-0">
                         <button class="btn px-3 btn-green-shine btn-block"
                                 type="submit">Search
                         </button>
@@ -257,8 +301,8 @@
     <div class="row mb-3">
         <div class="col-12 col-xl-auto small-col order-xl-1">
             <p class="h5 font-weight-bold mb-2 mb-md-3">Advertisements</p>
-            <div class="mob-items-carousel ml-n3 ml-lg-0">
-                <a href="#" class="item-orange d-flex link mb-2 mb-xl-3 ml-3 ml-lg-0 py-1 py-lg-2">
+            <div class="mob-items-carousel">
+                <a href="#" class="item-orange d-flex link mb-2 mb-xl-3 py-1 py-lg-2">
                     <div class="row content py-2 pl-4 w-100 align-items-center">
                         <p class="col-12 mb-2 line-clamp-3">Lorem ipsum dolor sit
                             amet, consectetur adipiscing elit,
@@ -273,11 +317,11 @@
                         <div class="col-auto ml-auto align-items-center justify-content-end d-flex">
                             <div class="d-flex d-lg-none align-items-center reviews text-light-gray mr-3 ml-xxxl-3 mr-xxxl-5">
                                 <div class="d-flex flex-column align-items-center justify-content-center mr-2 mr-xxxl-4">
-                                    <span class="material-icons text-glow-green mb-1 mb-xxxl-2">thumb_up</span>
+                                    <span class="custom-icon custom-icon-success icon-like-fill mb-1 mb-xxxl-2"></span>
                                     <span>10000</span>
                                 </div>
                                 <div class="d-flex flex-column align-items-center justify-content-center">
-                                    <span class="material-icons text-glow-light-red mb-1 mb-xxxl-2">thumb_down</span>
+                                    <span class="custom-icon custom-icon-danger icon-dis-fill mb-1 mb-xxxl-2"></span>
                                     <span>10000</span>
                                 </div>
                             </div>
@@ -293,7 +337,7 @@
                         </div>
                     </div>
                 </a>
-                <a href="#" class="item-orange d-flex link mb-2 mb-xl-3 ml-3 ml-lg-0 py-1 py-lg-2">
+                <a href="#" class="item-orange d-flex link mb-2 mb-xl-3 py-1 py-lg-2">
                     <div class="row content py-2 pl-4 w-100 align-items-center">
                         <p class="col-12 mb-2 line-clamp-3">Lorem ipsum dolor sit
                             amet, consectetur adipiscing elit,
@@ -308,11 +352,11 @@
                         <div class="col-auto ml-auto align-items-center justify-content-end d-flex">
                             <div class="d-flex d-lg-none align-items-center reviews text-light-gray mr-3 ml-xxxl-3 mr-xxxl-5">
                                 <div class="d-flex flex-column align-items-center justify-content-center mr-2 mr-xxxl-4">
-                                    <span class="material-icons text-glow-green mb-1 mb-xxxl-2">thumb_up</span>
+                                    <span class="custom-icon custom-icon-success icon-like-fill mb-1 mb-xxxl-2"></span>
                                     <span>10000</span>
                                 </div>
                                 <div class="d-flex flex-column align-items-center justify-content-center">
-                                    <span class="material-icons text-glow-light-red mb-1 mb-xxxl-2">thumb_down</span>
+                                    <span class="custom-icon custom-icon-danger icon-dis-fill mb-1 mb-xxxl-2"></span>
                                     <span>10000</span>
                                 </div>
                             </div>
@@ -328,7 +372,7 @@
                         </div>
                     </div>
                 </a>
-                <a href="#" class="item-orange d-flex link mb-2 mb-xl-3 ml-3 ml-lg-0 py-1 py-lg-2">
+                <a href="#" class="item-orange d-flex link mb-2 mb-xl-3 py-1 py-lg-2">
                     <div class="row content py-2 pl-4 w-100 align-items-center">
                         <p class="col-12 mb-2 line-clamp-3">Lorem ipsum dolor sit
                             amet, consectetur adipiscing elit,
@@ -343,11 +387,11 @@
                         <div class="col-auto ml-auto align-items-center justify-content-end d-flex">
                             <div class="d-flex d-lg-none align-items-center reviews text-light-gray mr-3 ml-xxxl-3 mr-xxxl-5">
                                 <div class="d-flex flex-column align-items-center justify-content-center mr-2 mr-xxxl-4">
-                                    <span class="material-icons text-glow-green mb-1 mb-xxxl-2">thumb_up</span>
+                                    <span class="custom-icon custom-icon-success icon-like-fill mb-1 mb-xxxl-2"></span>
                                     <span>10000</span>
                                 </div>
                                 <div class="d-flex flex-column align-items-center justify-content-center">
-                                    <span class="material-icons text-glow-light-red mb-1 mb-xxxl-2">thumb_down</span>
+                                    <span class="custom-icon custom-icon-danger icon-dis-fill mb-1 mb-xxxl-2"></span>
                                     <span>10000</span>
                                 </div>
                             </div>
@@ -363,7 +407,7 @@
                         </div>
                     </div>
                 </a>
-                <a href="#" class="item-orange d-flex link mb-2 mb-xl-3 ml-3 ml-lg-0 py-1 py-lg-2">
+                <a href="#" class="item-orange d-flex link mb-2 mb-xl-3 py-1 py-lg-2">
                     <div class="row content py-2 pl-4 w-100 align-items-center">
                         <p class="col-12 mb-2 line-clamp-3">Lorem ipsum dolor sit
                             amet, consectetur adipiscing elit,
@@ -378,11 +422,11 @@
                         <div class="col-auto ml-auto align-items-center justify-content-end d-flex">
                             <div class="d-flex d-lg-none align-items-center reviews text-light-gray mr-3 ml-xxxl-3 mr-xxxl-5">
                                 <div class="d-flex flex-column align-items-center justify-content-center mr-2 mr-xxxl-4">
-                                    <span class="material-icons text-glow-green mb-1 mb-xxxl-2">thumb_up</span>
+                                    <span class="custom-icon custom-icon-success icon-like-fill mb-1 mb-xxxl-2"></span>
                                     <span>10000</span>
                                 </div>
                                 <div class="d-flex flex-column align-items-center justify-content-center">
-                                    <span class="material-icons text-glow-light-red mb-1 mb-xxxl-2">thumb_down</span>
+                                    <span class="custom-icon custom-icon-danger icon-dis-fill mb-1 mb-xxxl-2"></span>
                                     <span>10000</span>
                                 </div>
                             </div>
@@ -398,7 +442,7 @@
                         </div>
                     </div>
                 </a>
-                <a href="#" class="item-orange d-flex link mb-2 mb-xl-3 ml-3 ml-lg-0 py-1 py-lg-2">
+                <a href="#" class="item-orange d-flex link mb-2 mb-xl-3 py-1 py-lg-2">
                     <div class="row content py-2 pl-4 w-100 align-items-center">
                         <p class="col-12 mb-2 line-clamp-3">Lorem ipsum dolor sit
                             amet, consectetur adipiscing elit,
@@ -413,11 +457,11 @@
                         <div class="col-auto ml-auto align-items-center justify-content-end d-flex">
                             <div class="d-flex d-lg-none align-items-center reviews text-light-gray mr-3 ml-xxxl-3 mr-xxxl-5">
                                 <div class="d-flex flex-column align-items-center justify-content-center mr-2 mr-xxxl-4">
-                                    <span class="material-icons text-glow-green mb-1 mb-xxxl-2">thumb_up</span>
+                                    <span class="custom-icon custom-icon-success icon-like-fill mb-1 mb-xxxl-2"></span>
                                     <span>10000</span>
                                 </div>
                                 <div class="d-flex flex-column align-items-center justify-content-center">
-                                    <span class="material-icons text-glow-light-red mb-1 mb-xxxl-2">thumb_down</span>
+                                    <span class="custom-icon custom-icon-danger icon-dis-fill mb-1 mb-xxxl-2"></span>
                                     <span>10000</span>
                                 </div>
                             </div>
@@ -448,17 +492,17 @@
                             sed consectetur
                             adipiscing elit, sed do</p>
                     </div>
-                    <div class="col col-xxl-auto order-xxl-1 d-flex align-items-center">
-                        <span class="material-icons text-glow-light-red md-36">favorite_border</span>
+                    <div class="col pr-0 col-xxl-auto order-xxl-1 d-flex align-items-center like-container">
+                        <span class="custom-icon custom-icon-danger icon-heart-outline"></span>
                     </div>
                     <div class="col-auto order-xxl-3 ml-auto d-flex align-items-center justify-content-end">
                         <div class="d-flex align-items-center reviews text-light-gray mr-3 ml-xxxl-3 mr-xxxl-5">
                             <div class="d-flex flex-column align-items-center justify-content-center mr-2 mr-xxxl-4">
-                                <span class="material-icons text-glow-green mb-1 mb-xxxl-2">thumb_up</span>
+                                <span class="custom-icon custom-icon-success icon-like-fill mb-1 mb-xxxl-2"></span>
                                 <span>10000</span>
                             </div>
                             <div class="d-flex flex-column align-items-center justify-content-center">
-                                <span class="material-icons text-glow-light-red mb-1 mb-xxxl-2">thumb_down</span>
+                                <span class="custom-icon custom-icon-danger icon-dis-fill mb-1 mb-xxxl-2"></span>
                                 <span>10000</span>
                             </div>
                         </div>
@@ -484,17 +528,17 @@
                             sed consectetur
                             adipiscing elit, sed do</p>
                     </div>
-                    <div class="col col-xxl-auto order-xxl-1 d-flex align-items-center">
-                        <span class="material-icons text-glow-light-red md-36">favorite</span>
+                    <div class="col pr-0 col-xxl-auto order-xxl-1 d-flex align-items-center like-container">
+                        <span class="custom-icon custom-icon-danger icon-heart-fill"></span>
                     </div>
                     <div class="col-auto order-xxl-3 ml-auto d-flex align-items-center justify-content-end">
                         <div class="d-flex align-items-center reviews text-light-gray mr-3 ml-xxxl-3 mr-xxxl-5">
                             <div class="d-flex flex-column align-items-center justify-content-center mr-2 mr-xxxl-4">
-                                <span class="material-icons text-glow-green mb-1 mb-xxxl-2">thumb_up</span>
+                                <span class="custom-icon custom-icon-success icon-like-fill mb-1 mb-xxxl-2"></span>
                                 <span>10000</span>
                             </div>
                             <div class="d-flex flex-column align-items-center justify-content-center">
-                                <span class="material-icons text-glow-light-red mb-1 mb-xxxl-2">thumb_down</span>
+                                <span class="custom-icon custom-icon-danger icon-dis-fill mb-1 mb-xxxl-2"></span>
                                 <span>10000</span>
                             </div>
                         </div>
@@ -520,17 +564,17 @@
                             sed consectetur
                             adipiscing elit, sed do</p>
                     </div>
-                    <div class="col col-xxl-auto order-xxl-1 d-flex align-items-center">
-                        <span class="material-icons text-glow-light-red md-36">favorite_border</span>
+                    <div class="col pr-0 col-xxl-auto order-xxl-1 d-flex align-items-center like-container">
+                        <span class="custom-icon custom-icon-danger icon-heart-outline"></span>
                     </div>
                     <div class="col-auto order-xxl-3 ml-auto d-flex align-items-center justify-content-end">
                         <div class="d-flex align-items-center reviews text-light-gray mr-3 ml-xxxl-3 mr-xxxl-5">
                             <div class="d-flex flex-column align-items-center justify-content-center mr-2 mr-xxxl-4">
-                                <span class="material-icons text-glow-green mb-1 mb-xxxl-2">thumb_up</span>
+                                <span class="custom-icon custom-icon-success icon-like-fill mb-1 mb-xxxl-2"></span>
                                 <span>10000</span>
                             </div>
                             <div class="d-flex flex-column align-items-center justify-content-center">
-                                <span class="material-icons text-glow-light-red mb-1 mb-xxxl-2">thumb_down</span>
+                                <span class="custom-icon custom-icon-danger icon-dis-fill mb-1 mb-xxxl-2"></span>
                                 <span>10000</span>
                             </div>
                         </div>
@@ -556,17 +600,17 @@
                             sed consectetur
                             adipiscing elit, sed do</p>
                     </div>
-                    <div class="col col-xxl-auto order-xxl-1 d-flex align-items-center">
-                        <span class="material-icons text-glow-light-red md-36">favorite_border</span>
+                    <div class="col pr-0 col-xxl-auto order-xxl-1 d-flex align-items-center like-container">
+                        <span class="custom-icon custom-icon-danger icon-heart-outline"></span>
                     </div>
                     <div class="col-auto order-xxl-3 ml-auto d-flex align-items-center justify-content-end">
                         <div class="d-flex align-items-center reviews text-light-gray mr-3 ml-xxxl-3 mr-xxxl-5">
                             <div class="d-flex flex-column align-items-center justify-content-center mr-2 mr-xxxl-4">
-                                <span class="material-icons text-glow-green mb-1 mb-xxxl-2">thumb_up</span>
+                                <span class="custom-icon custom-icon-success icon-like-fill mb-1 mb-xxxl-2"></span>
                                 <span>10000</span>
                             </div>
                             <div class="d-flex flex-column align-items-center justify-content-center">
-                                <span class="material-icons text-glow-light-red mb-1 mb-xxxl-2">thumb_down</span>
+                                <span class="custom-icon custom-icon-danger icon-dis-fill mb-1 mb-xxxl-2"></span>
                                 <span>10000</span>
                             </div>
                         </div>
@@ -592,17 +636,17 @@
                             sed consectetur
                             adipiscing elit, sed do</p>
                     </div>
-                    <div class="col col-xxl-auto order-xxl-1 d-flex align-items-center">
-                        <span class="material-icons text-glow-light-red md-36">favorite_border</span>
+                    <div class="col pr-0 col-xxl-auto order-xxl-1 d-flex align-items-center like-container">
+                        <span class="custom-icon custom-icon-danger icon-heart-outline"></span>
                     </div>
                     <div class="col-auto order-xxl-3 ml-auto d-flex align-items-center justify-content-end">
                         <div class="d-flex align-items-center reviews text-light-gray mr-3 ml-xxxl-3 mr-xxxl-5">
                             <div class="d-flex flex-column align-items-center justify-content-center mr-2 mr-xxxl-4">
-                                <span class="material-icons text-glow-green mb-1 mb-xxxl-2">thumb_up</span>
+                                <span class="custom-icon custom-icon-success icon-like-fill mb-1 mb-xxxl-2"></span>
                                 <span>10000</span>
                             </div>
                             <div class="d-flex flex-column align-items-center justify-content-center">
-                                <span class="material-icons text-glow-light-red mb-1 mb-xxxl-2">thumb_down</span>
+                                <span class="custom-icon custom-icon-danger icon-dis-fill mb-1 mb-xxxl-2"></span>
                                 <span>10000</span>
                             </div>
                         </div>
@@ -628,17 +672,17 @@
                             sed consectetur
                             adipiscing elit, sed do</p>
                     </div>
-                    <div class="col col-xxl-auto order-xxl-1 d-flex align-items-center">
-                        <span class="material-icons text-glow-light-red md-36">favorite_border</span>
+                    <div class="col pr-0 col-xxl-auto order-xxl-1 d-flex align-items-center like-container">
+                        <span class="custom-icon custom-icon-danger icon-heart-outline"></span>
                     </div>
                     <div class="col-auto order-xxl-3 ml-auto d-flex align-items-center justify-content-end">
                         <div class="d-flex align-items-center reviews text-light-gray mr-3 ml-xxxl-3 mr-xxxl-5">
                             <div class="d-flex flex-column align-items-center justify-content-center mr-2 mr-xxxl-4">
-                                <span class="material-icons text-glow-green mb-1 mb-xxxl-2">thumb_up</span>
+                                <span class="custom-icon custom-icon-success icon-like-fill mb-1 mb-xxxl-2"></span>
                                 <span>10000</span>
                             </div>
                             <div class="d-flex flex-column align-items-center justify-content-center">
-                                <span class="material-icons text-glow-light-red mb-1 mb-xxxl-2">thumb_down</span>
+                                <span class="custom-icon custom-icon-danger icon-dis-fill mb-1 mb-xxxl-2"></span>
                                 <span>10000</span>
                             </div>
                         </div>
@@ -664,17 +708,17 @@
                             sed consectetur
                             adipiscing elit, sed do</p>
                     </div>
-                    <div class="col col-xxl-auto order-xxl-1 d-flex align-items-center">
-                        <span class="material-icons text-glow-light-red md-36">favorite_border</span>
+                    <div class="col pr-0 col-xxl-auto order-xxl-1 d-flex align-items-center like-container">
+                        <span class="custom-icon custom-icon-danger icon-heart-outline"></span>
                     </div>
                     <div class="col-auto order-xxl-3 ml-auto d-flex align-items-center justify-content-end">
                         <div class="d-flex align-items-center reviews text-light-gray mr-3 ml-xxxl-3 mr-xxxl-5">
                             <div class="d-flex flex-column align-items-center justify-content-center mr-2 mr-xxxl-4">
-                                <span class="material-icons text-glow-green mb-1 mb-xxxl-2">thumb_up</span>
+                                <span class="custom-icon custom-icon-success icon-like-fill mb-1 mb-xxxl-2"></span>
                                 <span>10000</span>
                             </div>
                             <div class="d-flex flex-column align-items-center justify-content-center">
-                                <span class="material-icons text-glow-light-red mb-1 mb-xxxl-2">thumb_down</span>
+                                <span class="custom-icon custom-icon-danger icon-dis-fill mb-1 mb-xxxl-2"></span>
                                 <span>10000</span>
                             </div>
                         </div>
@@ -700,17 +744,53 @@
                             sed consectetur
                             adipiscing elit, sed do</p>
                     </div>
-                    <div class="col col-xxl-auto order-xxl-1 d-flex align-items-center">
-                        <span class="material-icons text-glow-light-red md-36">favorite_border</span>
+                    <div class="col pr-0 col-xxl-auto order-xxl-1 d-flex align-items-center like-container">
+                        <span class="custom-icon custom-icon-danger icon-heart-outline"></span>
                     </div>
                     <div class="col-auto order-xxl-3 ml-auto d-flex align-items-center justify-content-end">
                         <div class="d-flex align-items-center reviews text-light-gray mr-3 ml-xxxl-3 mr-xxxl-5">
                             <div class="d-flex flex-column align-items-center justify-content-center mr-2 mr-xxxl-4">
-                                <span class="material-icons text-glow-green mb-1 mb-xxxl-2">thumb_up</span>
+                                <span class="custom-icon custom-icon-success icon-like-fill mb-1 mb-xxxl-2"></span>
                                 <span>10000</span>
                             </div>
                             <div class="d-flex flex-column align-items-center justify-content-center">
-                                <span class="material-icons text-glow-light-red mb-1 mb-xxxl-2">thumb_down</span>
+                                <span class="custom-icon custom-icon-danger icon-dis-fill mb-1 mb-xxxl-2"></span>
+                                <span>10000</span>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column align-items-center justify-content-center text-light-gray mr-3 mr-xxxl-5">
+                            <div class="progress progress-tiny bg-light-red mb-2 mb-xxxl-3 mt-xxl-2">
+                                <div class="progress-bar" role="progressbar" style="width: 30%"
+                                     aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <span class="rating">25.69/<small>100</small></span>
+                        </div>
+                        <span class="text-glow-green price">$45.00</span>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="item link mb-2 mb-xl-3 py-1">
+                <div class="row content py-2 pl-4 w-100 align-items-center">
+                    <div class="col-xxl order-xxl-2 mb-2 mb-xxl-0 d-flex align-items-center">
+                        <div class="user-image-container online mr-3">
+                            <img class="user-image" src="https://source.unsplash.com/random" alt="">
+                        </div>
+                        <p class="mb-0 line-clamp-3">Lorem ipsum dolor sit
+                            amet, consectetur adipiscing elit,
+                            sed consectetur
+                            adipiscing elit, sed do</p>
+                    </div>
+                    <div class="col pr-0 col-xxl-auto order-xxl-1 d-flex align-items-center like-container">
+                        <span class="custom-icon custom-icon-danger icon-heart-outline"></span>
+                    </div>
+                    <div class="col-auto order-xxl-3 ml-auto d-flex align-items-center justify-content-end">
+                        <div class="d-flex align-items-center reviews text-light-gray mr-3 ml-xxxl-3 mr-xxxl-5">
+                            <div class="d-flex flex-column align-items-center justify-content-center mr-2 mr-xxxl-4">
+                                <span class="custom-icon custom-icon-success icon-like-fill mb-1 mb-xxxl-2"></span>
+                                <span>10000</span>
+                            </div>
+                            <div class="d-flex flex-column align-items-center justify-content-center">
+                                <span class="custom-icon custom-icon-danger icon-dis-fill mb-1 mb-xxxl-2"></span>
                                 <span>10000</span>
                             </div>
                         </div>
@@ -751,6 +831,8 @@
 <script type="text/javascript" src="slick/slick.min.js"></script>
 <script type="text/javascript" src="js/materialSelect.js"></script>
 <script type="text/javascript" src="js/materialInput.js"></script>
+<script type="text/javascript" src="js/header.js"></script>
+<script type="text/javascript" src="js/mainMenu.js"></script>
 <script>
   $(window).on('load resize orientationchange', function() {
     $('.mob-items-carousel').each(function() {
@@ -775,33 +857,6 @@
         }
       }
     });
-  });
-
-  $('.menu-fixed-toggle').click(function() {
-    $('body').toggleClass('collapsed');
-  });
-
-  $(document).click(function(e) {
-    if ($(window).width() < 992 && !$(e.target).closest('.main-menu').length &&
-      !$(e.target).closest('.menu-fixed-toggle').length) {
-      $('body').removeClass('collapsed');
-    }
-  });
-
-  //info accordion
-  $('.collapse').on('show.bs.collapse', function(e) {
-    $(this).parent().toggleClass('expanded');
-  });
-  $('.collapse').on('hide.bs.collapse', function(e) {
-    $(this).parent().toggleClass('expanded');
-  });
-
-  $('.menu-accordion-collapse-toggle').click(function() {
-    $(this).siblings('.collapse').collapse('toggle');
-  });
-
-  $('.accordion-collapse-toggle').click(function() {
-    $(this).find('.collapse').collapse('toggle');
   });
 </script>
 </body>

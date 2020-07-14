@@ -10,14 +10,13 @@ $input-bg: transparent;
 $component-active-color: $light-dark;
 $component-active-bg: $green;
 
-html, body {
-  overflow-y: unset;
-}
-
 body {
-  position: relative;
   font-size: 14px;
   color: #fff;
+}
+
+.main {
+  position: relative;
   background: url("../../../images/auth/largePlanetBg.png") no-repeat center 70%;
   background-size: cover;
   overflow: hidden;
@@ -193,7 +192,7 @@ h1 {
 }
 
 @media screen and (max-width: 1023px) {
-  body {
+  .main {
     background: url("../../../images/auth/mobBg.png") no-repeat scroll 0 0, linear-gradient(180deg, #4F38B8 42.71%, #301570 100%);
     background-size: 100% auto;
     overflow: hidden;

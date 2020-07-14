@@ -154,10 +154,20 @@
   display: inline-block;
   width: 25px;
   height: 20px;
-  background: #fff;
+  background: rgba(255,255,255,.5);
   opacity: 1;
   mask-size: 100% 100%;
-  &:hover, &:focus {
-    background: red;
+
+  &.custom-icon-primary {
+    background: $primary!important;
+  }
+  &.custom-icon-success {
+    background: $success!important;
+  }
+  &.custom-icon-danger {
+    background: $danger!important;
+  }
+  &.custom-icon-dark {
+    background: $dark!important;
   }
 }

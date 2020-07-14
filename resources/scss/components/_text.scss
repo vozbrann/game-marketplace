@@ -66,11 +66,18 @@
 .text-stroke-glow-blue {
   @include text-stroke-shadow($blue);
 }
+.text-light-dark{
+  color: $light-dark;
+}
 
 .line-clamp {
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
+}
+.line-clamp-1 {
+  @extend .line-clamp;
+  -webkit-line-clamp: 1;
 }
 .line-clamp-2 {
   @extend .line-clamp;

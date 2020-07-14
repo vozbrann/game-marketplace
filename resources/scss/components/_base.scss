@@ -5,9 +5,7 @@ html, body {
   background: #141414;
   font-weight: 500;
   font-size: 14px;
-}
 
-html, body {
   padding: 0;
   margin: 0;
   max-width: 100%;
@@ -38,28 +36,10 @@ html, body {
 .bg-semi-dark {
   background-color: $semi-dark;
 }
+.bg-light-dark {
+  background-color: $light-dark;
+}
 
 .slick-slide {
   outline: none
-}
-
-//scrollbar
-html, body {
-  overflow-y: scroll;
-  ::-webkit-scrollbar-track
-  {
-    border-radius: 10px;
-  }
-
-  ::-webkit-scrollbar
-  {
-    width: 8px;
-  }
-
-  ::-webkit-scrollbar-thumb
-  {
-    border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-    background-color: #3A3763;
-  }
 }

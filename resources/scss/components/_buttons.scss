@@ -10,9 +10,15 @@
   text-transform: capitalize;
   border: 2px solid $color;
   box-sizing: border-box;
+  .custom-icon {
+    background: $color;
+  }
   &:hover {
     background-color: $color;
     color: $text-color!important;
+    .custom-icon {
+      background: $text-color;
+    }
   }
   &:active {
     box-shadow: none;

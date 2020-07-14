@@ -1,24 +1,5 @@
 .levels-list {
   overflow: auto;
-  &::-webkit-scrollbar-track
-  {
-
-  }
-
-  &::-webkit-scrollbar
-  {
-    height: 16px;
-    border:2px solid #393052;
-    border-radius: 10px;
-  }
-
-  &::-webkit-scrollbar-thumb
-  {
-    background-color: #393052;
-    border-radius: 10px;
-    height: 2px;
-  }
-
   white-space: nowrap;
   padding-bottom: 20px;
   .star-container {
@@ -117,24 +98,6 @@
   overflow: hidden;
   overflow-x: auto;
   white-space: nowrap;
-  &::-webkit-scrollbar-track
-  {
-
-  }
-
-  &::-webkit-scrollbar
-  {
-    height: 16px;
-    border:2px solid #393052;
-    border-radius: 10px;
-  }
-
-  &::-webkit-scrollbar-thumb
-  {
-    background-color: #393052;
-    border-radius: 10px;
-    height: 2px;
-  }
 }
 
 .quest {

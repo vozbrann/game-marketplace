@@ -2,19 +2,21 @@
   width: 100%;
   color: $light-gray;
   &.material-select-lg {
-    .material-select-body {
-      height: $input-height-large;
-      .selected {
-        line-height: $input-height-large;
-      }
-      .placeholder {
-        line-height: calc(#{$input-height-large} - 4px);
-      }
-    }
-    &.material-select-required {
+    @include media-breakpoint-up(xxxl) {
       .material-select-body {
+        height: $input-height-large;
         .selected {
+          line-height: $input-height-large;
+        }
+        .placeholder {
           line-height: calc(#{$input-height-large} - 4px);
+        }
+      }
+      &.material-select-required {
+        .material-select-body {
+          .selected {
+            line-height: calc(#{$input-height-large} - 4px);
+          }
         }
       }
     }

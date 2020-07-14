@@ -13,134 +13,137 @@
     <title>Auth</title>
 </head>
 <body>
-<div class="scene">
-    <img class="bg-image planet-1" data-depth="0.3" src="../images/auth/planet1.png" alt="">
-    <img class="bg-image planet-2" data-depth="0.1" src="../images/auth/planet2.png" alt="">
-    <img class="bg-image planet-3" data-depth="0.2" src="../images/auth/planet3.png" alt="">
-    <img class="bg-image planet-4" data-depth="0.1" src="../images/auth/planet6.png" alt="">
-    <img class="bg-image planet-5" data-depth="0.08" src="../images/auth/planet4.png" alt="">
-</div>
-<div class="container-fluid h-100 d-flex align-items-center content">
-    <div class="row py-3" style="min-height: 100vh!important; width: 100vw">
-        <div class="col-xl-8 col-lg-7 title-container d-flex flex-column text-center">
-            <p class="mb-0 pre-heading text-uppercase">Welcome to</p>
-            <h1 class="mb-2 mb-md-3">GAMES SYSTEM</h1>
-            <p>Nulla facilisi etiam dignissim diam. Sed adipiscing diam donec adipiscing. Porttitor
-                leo a diam sollicitudin tempor id. Mi eget mauris pharetra et ultrices neque ornare
-                aenean.</p>
-        </div>
-        <div class="col d-flex align-items-center">
-            <div id="form-register" class="form-container position-relative">
-                <div class="position-absolute scene-form">
-                    <img class="fg-image planet-1" data-depth="0.08" src="../images/auth/planet3.png" alt="">
-                    <img class="fg-image planet-2" data-depth="0.1" src="../images/auth/planet5.png" alt="">
-                </div>
-                <div class="btn-group w-100 d-flex mb-4" role="group">
-                    <button type="button"
-                            class="btn w-100 active text-uppercase text-white font-weight-bold">
-                        Register
-                    </button>
-                    <button type="button" id="login-btn"
-                            class="btn w-100 text-uppercase text-white font-weight-bold">
-                        Login
-                    </button>
-                </div>
-                <form class="border-bottom border-secondary mb-3">
-                    <div class="material-input material-input-lg mb-3">
-                        <input id="username" type="text" name="username">
-                        <label for="username">Username</label>
-                    </div>
-                    <div class="material-input material-input-lg mb-3">
-                        <input id="email" type="email" name="email">
-                        <label for="email">E-mail</label>
-                    </div>
-                    <div class="material-input material-input-lg mb-3">
-                        <input id="password" type="password" name="password">
-                        <label for="password">Password</label>
-                    </div>
-                    <div class="material-input material-input-lg mb-3">
-                        <input id="repeatPassword" type="password" name="Password">
-                        <label for="repeatPassword">Repeat password</label>
-                    </div>
-                    <button type="submit"
-                            class="btn btn-lg btn-block btn-green-shine active mt-4 mb-3">
-                        Register Now!
-                    </button>
-                    <p class="small text-grey">You'll receive a confirmation email in your inbox
-                        with a link
-                        to activate your account. If you have any problems, <a href="#">contact
-                            us</a>!</p>
-                </form>
-                <p class="text-center text-grey">Or Register with</p>
-                <div class="row">
-                    <div class="col-md">
-                        <button type="button"
-                                class="btn btn-block btn-google active text-white font-weight-bold mr-3 mb-2 mb-md-0">
-                            Google
-                        </button>
-                    </div>
-                    <div class="col-md">
-                        <button type="button"
-                                class="btn btn-block btn-facebook active text-white font-weight-bold">
-                            Facebook
-                        </button>
-                    </div>
-                </div>
+<div class="main">
+    <div class="scene">
+        <img class="bg-image planet-1" data-depth="0.3" src="../images/auth/planet1.png" alt="">
+        <img class="bg-image planet-2" data-depth="0.1" src="../images/auth/planet2.png" alt="">
+        <img class="bg-image planet-3" data-depth="0.2" src="../images/auth/planet3.png" alt="">
+        <img class="bg-image planet-4" data-depth="0.1" src="../images/auth/planet6.png" alt="">
+        <img class="bg-image planet-5" data-depth="0.08" src="../images/auth/planet4.png" alt="">
+    </div>
+    <div class="container-fluid h-100 d-flex align-items-center content">
+        <div class="row py-3" style="min-height: 100vh!important; width: 100vw">
+            <div class="col-xl-8 col-lg-7 title-container d-flex flex-column text-center">
+                <p class="mb-0 pre-heading text-uppercase">Welcome to</p>
+                <h1 class="mb-2 mb-md-3">GAMES SYSTEM</h1>
+                <p>Nulla facilisi etiam dignissim diam. Sed adipiscing diam donec adipiscing. Porttitor
+                    leo a diam sollicitudin tempor id. Mi eget mauris pharetra et ultrices neque ornare
+                    aenean.</p>
             </div>
-            <div id="form-login" class="form-container position-relative">
-                <div class="position-absolute scene-form">
-                    <img class="fg-image planet-1" data-depth="0.08" src="../images/auth/planet3.png" alt="">
-                    <img class="fg-image planet-2" data-depth="0.1" src="../images/auth/planet5.png" alt="">
-                </div>
-                <div class="btn-group w-100 d-flex mb-4" role="group">
-                    <button type="button"
-                            id="register-btn"
-                            class="btn w-100 text-uppercase text-white font-weight-bold">
-                        Register
-                    </button>
-                    <button type="button"
-                            class="btn w-100 active text-uppercase text-white font-weight-bold">
-                        Login
-                    </button>
-                </div>
-                <form class="border-bottom border-secondary mb-3">
-                    <div class="material-input material-input-lg mb-3">
-                        <input id="login" type="text" name="username">
-                        <label for="login">Username or Email</label>
+            <div class="col d-flex align-items-center">
+                <div id="form-register" class="form-container position-relative" style="display:none">
+                    <div class="position-absolute scene-form">
+                        <img class="fg-image planet-1" data-depth="0.08" src="../images/auth/planet3.png" alt="">
+                        <img class="fg-image planet-2" data-depth="0.1" src="../images/auth/planet5.png" alt="">
                     </div>
-                    <div class="material-input material-input-lg mb-3">
-                        <input id="loginPassword" type="password" name="password">
-                        <label for="loginPassword">Password</label>
-                    </div>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <input class="styled-checkbox" id="remember" type="checkbox" value="value4">
-                        <label for="remember">Remember Me</label>
-                        <a class="text-light text-grey" href="#">Forgot password?</a>
-                    </div>
-                    <button type="submit"
-                            class="btn btn-lg btn-block btn-green-shine active text-white font-weight-bold my-3">
-                        Login to your account!
-                    </button>
-                </form>
-                <p class="text-center text-grey">Or Login with</p>
-                <div class="row">
-                    <div class="col-md">
+                    <div class="btn-group w-100 d-flex mb-4" role="group">
                         <button type="button"
-                                class="btn btn-block btn-google active text-white font-weight-bold mr-3 mb-2 mb-md-0">
-                            Google
+                                class="btn w-100 active text-uppercase text-white font-weight-bold">
+                            Register
+                        </button>
+                        <button type="button" id="login-btn"
+                                class="btn w-100 text-uppercase text-white font-weight-bold">
+                            Login
                         </button>
                     </div>
-                    <div class="col-md">
-                        <button type="button"
-                                class="btn btn-block btn-facebook active text-white font-weight-bold">
-                            Facebook
+                    <form class="border-bottom border-secondary mb-3">
+                        <div class="material-input material-input-lg mb-3">
+                            <input id="username" type="text" name="username">
+                            <label for="username">Username</label>
+                        </div>
+                        <div class="material-input material-input-lg mb-3">
+                            <input id="email" type="email" name="email">
+                            <label for="email">E-mail</label>
+                        </div>
+                        <div class="material-input material-input-lg mb-3">
+                            <input id="password" type="password" name="password">
+                            <label for="password">Password</label>
+                        </div>
+                        <div class="material-input material-input-lg mb-3">
+                            <input id="repeatPassword" type="password" name="Password">
+                            <label for="repeatPassword">Repeat password</label>
+                        </div>
+                        <button type="submit"
+                                class="btn btn-lg btn-block btn-green-shine active mt-4 mb-3">
+                            Register Now!
                         </button>
+                        <p class="small text-grey">You'll receive a confirmation email in your inbox
+                            with a link
+                            to activate your account. If you have any problems, <a href="#">contact
+                                us</a>!</p>
+                    </form>
+                    <p class="text-center text-grey">Or Register with</p>
+                    <div class="row">
+                        <div class="col-md">
+                            <button type="button"
+                                    class="btn btn-block btn-google active text-white font-weight-bold mr-3 mb-2 mb-md-0">
+                                Google
+                            </button>
+                        </div>
+                        <div class="col-md">
+                            <button type="button"
+                                    class="btn btn-block btn-facebook active text-white font-weight-bold">
+                                Facebook
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div id="form-login" class="form-container position-relative" style="display:none">
+                    <div class="position-absolute scene-form">
+                        <img class="fg-image planet-1" data-depth="0.08" src="../images/auth/planet3.png" alt="">
+                        <img class="fg-image planet-2" data-depth="0.1" src="../images/auth/planet5.png" alt="">
+                    </div>
+                    <div class="btn-group w-100 d-flex mb-4" role="group">
+                        <button type="button"
+                                id="register-btn"
+                                class="btn w-100 text-uppercase text-white font-weight-bold">
+                            Register
+                        </button>
+                        <button type="button"
+                                class="btn w-100 active text-uppercase text-white font-weight-bold">
+                            Login
+                        </button>
+                    </div>
+                    <form class="border-bottom border-secondary mb-3">
+                        <div class="material-input material-input-lg mb-3">
+                            <input id="login" type="text" name="username">
+                            <label for="login">Username or Email</label>
+                        </div>
+                        <div class="material-input material-input-lg mb-3">
+                            <input id="loginPassword" type="password" name="password">
+                            <label for="loginPassword">Password</label>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <input class="styled-checkbox" id="remember" type="checkbox" value="value4">
+                            <label for="remember">Remember Me</label>
+                            <a class="text-light text-grey" href="#">Forgot password?</a>
+                        </div>
+                        <button type="submit"
+                                class="btn btn-lg btn-block btn-green-shine active text-white font-weight-bold my-3">
+                            Login to your account!
+                        </button>
+                    </form>
+                    <p class="text-center text-grey">Or Login with</p>
+                    <div class="row">
+                        <div class="col-md">
+                            <button type="button"
+                                    class="btn btn-block btn-google active text-white font-weight-bold mr-3 mb-2 mb-md-0">
+                                Google
+                            </button>
+                        </div>
+                        <div class="col-md">
+                            <button type="button"
+                                    class="btn btn-block btn-facebook active text-white font-weight-bold">
+                                Facebook
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -152,15 +155,18 @@
         crossorigin="anonymous"></script>
 <!-- Optional JavaScript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
-<script src="js/spaceShuttle.js"></script>
+<script src="js/materialInput.js"></script>
+<script src="js/jquery.overlayScrollbars.min.js"></script>
 <script>
-  $('.material-input input').on('input', function() {
-    $(this).closest('.material-input').addClass('active');
-  });
-  $('.material-input input').focusout(function() {
-    if ($(this).val() === '') {
-      $(this).closest('.material-input').removeClass('active');
-    }
+  $(function() {
+    $("body").overlayScrollbars({
+      scrollbars: {
+        autoHide: "scroll",
+      },
+      overflowBehavior: {
+        x: "hidden",
+      },
+    });
   });
 
   // Parallax.js
@@ -195,20 +201,42 @@
     });
 
   $('#login-btn').click(function() {
-    animateCSS('#form-register', 'fadeOutRight').then(() => {
-      $('#form-register').hide();
-      $('#form-login').show();
-      animateCSS('#form-login', 'fadeInRight')
-    });
+    location.hash = 'login';
   });
   $('#register-btn').click(function() {
-    animateCSS('#form-login', 'fadeOutRight').then(() => {
+    location.hash = 'register';
+  });
+
+  $(document).ready(function() {
+    let hash = window.location.hash;
+    console.log(hash);
+    if (hash.includes("login")) {
+      $('#form-register').hide();
+      $('#form-login').show();
+      animateCSS('#form-login', 'fadeInRight');
+    } else {
       $('#form-login').hide();
       $('#form-register').show();
-      animateCSS('#form-register', 'fadeInRight')
-    });
+      animateCSS('#form-register', 'fadeInRight');
+    }
   });
-  $('#form-login').hide();
+  $(window).on('hashchange', function(e){
+    let hash = window.location.hash;
+    if (hash.includes("login")) {
+      animateCSS('#form-register', 'fadeOutRight').then(() => {
+        $('#form-register').hide();
+        $('#form-login').show();
+        animateCSS('#form-login', 'fadeInRight');
+      });
+    } else {
+      animateCSS('#form-login', 'fadeOutRight').then(() => {
+        $('#form-login').hide();
+        $('#form-register').show();
+        animateCSS('#form-register', 'fadeInRight');
+      });
+    }
+  });
 </script>
+<script src="js/spaceShuttle.js"></script>
 </body>
 </html>

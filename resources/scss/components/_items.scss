@@ -19,6 +19,12 @@
     border-left: 2px solid $color;
     box-shadow: 0 0 10px rgba($color, 0.8);
   }
+  .like-container {
+    .custom-icon {
+      width: 30px;
+      height: 30px;
+    }
+  }
   .content {
     font-weight: 500;
     .price {
@@ -37,8 +43,9 @@
   @media screen and (max-width: 992px) {
     font-size: 12px;
     .reviews {
-      .material-icons {
-        font-size: 18px;
+      .custom-icon {
+        width: 15px;
+        height: 15px;
       }
     }
     .reviews, .rating {
