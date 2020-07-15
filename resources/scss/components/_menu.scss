@@ -102,6 +102,9 @@
   }
   .main-menu {
     width: 0;
+    .menu-fixed-toggle {
+      display: none;
+    }
   }
   .collapsed {
     .main-menu {

@@ -116,23 +116,25 @@
   }
 }
 
-.imageList {
-  img {
-    height: 160px;
-    width: 100%;
-    object-fit: cover;
-    border-radius: $border-radius-lg;
-    @media screen and (max-width: 1440px) {
-      height: 140px;
-    }
-    @media screen and (max-width: 1024px) {
-      height: 120px;
-    }
-    @media screen and (max-width: 600px) {
-      height: 100px;
-    }
-    @media screen and (max-width: 480px) {
-      height: 70px;
+.categories {
+  a {
+    img {
+      height: 150px;
+      object-fit: cover;
+      border-radius: $border-radius-lg;
+
+      @media screen and (max-width: 1440px) {
+        height: 130px;
+      }
+      @media screen and (max-width: 1200px) {
+        height: 120px;
+      }
+      @media screen and (max-width: 768px) {
+        height: 100px;
+      }
+      @media screen and (max-width: 667px) {
+        height: 64px;
+      }
     }
   }
 }
@@ -141,51 +143,39 @@
   width: 400px;
 }
 
-.slick-dots{
-  width:100%;
-  padding:0px;
-  margin: 0px 0px 30px;
-  list-style-type:none;
-  text-align:center;
+.owl-carousel {
+  &.off {
+    display: block;
+  }
+  .owl-dots {
+    width:100%;
+    padding:0px;
+    margin: 0px 0px 30px;
+    list-style-type:none;
+    text-align:center;
+    .owl-dot {
+      display:inline-block;
+      outline: none;
+      width:15px;
+      height:15px;
+      background:Transparent;
+      -webkit-transition:all 0.5s;
+      transition:all 0.5s;
+      -webkit-border-radius:50%;
+      border-radius:50%;
+      border: 2px solid #3A3258;
+      margin:0 2.5px;
+      cursor:pointer;
+      position:relative;
+      &.active {
+        background:#7750F8;
+        -webkit-box-shadow:inset 0 0 0 2px rgba(0,0,0,.28);
+        box-shadow:inset 0 0 0 2px rgba(0,0,0,.28);
+      }
+    }
+  }
 }
 
-.slick-dots li{
-  display:inline-block;
-  width:15px;
-  height:15px;
-  background:Transparent;
-  -webkit-transition:all 0.5s;
-  transition:all 0.5s;
-  -webkit-border-radius:50%;
-  border-radius:50%;
-  border: 2px solid #3A3258;
-  margin:0 2.5px;
-  cursor:pointer;
-  position:relative;
-}
-
-.slick-dots li.slick-active{
-  background:#7750F8;
-  -webkit-box-shadow:inset 0 0 0 2px rgba(0,0,0,.28);
-  box-shadow:inset 0 0 0 2px rgba(0,0,0,.28);
-}
-
-.slick-dots li button{
-  position:absolute;
-  bottom:100%;
-  left:50%;
-  width:120px;
-  height:75px;
-  display:block;
-  visibility:hidden;
-  border:4px solid rgba(0,0,0,.50);
-  margin-left:-60px;
-  margin-bottom:15px;
-  -webkit-transition:visibility 0.5s linear 0.5s;
-  transition:visibility 0.5s linear 0.5s;
-  -webkit-animation:fadeOut 0.5s both;
-  animation:fadeOut 0.5s both;
-}
 
 @media screen and (max-width: 992px) {
   .item {

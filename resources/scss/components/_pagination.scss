@@ -17,5 +17,22 @@
       @include block-shadow($violet);
       @include text-glow-mixin($violet);
     }
+
+    //arrows
+    &:first-child, &:last-child {
+      &.active {
+        pointer-events: initial;
+      }
+      .custom-icon {
+        width: 16px;
+        height: 16px;
+      }
+    }
+    &:first-child.active {
+      transform: rotate(90deg);
+    }
+    &:last-child.active {
+      transform: rotate(-90deg);
+    }
   }
 }
