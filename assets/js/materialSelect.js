@@ -1,4 +1,3 @@
-// material select //
 $( document ).ready(function() {
   let materialSelect = $('.material-select');
   materialSelect.each(function() {
@@ -8,7 +7,6 @@ $( document ).ready(function() {
     let placeholder = $( this ).attr('data-placeholder');
     let placeholderString = !!placeholder ?
       '<span class="placeholder"><span>'+ placeholder +'</span></span>' : '';
-    // $( this ).addClass('d-none');
     $( this ).hide();
     $( this ).removeClass('d-block');
     $( this ).wrap( `<div class="material-select-wrapper ${classes}">`);
@@ -74,4 +72,3 @@ $( document ).ready(function() {
     $(this).parent().find('.select-list').collapse('hide');
   });
 });
-// material select //

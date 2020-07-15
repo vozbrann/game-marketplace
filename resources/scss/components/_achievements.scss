@@ -54,6 +54,14 @@
       }
     }
   }
+  @include media-breakpoint-down(xl) {
+    .level-container {
+      width: calc(97%/3);
+      .content {
+        padding: 10px 0;
+      }
+    }
+  }
   @include media-breakpoint-down(lg) {
     .level-container {
       width: calc(97%/3);

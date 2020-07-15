@@ -37,6 +37,9 @@
 .icon-close {
   mask: url(../../images/icons/close.svg);
 }
+.icon-close-circle {
+  mask: url(../../images/icons/close-circle.svg);
+}
 .icon-home {
   mask: url(../../images/icons/home.svg);
 }
@@ -178,5 +181,8 @@
   }
   &.custom-icon-warning {
     background: $warning!important;
+  }
+  &.custom-icon-secondary {
+    background: $gray!important;
   }
 }

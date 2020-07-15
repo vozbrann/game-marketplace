@@ -92,8 +92,8 @@
     }
   }
   &.icon-prepend {
-    padding-left: 24px;
-    .material-input-icon {
+    padding-left: 26px;
+    .material-input-icon-prepend {
       position: absolute;
       top: 50%;
       left: 14px;
@@ -103,7 +103,7 @@
       &:before {
         width: 44px;
         @include media-breakpoint-down(sm) {
-          width: 70px;
+          width: 50px;
         }
       }
     }
@@ -124,8 +124,8 @@
     }
   }
   &.icon-append {
-    padding-right: 34px;
-    .material-input-icon {
+    padding-right: 28px;
+    .material-input-icon-append {
       position: absolute;
       top: 50%;
       right: 20px;

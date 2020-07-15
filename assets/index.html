@@ -160,19 +160,20 @@
     </div>
 </nav>
 <main>
-    <header class="main-header d-flex px-lg-4 px-3 py-2 mb-3 mb-xl-4">
+    <header class="main-header d-flex align-items-center px-lg-4 px-3 py-2 mb-3 mb-xl-4">
         <form class="search-container container-fluid collapse px-2 px-lg-4"
-              id="header-search-container">
-            <div class="material-input material-input-success material-input-violet icon-append bg-dark">
+              id="header-search-container"> <!-- Search form START -->
+            <div class="material-input material-input-success material-input-violet icon-prepend icon-append bg-dark"> <!-- Search input -->
                 <input id="login111" type="text" name="username">
                 <label for="login111">Search</label>
-                <span class="custom-icon icon-search material-input-icon"></span>
+                <span class="custom-icon icon-search-2 material-input-icon material-input-icon-prepend"></span>
+                <span class="close-button custom-icon custom-icon-secondary icon-close material-input-icon material-input-icon-append"></span>
             </div>
-            <div class="res-container position-relative">
+            <div class="res-container position-relative"> <!-- Search results container START -->
                 <div class="search-results py-2 rounded-lg">
-                    <div class="res-group container-fluid">
+                    <div class="res-group container-fluid"> <!-- Res group START -->
                         <p class="text-uppercase mb-0 px-1 small">Services</p>
-                        <a href="#" class="row result-item d-flex px-1 align-items-center">
+                        <a href="#" class="row result-item d-flex px-1 align-items-center"> <!-- Res link -->
                             <div class="col">
                                 <p class="h5 mb-1 mb-md-0 text-light-gray line-clamp-1">Grand Theft Auto V:
                                     Premium Online Edition Rockstar Key</p>
@@ -185,10 +186,10 @@
                                 <span class="rating text-gray">25.69/<small>100</small></span>
                             </div>
                         </a>
-                    </div>
+                    </div> <!-- Res group END -->
                     <div class="res-group container-fluid">
                         <p class="text-uppercase mb-0 px-1 small">Items</p>
-                        <a href="#" class="row result-item px-1 d-flex align-items-center">
+                        <a href="#" class="row result-item px-1 d-flex align-items-center"> <!-- Res link -->
                             <div class="col">
                                 <p class="h5 mb-1 mb-md-0 text-light-gray line-clamp-1">Grand Theft Auto V:
                                     Premium Online Edition Rockstar Key</p>
@@ -201,7 +202,7 @@
                                 <span class="rating text-gray">25.69/<small>100</small></span>
                             </div>
                         </a>
-                        <a href="#" class="row result-item px-1 d-flex align-items-center">
+                        <a href="#" class="row result-item px-1 d-flex align-items-center"> <!-- Res link -->
                             <div class="col">
                                 <p class="h5 mb-1 mb-md-0 text-light-gray line-clamp-1">Grand Theft Auto V:
                                     Premium Online Edition Rockstar Key</p>
@@ -214,10 +215,10 @@
                                 <span class="rating text-gray">25.69/<small>100</small></span>
                             </div>
                         </a>
-                    </div>
+                    </div> <!-- Res group END -->
                     <div class="res-group container-fluid">
                         <p class="text-uppercase mb-0 px-1 small">Users</p>
-                        <a href="#" class="row result-item px-1 d-flex align-items-center">
+                        <a href="#" class="row result-item px-1 d-flex align-items-center"> <!-- Res user link -->
                             <div class="col d-flex align-items-center mb-1 mb-sm-0">
                                 <div class="user-image-container online mr-3">
                                     <img class="user-image user-image-sm"
@@ -233,7 +234,7 @@
                                 <span class="rating text-gray">25.69/<small>100</small></span>
                             </div>
                         </a>
-                        <a href="#" class="row result-item px-1 d-flex align-items-center">
+                        <a href="#" class="row result-item px-1 d-flex align-items-center"> <!-- Res user link -->
                             <div class="col d-flex align-items-center mb-1 mb-sm-0">
                                 <div class="user-image-container online mr-3">
                                     <img class="user-image user-image-sm"
@@ -249,168 +250,96 @@
                                 <span class="rating text-gray">25.69/<small>100</small></span>
                             </div>
                         </a>
-                    </div>
+                    </div> <!-- Res group END -->
                 </div>
-            </div>
-        </form>
-        <div class="d-none d-lg-flex align-items-center mr-auto">
-            <div class="mr-3 mr-xxl-4" style="width: 100px;">
-                <select class="material-select material-select-required" name="" aria-label="">
-                    <option selected value="1">En</option>
-                    <option value="2">Ru</option>
-                </select>
-            </div>
-            <a class="mr-3 mr-xxl-4" href="#">
-                <span class="custom-icon icon-cart"></span>
-            </a>
-            <a class="mr-3 mr-xxl-4" href="#">
-                <span class="custom-icon icon-chat"></span>
-            </a>
-            <a class="mr-3 mr-xxl-4 search-button" data-toggle="collapse"
-               href="#header-search-container"
-               role="button" aria-expanded="false" aria-controls="header-search-container">
-                <span class="custom-icon custom-icon-success icon-search"></span>
-            </a>
-        </div>
-        <div class="d-none d-lg-flex align-items-center">
-            <div class="d-flex align-items-center">
-                <div class="text-right mr-2">
-                    <p class="mb-0">Balance:</p>
-                    <p class="mb-0 balance-number">$ 1000.00</p>
-                </div>
-                <span class="custom-icon custom-icon-success icon-add"></span>
-            </div>
-            <div class="ml-3 ml-xxl-5">
-                <div class="mb-2 d-flex align-items-center justify-content-between">
-                    <span class="">Level:</span>
-                    <span>93.61</span>
-                </div>
-                <div class="progress progress-tiny bg-light-green">
-                    <div class="progress-bar" role="progressbar" style="width: 80%"
-                         aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-            </div>
-            <div class="ml-3 ml-xxl-4 d-flex align-items-center">
-                <div class="mr-3 notifications-dropdown">
-                    <a class="notifications active" data-toggle="collapse"
-                       href=".notifications-dropdown-menu"
-                       role="button" aria-expanded="false"
-                       aria-controls="notifications-dropdown-menu">
-                        <span class="custom-icon icon-bell"></span>
-                    </a>
-                    <div class="notifications-dropdown-menu collapse">
-                        <div class="content">
-                            <div class="py-1">
-                                <div class="notifications-dropdown-item item-primary px-3 d-flex align-items-center py-2">
-                                    <div class="user-image-container online mr-3">
-                                        <img class="user-image user-image-sm"
-                                             src="https://source.unsplash.com/random" alt="">
-                                    </div>
-                                    <p class="line-clamp-2 mb-0">Lorem ipsum dolor sit amet,
-                                        consectetur adipiscing elit, sed consectetur adipiscing.</p>
-                                </div>
-                                <div class="notifications-dropdown-item item-warning px-3 d-flex align-items-center py-2">
-                                    <div class="user-image-container online mr-3">
-                                        <img class="user-image user-image-sm"
-                                             src="https://source.unsplash.com/random" alt="">
-                                    </div>
-                                    <p class="line-clamp-2 mb-0">Lorem ipsum dolor sit amet,
-                                        consectetur adipiscing elit, sed consectetur adipiscing.</p>
-                                </div>
-                                <div class="notifications-dropdown-item px-3 item-danger disabled d-flex align-items-center py-2">
-                                    <div class="user-image-container online mr-3">
-                                        <img class="user-image user-image-sm"
-                                             src="https://source.unsplash.com/random" alt="">
-                                    </div>
-                                    <p class="line-clamp-2 mb-0">Lorem ipsum dolor sit amet,
-                                        consectetur adipiscing elit, sed consectetur adipiscing.</p>
-                                </div>
-                                <div class="notifications-dropdown-item px-3 item-success disabled d-flex align-items-center py-2">
-                                    <div class="user-image-container online mr-3">
-                                        <img class="user-image user-image-sm"
-                                             src="https://source.unsplash.com/random" alt="">
-                                    </div>
-                                    <p class="line-clamp-2 mb-0">Lorem ipsum dolor sit amet,
-                                        consectetur adipiscing elit, sed consectetur adipiscing.</p>
-                                </div>
-                            </div>
-                            <div class="load-more-link-container text-center py-2 mb-1">
-                                <a href="#">Load more</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <a href="#">
-                    <span class="custom-icon icon-user"></span>
-                </a>
-            </div>
-        </div>
-        <button class="btn p-0 d-flex d-lg-none align-items-center menu-fixed-toggle">
-            <a class="mr-3 mr-xxl-4" href="#">
+            </div> <!-- Search results container END -->
+        </form> <!-- Search form END -->
+        <button class="btn p-0 d-flex d-lg-none align-items-center menu-fixed-toggle mr-auto order-0"> <!-- Mob menu burger btn -->
+            <a href="#">
                 <span class="custom-icon icon-burger"></span>
             </a>
         </button>
-        <div class="d-lg-none d-flex align-items-center ml-auto">
-            <a class="mr-3 mr-xxl-4 search-button" data-toggle="collapse"
-               href="#header-search-container"
-               role="button" aria-expanded="false" aria-controls="header-search-container">
-                <span class="custom-icon custom-icon-success icon-search"></span>
+        <div class="d-none d-lg-block mr-3 mr-xxl-4" style="width: 100px;"> <!-- Language switch -->
+            <select class="material-select material-select-required" name="" aria-label="">
+                <option selected value="1">En</option>
+                <option value="2">Ru</option>
+            </select>
+        </div>
+        <a class="mr-3 mr-xxl-4 order-2 order-lg-0" href="#"> <!-- Cart -->
+            <span class="custom-icon icon-cart"></span>
+        </a>
+        <a class="mr-3 mr-xxl-4 order-3 order-lg-0" href="#"> <!-- Chat -->
+            <span class="custom-icon icon-chat"></span>
+        </a>
+        <a href="#" class="mr-3 mr-xxl-4 search-button order-1 order-lg-0"> <!-- Search -->
+            <span class="custom-icon custom-icon-success icon-search"></span>
+        </a>
+        <div class="mr-3 d-none d-lg-flex align-items-center ml-auto"> <!-- Balance -->
+            <div class="text-right mr-2">
+                <p class="mb-0">Balance:</p>
+                <p class="mb-0 balance-number">$ 1000.00</p>
+            </div>
+            <span class="custom-icon custom-icon-success icon-add"></span>
+        </div>
+        <div class="mr-3 d-none d-lg-block"> <!-- Level -->
+            <div class="mb-2 d-flex align-items-center justify-content-between">
+                <span class="">Level:</span>
+                <span>93.61</span>
+            </div>
+            <div class="progress progress-tiny bg-light-green">
+                <div class="progress-bar" role="progressbar" style="width: 80%"
+                     aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+        <div class="mr-3 notifications-dropdown order-4 order-lg-0">
+            <a href="#" class="notifications active notifications-button">
+                <span class="custom-icon icon-bell"></span>
             </a>
-            <a class=" mr-3 mr-xxl-4" href="#">
-                <span class="custom-icon icon-cart"></span>
-            </a>
-            <div class="mr-3 notifications-dropdown">
-                <a class="notifications active" data-toggle="collapse"
-                   href=".notifications-dropdown-menu"
-                   role="button" aria-expanded="false" aria-controls="notifications-dropdown-menu">
-                    <span class="custom-icon icon-bell"></span>
-                </a>
-                <div class="notifications-dropdown-menu collapse">
-                    <div class="content">
-                        <div class="py-1">
-                            <div class="notifications-dropdown-item item-primary px-3 d-flex align-items-center py-2">
-                                <div class="user-image-container online mr-3">
-                                    <img class="user-image user-image-sm"
-                                         src="https://source.unsplash.com/random" alt="">
-                                </div>
-                                <p class="line-clamp-2 mb-0">Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit, sed consectetur adipiscing.</p>
+            <div class="notifications-dropdown-menu collapse">
+                <div class="content">
+                    <div class="p-1">
+                        <div class="notifications-dropdown-item item-primary px-3 d-flex align-items-center py-2">
+                            <div class="user-image-container online mr-3">
+                                <img class="user-image user-image-sm"
+                                     src="https://source.unsplash.com/random" alt="">
                             </div>
-                            <div class="notifications-dropdown-item item-warning px-3 d-flex align-items-center py-2">
-                                <div class="user-image-container online mr-3">
-                                    <img class="user-image user-image-sm"
-                                         src="https://source.unsplash.com/random" alt="">
-                                </div>
-                                <p class="line-clamp-2 mb-0">Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit, sed consectetur adipiscing.</p>
-                            </div>
-                            <div class="notifications-dropdown-item px-3 item-danger disabled d-flex align-items-center py-2">
-                                <div class="user-image-container online mr-3">
-                                    <img class="user-image user-image-sm"
-                                         src="https://source.unsplash.com/random" alt="">
-                                </div>
-                                <p class="line-clamp-2 mb-0">Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit, sed consectetur adipiscing.</p>
-                            </div>
-                            <div class="notifications-dropdown-item px-3 item-success disabled d-flex align-items-center py-2">
-                                <div class="user-image-container online mr-3">
-                                    <img class="user-image user-image-sm"
-                                         src="https://source.unsplash.com/random" alt="">
-                                </div>
-                                <p class="line-clamp-2 mb-0">Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit, sed consectetur adipiscing.</p>
-                            </div>
+                            <p class="line-clamp-2 mb-0">Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit, sed consectetur adipiscing.</p>
                         </div>
-                        <div class="load-more-link-container text-center py-2 mb-1">
-                            <a href="#">Load more</a>
+                        <div class="notifications-dropdown-item item-warning px-3 d-flex align-items-center py-2">
+                            <div class="user-image-container online mr-3">
+                                <img class="user-image user-image-sm"
+                                     src="https://source.unsplash.com/random" alt="">
+                            </div>
+                            <p class="line-clamp-2 mb-0">Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit, sed consectetur adipiscing.</p>
                         </div>
+                        <div class="notifications-dropdown-item px-3 item-danger disabled d-flex align-items-center py-2">
+                            <div class="user-image-container online mr-3">
+                                <img class="user-image user-image-sm"
+                                     src="https://source.unsplash.com/random" alt="">
+                            </div>
+                            <p class="line-clamp-2 mb-0">Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit, sed consectetur adipiscing.</p>
+                        </div>
+                        <div class="notifications-dropdown-item px-3 item-success disabled d-flex align-items-center py-2">
+                            <div class="user-image-container online mr-3">
+                                <img class="user-image user-image-sm"
+                                     src="https://source.unsplash.com/random" alt="">
+                            </div>
+                            <p class="line-clamp-2 mb-0">Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit, sed consectetur adipiscing.</p>
+                        </div>
+                    </div>
+                    <div class="load-more-link-container text-center py-2 mb-1">
+                        <a href="#">Load more</a>
                     </div>
                 </div>
             </div>
-            <a class="" href="#">
-                <span class="custom-icon icon-user"></span>
-            </a>
-        </div>
+        </div> <!-- Notifications -->
+        <a class="order-5 order-lg-0" href="#"> <!-- Profile -->
+            <span class="custom-icon icon-user"></span>
+        </a>
     </header>
     <div class="alert alert-danger alert-dismissible fade show mb-3 mb-xl-4 px-4 py-3" role="alert">
         <div class="d-flex justify-content-between title">
@@ -418,7 +347,7 @@
                 <span class="custom-icon custom-icon-danger icon-info mr-2"></span>
                 <span class="text-uppercase h5 font-weight-bold mb-0">Attention!</span>
             </p>
-            <a href="#"><span class="custom-icon custom-icon-danger icon-close" data-dismiss="alert"
+            <a href="#"><span class="custom-icon custom-icon-danger icon-close-circle" data-dismiss="alert"
                               aria-label="Close"></span></a>
         </div>
         <p class="mb-0 text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -1053,8 +982,8 @@
     </div>
 </main>
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
         crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
@@ -1096,10 +1025,11 @@
   });
 
   $('.games-carousel').slick({
-    infinite: false,
+    infinite: true,
     arrows: false,
     slidesToShow: 6,
     slidesToScroll: 1,
+    autoplay: true,
     responsive: [
       {
         breakpoint: 1440,

@@ -115,6 +115,18 @@
     position: absolute;
     left: 0;
     z-index: 10;
+    .material-input {
+      .icon-search-2 {
+        width: 20px;
+        height: 20px;
+      }
+      .close-button {
+        cursor: pointer;
+        width: 14px;
+        height: 14px;
+        pointer-events: initial!important;
+      }
+    }
     .search-results {
       width: 100%;
       position: absolute;

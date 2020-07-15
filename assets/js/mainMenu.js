@@ -1,5 +1,8 @@
 $('.menu-fixed-toggle').click(function() {
   $('body').toggleClass('collapsed');
+  setTimeout(function() {
+    $('.slick-slider').slick('setPosition');
+  }, 301);
 });
 
 $(document).ready(function(e) {

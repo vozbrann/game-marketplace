@@ -829,46 +829,12 @@
 <!-- Optional JavaScript -->
 <script>
   $(".nav-info-pills-container").overlayScrollbars({
-    overflowBehavior: {
-      y: "hidden",
-    },
-  });
-
-  //info tabs list scroll
-  const slider = document.querySelector('.nav-info .nav');
-  let isDown = false;
-  let startX;
-  let scrollLeft;
-
-  slider.addEventListener('mousedown', (e) => {
-    isDown = true;
-    startX = e.pageX - slider.offsetLeft;
-    scrollLeft = slider.scrollLeft;
-  });
-  slider.addEventListener('mouseleave', () => {
-    isDown = false;
-  });
-  slider.addEventListener('mouseup', () => {
-    isDown = false;
-  });
-  slider.addEventListener('mousemove', (e) => {
-    if (!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - slider.offsetLeft;
-    const walk = (x - startX) * 2; //scroll-fast
-    slider.scrollLeft = scrollLeft - walk;
-  });
-
-  //info accordion
-  $('.nav-info .collapse').on('show.bs.collapse', function(e) {
-    $(this).parent().toggleClass('expanded');
-  });
-  $('.nav-info .collapse').on('hide.bs.collapse', function(e) {
-    $(this).parent().toggleClass('expanded');
-  });
-
-  $('.nav-info .accordion-collapse-toggle').click(function() {
-    $(this).find('.collapse').collapse('toggle');
+    scrollbars: {
+      dragScrolling    : true,
+      clickScrolling   : true,
+      touchSupport     : true,
+      snapHandle       : true
+    }
   });
 </script>
 </body>
