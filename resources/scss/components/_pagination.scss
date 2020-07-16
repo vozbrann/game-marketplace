@@ -19,19 +19,18 @@
     }
 
     //arrows
-    &:first-child, &:last-child {
-      &.active {
-        pointer-events: initial;
-      }
+    &.arrow-left, &.arrow-right {
+      @extend .active;
+      pointer-events: initial;
       .custom-icon {
         width: 16px;
         height: 16px;
       }
     }
-    &:first-child.active {
+    &.arrow-left {
       transform: rotate(90deg);
     }
-    &:last-child.active {
+    &.arrow-right {
       transform: rotate(-90deg);
     }
   }

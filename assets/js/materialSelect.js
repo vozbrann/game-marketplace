@@ -13,7 +13,8 @@ $( document ).ready(function() {
     let optionList = options.map(function() {
       let value = $(this).attr('value');
       let text = $(this).text();
-      return `<li data-id="${value}">${text}</li>`;
+      let onclickFunc = $(this).attr('onclick');
+      return `<li onclick="${onclickFunc}" data-id="${value}">${text}</li>`;
     }).get().join("");
     $( this ).after(`
     <div class="material-select-body">

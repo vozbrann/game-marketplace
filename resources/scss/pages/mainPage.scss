@@ -1,6 +1,5 @@
 @import "../components/variables";
 @import "../components/text";
-@import "../components/userImage";
 
 .carousel {
   .carousel-control-prev, .carousel-control-next {
@@ -177,23 +176,23 @@
 }
 
 
-@media screen and (max-width: 992px) {
-  .item {
-    font-size: 12px;
-    .reviews {
-      .material-icons {
-        font-size: 18px;
-      }
-    }
-    .reviews, .rating {
-      font-size: 10px;
-    }
-    .price {
-      font-size: 18px;
-    }
-    .user-image {
-      width: 30px;
-      height: 30px;
-    }
-  }
-}
+//@media screen and (max-width: 992px) {
+//  .item {
+//    font-size: 12px;
+//    .reviews {
+//      .material-icons {
+//        font-size: 18px;
+//      }
+//    }
+//    .reviews, .rating {
+//      font-size: 10px;
+//    }
+//    .price {
+//      font-size: 18px;
+//    }
+//    .user-image {
+//      width: 30px;
+//      height: 30px;
+//    }
+//  }
+//}
