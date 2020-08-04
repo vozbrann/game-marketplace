@@ -1,13 +1,16 @@
+$user-image-size: 40px;
+$user-image-sm-size: 30px;
+
 .user-image-container {
   position: relative;
   .user-image {
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: $user-image-size;
+    height: $user-image-size;
     object-fit: cover;
     &.user-image-sm {
-      width: 30px;
-      height: 30px;
+      width: $user-image-sm-size;
+      height: $user-image-sm-size;
     }
     &.user-image-lg {
       width: 170px;

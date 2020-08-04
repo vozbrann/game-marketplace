@@ -61,13 +61,16 @@
   @include text-stroke-shadow($light-red);
 }
 .text-glow-blue  {
-  @include text-stroke-shadow($blue);
+  @include text-glow-mixin($blue);
 }
 .text-stroke-glow-blue {
   @include text-stroke-shadow($blue);
 }
 .text-light-dark{
   color: $light-dark;
+}
+.text-stroke-glow-light-dark {
+    @include text-stroke-shadow($light-dark);
 }
 
 .line-clamp {

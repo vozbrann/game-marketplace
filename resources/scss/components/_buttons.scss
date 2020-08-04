@@ -68,6 +68,7 @@
   &.btn-block {
     padding-left: 0;
     padding-right: 0;
+      margin: 0;
   }
 
   &.btn-primary {
@@ -75,6 +76,17 @@
   }
   &.btn-outline-primary {
     @include button-outline($violet);
+  }
+
+  &.btn-info {
+    @include button($info, #fff);
+  }
+  &.btn-outline-info {
+    @include button-outline($info);
+  }
+
+  &.btn-outline-warning {
+    @include button-outline($warning);
   }
 
   &.btn-violet {

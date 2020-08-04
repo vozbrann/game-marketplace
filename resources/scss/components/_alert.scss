@@ -10,8 +10,10 @@
   .text {
     color: rgba($textColor, 0.8);
     font-weight: normal;
-    font-size: 14px;
     line-height: 1.2em;
+      @include media-breakpoint-down(lg) {
+          font-size: $small-font-size;
+      }
   }
 }
 

@@ -1,4 +1,9 @@
-$("body").overlayScrollbars({});
+$("body").overlayScrollbars({
+  overflowBehavior : {
+    x : "hidden",
+    y : "scroll"
+  },
+});
 $(document).ready(function(e) {
   var instance = $(".main-menu").overlayScrollbars({
     overflowBehavior: {
